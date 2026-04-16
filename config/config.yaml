@@ -26,48 +26,48 @@ fast:
         default_normal_debounce_close: 4ms
 
 switches:
-    s_left_flipper_eos:
+    sLeftFlipperEOS:
         number: pio1-31
         type: NC
         debounce: quick
-    s_right_flipper_eos:
+    sRightFlipperEOS:
         number: pio1-15
         type: NC
         debounce: quick
-    s_auto_plung:
+    sPlungerLane:
         number: pio1-0
         platform_settings:
             debounce_open: 5ms
             debounce_close: 20ms
-    s_left_flipper:
+    sLeftFlipperButton:
         number: cabio-8
         debounce: quick
-    s_right_flipper:
+    sRightFlipperButton:
         number: cabio-16
         debounce: quick
-    s_right_kicker_upper:
+    sRightSlingUpper:
         number: pio1-13
-    s_right_kicker_lower:
+    sRightSlingLower:
         number: pio1-14
-    s_left_kicker_upper:
+    sLeftSlingUpper:
         number: pio1-29
         debounce: quick
-    s_left_kicker_lower:
+    sLeftSlingLower:
         number: pio1-30       
         debounce: quick
-    s_ball_jam:
+    sBallJam:
         number: pio1-2
         type: NC
-    s_ball1:
+    sBall1:
         number: pio1-1
         type: NC
-    s_poptarget1:
+    s1PopTarget:
         number: pio2-28
         tags: playfield_active
-    s_start:
+    sStartButton:
         number: cabio-9
         tags: start
-    s_plunger:
+    sPlungerButton:
         number: cabio-10
 
 coils:
@@ -106,48 +106,48 @@ flippers:
     left_flipper:
         main_coil: c_left_flipper_main
         hold_coil: c_left_flipper_hold
-        activation_switch: s_left_flipper
-        eos_switch: s_left_flipper_eos
+        activation_switch: sLeftFlipperButton
+        eos_switch: sLeftFlipperEOS
         use_eos: true
     right_flipper:
         main_coil: c_right_flipper_main
         hold_coil: c_right_flipper_hold
-        activation_switch: s_right_flipper
-        eos_switch: s_right_flipper_eos
+        activation_switch: sRightFlipperButton
+        eos_switch: sRightFlipperEOS
         use_eos: true
 
 ball_devices:
     bd_trough:
-        ball_switches: s_ball1
+        ball_switches: sBall1
         eject_coil: c_ball_trough
         tags: trough, home, drain
-        jam_switch: s_ball_jam
+        jam_switch: sBallJam
         eject_coil_jam_pulse: 15ms
         eject_targets: bd_plunger
     bd_plunger:
-        ball_switches: s_auto_plung
+        ball_switches: sPlungerLane
         entrance_count_delay: 300ms
         eject_timeouts: 3s
         eject_coil: c_auto_plung
         mechanical_eject: true
-        player_controlled_eject_event: s_plunger_active
+        player_controlled_eject_event: sPlungerButton_active
 
 autofire_coils:
     right_kicker:
         coil: c_right_kicker
-        switch: s_right_kicker_upper
+        switch: sRightSlingUpper
         enable_events: machine_reset_phase_3
     right_kicker_lower:
         coil: c_right_kicker
-        switch: s_right_kicker_lower
+        switch: sRightSlingLower
         enable_events: machine_reset_phase_3
     left_kicker:
         coil: c_left_kicker
-        switch: s_left_kicker_upper
+        switch: sLeftSlingUpper
         enable_events: machine_reset_phase_3
     left_kicker_lower:
         coil: c_left_kicker
-        switch: s_left_kicker_lower
+        switch: sLeftSlingLower
         enable_events: machine_reset_phase_3
 
 playfields:
