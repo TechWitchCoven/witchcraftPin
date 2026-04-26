@@ -61,6 +61,16 @@ switches:
     sBall1:
         number: pio1-1
         type: NC
+    sBall2:
+        number: pio1-3
+    sBall3:
+        number: pio1-4
+    sBall4:
+        number: pio1-5
+    sBall5:
+        number: pio1-6
+    sBall6:
+        number: pio1-7
     s1PopTarget:
         number: pio2-28
         tags: playfield_active
