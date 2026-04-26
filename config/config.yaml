@@ -79,6 +79,20 @@ switches:
         tags: start
     sPlungerButton:
         number: cabio-10
+    sLowerRightPopBuper:
+        number: pio2-24
+        debounce: quick
+    sUpperRightPopBumper:
+        number: pio2-25
+        debounce: quick
+    sUpperLeftPopBumper:
+        number: pio2-26
+        debounce: quick
+    sLowerLeftPopBumper:
+        number: pio2-27
+        debounce: quick
+    sSinglePopTarget:
+        number: pio2-28
 
 coils:
     c_ball_trough:
