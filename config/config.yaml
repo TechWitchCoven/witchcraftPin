@@ -125,6 +125,28 @@ coils:
             recycle_ms: 40
     cAutoPlunger:
         number: pio1-3
+    cUpperLeftPopBumper:
+        number: pio2-0
+        default_pulse_ms: 15
+        platform_settings:
+            recycle_ms: 40
+    cLowerLeftPopBumper:
+        number: pio2-1
+        default_pulse_ms: 15
+        platform_settings:
+            recycle_ms: 40
+    cUpperRightPopBumper:
+        number: pio2-4
+        default_pulse_ms: 15
+        platform_settings:
+            recycle_ms: 40
+    cLowerRightPopBumper:
+        number: pio2-5
+        default_pulse_ms: 15
+        platform_settings:
+            recycle_ms: 40
+    cSinglePopTarget:
+        number: pio2-7
 
 flippers:
     leftFlipper:
@@ -169,6 +191,19 @@ autofire_coils:
     left_kicker_lower:
         coil: cLeftSling
         switch: sLeftSlingLower
+    upperLeftPopBumper:
+        coil: cUpperLeftPopBumper
+        switch: sUpperLeftPopBumper
+    lowerLeftPopBumper:
+        coil: cLowerLeftPopBumper
+        switch: sLowerLeftPopBumper
+    upperRightPopBumper:
+        coil: cUpperRightPopBumper
+        switch: sUpperRightPopBumper
+    lowerRightPopBumper:
+        coil: cLowerRightPopBumper
+        switch: sLowerRightPopBumper
+
 
 playfields:
     playfield:
