@@ -179,16 +179,16 @@ ball_devices:
         player_controlled_eject_event: sPlungerButton_active
 
 autofire_coils:
-    right_kicker:
+    rightSlingUpper:
         coil: cRightSling
         switch: sRightSlingUpper
-    right_kicker_lower:
+    rightSlingLower:
         coil: cRightSling
         switch: sRightSlingLower
-    left_kicker:
+    leftSlingUpper:
         coil: cLeftSling
         switch: sLeftSlingUpper
-    left_kicker_lower:
+    leftSlingLower:
         coil: cLeftSling
         switch: sLeftSlingLower
     upperLeftPopBumper:
