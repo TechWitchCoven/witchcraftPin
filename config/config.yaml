@@ -160,19 +160,15 @@ autofire_coils:
     right_kicker:
         coil: c_right_kicker
         switch: sRightSlingUpper
-        enable_events: machine_reset_phase_3
     right_kicker_lower:
         coil: c_right_kicker
         switch: sRightSlingLower
-        enable_events: machine_reset_phase_3
     left_kicker:
         coil: c_left_kicker
         switch: sLeftSlingUpper
-        enable_events: machine_reset_phase_3
     left_kicker_lower:
         coil: c_left_kicker
         switch: sLeftSlingLower
-        enable_events: machine_reset_phase_3
 
 playfields:
     playfield:
