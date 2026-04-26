@@ -142,7 +142,7 @@ flippers:
 
 ball_devices:
     bd_trough:
-        ball_switches: sBall1
+        ball_switches: sBall1,sBall2,sBall3,sBall4,sBall5,sBall6
         eject_coil: cBallTroughEject
         tags: trough, home, drain
         jam_switch: sBallJam
