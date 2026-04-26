@@ -127,13 +127,13 @@ coils:
         number: pio1-3
 
 flippers:
-    left_flipper:
+    leftFlipper:
         main_coil: cLeftFlipperPower
         hold_coil: cLeftFlipperHold
         activation_switch: sLeftFlipperButton
         eos_switch: sLeftFlipperEOS
         use_eos: true
-    right_flipper:
+    rightFlipper:
         main_coil: cRightFlipperPower
         hold_coil: cRightFlipperHold
         activation_switch: sRightFlipperButton
@@ -141,14 +141,14 @@ flippers:
         use_eos: true
 
 ball_devices:
-    bd_trough:
+    bdTrough:
         ball_switches: sBall1,sBall2,sBall3,sBall4,sBall5,sBall6
         eject_coil: cBallTroughEject
         tags: trough, home, drain
         jam_switch: sBallJam
         eject_coil_jam_pulse: 15ms
-        eject_targets: bd_plunger
-    bd_plunger:
+        eject_targets: bdPlunger
+    bdPlunger:
         ball_switches: sPlungerLane
         entrance_count_delay: 300ms
         eject_timeouts: 3s
@@ -173,7 +173,7 @@ autofire_coils:
 playfields:
     playfield:
         tags: default
-        default_source_device: bd_plunger
+        default_source_device: bdPlunger
     
 
         
