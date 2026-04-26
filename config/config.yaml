@@ -125,6 +125,16 @@ coils:
             recycle_ms: 40
     cAutoPlunger:
         number: pio1-3
+    cUpperLeftPopBumper:
+        number: pio2-0
+    cLowerLeftPopBumper:
+        number: pio2-1
+    cUpperRightPopBumper:
+        number: pio2-4
+    cLowerRightPopBumper:
+        number: pio2-5
+    cSinglePopTarget:
+        number: pio2-7
 
 flippers:
     leftFlipper:
