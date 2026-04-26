@@ -179,6 +179,19 @@ autofire_coils:
     left_kicker_lower:
         coil: cLeftSling
         switch: sLeftSlingLower
+    upperLeftPopBumper:
+        coil: cUpperLeftPopBumper
+        switch: sUpperLeftPopBumper
+    lowerLeftPopBumper:
+        coil: cLowerLeftPopBumper
+        switch: sLowerLeftPopBumper
+    upperRightPopBumper:
+        coil: cUpperRightPopBumper
+        switch: sUpperRightPopBumper
+    lowerRightPopBumper:
+        coil: cLowerRightPopBumper
+        switch: sLowerRightPopBumper
+
 
 playfields:
     playfield:
