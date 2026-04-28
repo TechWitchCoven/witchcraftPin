@@ -56,10 +56,10 @@ switches:
         number: pio1-30       
         debounce: quick
     sBallJam:
-        number: pio1-2
+        number: pio1-1
         type: NC
     sBall1:
-        number: pio1-1
+        number: pio1-2
         type: NC
     sBall2:
         number: pio1-3
