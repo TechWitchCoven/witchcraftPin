@@ -79,7 +79,7 @@ switches:
         tags: start
     sPlungerButton:
         number: cabio-10
-    sLowerRightPopBuper:
+    sLowerRightPopBumper:
         number: pio2-24
         debounce: quick
     sUpperRightPopBumper:
