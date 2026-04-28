@@ -71,9 +71,6 @@ switches:
         number: pio1-6
     sBall6:
         number: pio1-7
-    s1PopTarget:
-        number: pio2-28
-        tags: playfield_active
     sStartButton:
         number: cabio-9
         tags: start
