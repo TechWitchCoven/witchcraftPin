@@ -3,6 +3,9 @@
 hardware:
     platform: fast
 
+modes:
+    - service
+
 fast:
     net:
         controller: neuron
@@ -90,6 +93,18 @@ switches:
         debounce: quick
     sSinglePopTarget:
         number: pio2-28
+    sCreditBackButton:
+        number: cabio-0
+        tags: service_esc
+    sLeftMinus:
+        number: cabio-1
+        tags: service_down
+    sRightPlus:
+        number: cabio-2
+        tags: service_up
+    sMenuSelectButton:
+        number: cabio-3
+        tags: service_enter
 
 coils:
     cBallTroughEject:
@@ -206,6 +221,16 @@ playfields:
     playfield:
         tags: default
         default_source_device: bdPlunger
-    
+
+settings:
+    replay_score:
+        label: Replay replay_score
+        values:
+            500000: "500000 (default)"
+            1000000: "1000000"
+            1500000: "1500000"
+        default: 500000
+        key_type: int
+        sort: 100    
 
         
