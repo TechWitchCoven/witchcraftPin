@@ -79,18 +79,6 @@ switches:
         tags: start
     sPlungerButton:
         number: cabio-10
-    sLowerRightPopBumper:
-        number: pio2-24
-        debounce: quick
-    sUpperRightPopBumper:
-        number: pio2-25
-        debounce: quick
-    sUpperLeftPopBumper:
-        number: pio2-26
-        debounce: quick
-    sLowerLeftPopBumper:
-        number: pio2-27
-        debounce: quick
     sSinglePopTarget:
         number: pio2-28
     sCreditBackButton:
@@ -137,26 +125,6 @@ coils:
             recycle_ms: 40
     cAutoPlunger:
         number: pio1-3
-    cUpperLeftPopBumper:
-        number: pio2-0
-        default_pulse_ms: 15
-        platform_settings:
-            recycle_ms: 40
-    cLowerLeftPopBumper:
-        number: pio2-1
-        default_pulse_ms: 15
-        platform_settings:
-            recycle_ms: 40
-    cUpperRightPopBumper:
-        number: pio2-4
-        default_pulse_ms: 15
-        platform_settings:
-            recycle_ms: 40
-    cLowerRightPopBumper:
-        number: pio2-5
-        default_pulse_ms: 15
-        platform_settings:
-            recycle_ms: 40
     cSinglePopTarget:
         number: pio2-7
 
@@ -203,19 +171,6 @@ autofire_coils:
     leftSlingLower:
         coil: cLeftSling
         switch: sLeftSlingLower
-    upperLeftPopBumper:
-        coil: cUpperLeftPopBumper
-        switch: sUpperLeftPopBumper
-    lowerLeftPopBumper:
-        coil: cLowerLeftPopBumper
-        switch: sLowerLeftPopBumper
-    upperRightPopBumper:
-        coil: cUpperRightPopBumper
-        switch: sUpperRightPopBumper
-    lowerRightPopBumper:
-        coil: cLowerRightPopBumper
-        switch: sLowerRightPopBumper
-
 
 playfields:
     playfield:
