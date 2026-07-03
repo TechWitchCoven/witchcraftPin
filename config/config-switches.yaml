@@ -1,0 +1,67 @@
+#config_version=6
+
+switches:
+    sLeftFlipperEOS:
+        number: pio1-31
+        type: NC
+        debounce: quick
+    sRightFlipperEOS:
+        number: pio1-15
+        type: NC
+        debounce: quick
+    sPlungerLane:
+        number: pio1-0
+        platform_settings:
+            debounce_open: 5ms
+            debounce_close: 20ms
+    sLeftFlipperButton:
+        number: cabio-8
+        debounce: quick
+    sRightFlipperButton:
+        number: cabio-16
+        debounce: quick
+    sRightSlingUpper:
+        number: pio1-13
+    sRightSlingLower:
+        number: pio1-14
+    sLeftSlingUpper:
+        number: pio1-29
+        debounce: quick
+    sLeftSlingLower:
+        number: pio1-30       
+        debounce: quick
+    sBallJam:
+        number: pio1-1
+        type: NC
+    sBall1:
+        number: pio1-2
+        type: NC
+    sBall2:
+        number: pio1-3
+    sBall3:
+        number: pio1-4
+    sBall4:
+        number: pio1-5
+    sBall5:
+        number: pio1-6
+    sBall6:
+        number: pio1-7
+    sStartButton:
+        number: cabio-9
+        tags: start
+    sPlungerButton:
+        number: cabio-10
+    sSinglePopTarget:
+        number: pio2-28
+    sCreditBackButton:
+        number: cabio-0
+        tags: service_esc
+    sLeftMinus:
+        number: cabio-1
+        tags: service_down
+    sRightPlus:
+        number: cabio-2
+        tags: service_up
+    sMenuSelectButton:
+        number: cabio-3
+        tags: service_enter
