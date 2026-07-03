@@ -2,3 +2,8 @@
 
 slide_player:
     mode_attract_started: attract
+
+sound_player:
+    mode_attract_started:
+        bensound-enigmatic:
+            bus: music
