@@ -10,37 +10,23 @@ modes:
 
 coils:
     cBallTroughEject:
-        number: pio1-2
-        default_pulse_ms: 15
-        platform_settings:
-            recycle_ms: 10ms
-            pwm2_ms: 15ms
+        number: 
     cLeftFlipperPower:
-        number: pio1-1
-        default_pulse_ms: 25
+        number: 
     cLeftFlipperHold:
-        number: pio1-0
-        allow_enable: true
+        number: 
     cRightFlipperPower:
-        number: pio1-7
-        default_pulse_ms: 25
+        number: 
     cRightFlipperHold:
-        number: pio1-6
-        allow_enable: true
+        number: 
     cLeftSling:
-        number: pio1-4
-        default_pulse_ms: 18
-        platform_settings:
-            recycle_ms: 40
+        number: 
     cRightSling:
-        number: pio1-5
-        default_pulse_ms: 18
-        platform_settings:
-            recycle_ms: 40
+        number: 
     cAutoPlunger:
-        number: pio1-3
+        number: 
     cSinglePopTarget:
-        number: pio2-7
+        number: 
 
 flippers:
     leftFlipper:
