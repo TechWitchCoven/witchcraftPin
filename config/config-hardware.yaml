@@ -1,11 +1,10 @@
 #config_version=6
 
 hardware:
-    platform: fast
+    platform: fast, virtual
 
 fast:
     
-
     aud:
         port: auto
         main_amp_enabled: true
