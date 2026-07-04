@@ -24,3 +24,17 @@ fast:
         default_quick_debounce_close: 2ms
         default_normal_debounce_open: 4ms
         default_normal_debounce_close: 4ms
+
+    aud:
+        port: auto
+        main_amp_enabled: true
+
+        main_steps: 20
+
+        default_main_volume: 32
+
+        persist_volume_settings: true
+
+        max_hw_volume_main: 63
+
+        main_levels_list: None
