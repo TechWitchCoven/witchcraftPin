@@ -4,26 +4,7 @@ hardware:
     platform: fast
 
 fast:
-    net:
-        controller: neuron
-        port: /dev/ttyAMA2
-        io_loop:
-            pio1:
-                model: FP-I/O-3208
-                order: 1
-            pio2:
-                model: FP-I/O-3208
-                order: 2
-            cabio:
-                model: FP-I/O-0024
-                order: 3
-        baud: 921600
-        debug: false
-        watchdog: 1s
-        default_quick_debounce_open: 2ms
-        default_quick_debounce_close: 2ms
-        default_normal_debounce_open: 4ms
-        default_normal_debounce_close: 4ms
+    
 
     aud:
         port: auto
