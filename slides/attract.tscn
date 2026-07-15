@@ -28,6 +28,7 @@ carousel_name = "attract"
 metadata/_custom_type_script = "uid://dpe3dq8axt3g7"
 
 [node name="mpflogo" type="Control" parent="MPFCarousel" unique_id=2048674067]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -40,6 +41,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("4_cq3lo")
 
 [node name="title" type="Control" parent="MPFCarousel" unique_id=224844673]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -56,6 +58,7 @@ theme_override_font_sizes/font_size = 80
 text = "Witchcraft"
 
 [node name="credits" type="Control" parent="MPFCarousel" unique_id=2133095708]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
