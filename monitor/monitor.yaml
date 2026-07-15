@@ -1,0 +1,70 @@
+device_size: 0.04
+flipper:
+  leftFlipper:
+    rotation: 140
+    shape: FLIPPER
+    x: 0.29359612254571643
+    y: 0.912979295204209
+switch:
+  sBall1:
+    shape: CIRCLE
+    size: 0.04
+    x: 0.8623064922596902
+    y: 0.9483957011706761
+  sBall2:
+    shape: CIRCLE
+    size: 0.04
+    x: 0.8156486259450377
+    y: 0.9687184661957619
+  sBall3:
+    shape: CIRCLE
+    size: 0.04
+    x: 0.777062791408423
+    y: 0.9742988001059842
+  sBall4:
+    shape: CIRCLE
+    size: 0.04
+    x: 0.7260790336010831
+    y: 0.9742988001059842
+  sBall5:
+    shape: CIRCLE
+    size: 0.04
+    x: 0.6750952757937432
+    y: 0.9742988001059842
+  sBall6:
+    shape: CIRCLE
+    size: 0.04
+    x: 0.6223534573723569
+    y: 0.9729361444415005
+  sLeftFlipperButton:
+    shape: OCTAGON
+    size: 0.08
+    x: 0.005184207368294731
+    y: 0.9687184661957619
+  sLeftSlingLower:
+    x: 0.2579554921985079
+    y: 0.7239741638437314
+  sLeftSlingUpper:
+    x: 0.23365533713632963
+    y: 0.6536284961018304
+  sPlungerLane:
+    shape: RECTANGLE
+    size: 0.04
+    x: 0.9121904361802308
+    y: 0.8763897772845168
+  sRightFlipperButton:
+    shape: OCTAGON
+    size: 0.08
+    x: 0.924516980679227
+    y: 0.9687184661957619
+  sRightSlingLower:
+    x: 0.6392810024049977
+    y: 0.7400950460345836
+  sRightSlingUpper:
+    x: 0.6710581282555387
+    y: 0.6331110096771092
+  sStartButton:
+    shape: OCTAGON
+    size: 0.07
+    x: 0.17280691227649103
+    y: 0.9673636151940895
