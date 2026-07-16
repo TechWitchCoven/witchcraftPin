@@ -27,9 +27,15 @@ coils:
   cRightSling:
     number: pio1-5
       default_pulse_ms: 18
-        platform_settings:
-            recycle_ms: 40
-    cAutoPlunger:
-        number: pio1-3
-    cSinglePopTarget:
-        number: pio2-7
+      platform_settings:
+        recycle_ms: 40
+  cAutoPlunger:
+    number: pio1-3
+  cSpringPopPost:
+    number: pio2-2
+  cSpring3Reset:
+    number: pio2-0
+  cSpring3Knock:
+    number: pio2-1
+  cSpring1Reset:
+    number: pio2-3
