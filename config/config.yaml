@@ -3,44 +3,11 @@
 config:
     - config-hardware.yaml
     - config-switches.yaml
+    - config-coils.yaml
 
 modes:
     - service
 
-
-coils:
-    cBallTroughEject:
-        number: pio1-2
-        default_pulse_ms: 15
-        platform_settings:
-            recycle_ms: 10ms
-            pwm2_ms: 15ms
-    cLeftFlipperPower:
-        number: pio1-1
-        default_pulse_ms: 25
-    cLeftFlipperHold:
-        number: pio1-0
-        allow_enable: true
-    cRightFlipperPower:
-        number: pio1-7
-        default_pulse_ms: 25
-    cRightFlipperHold:
-        number: pio1-6
-        allow_enable: true
-    cLeftSling:
-        number: pio1-4
-        default_pulse_ms: 18
-        platform_settings:
-            recycle_ms: 40
-    cRightSling:
-        number: pio1-5
-        default_pulse_ms: 18
-        platform_settings:
-            recycle_ms: 40
-    cAutoPlunger:
-        number: pio1-3
-    cSinglePopTarget:
-        number: pio2-7
 
 flippers:
     leftFlipper:
