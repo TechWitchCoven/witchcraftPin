@@ -3,8 +3,8 @@ flipper:
   leftFlipper:
     rotation: 140
     shape: FLIPPER
-    x: 0.29359612254571643
-    y: 0.912979295204209
+    x: 0.28376902870708126
+    y: 0.9129792952042088
 switch:
   sBall1:
     shape: CIRCLE
@@ -15,7 +15,7 @@ switch:
     shape: CIRCLE
     size: 0.04
     x: 0.8156486259450377
-    y: 0.9687184661957619
+    y: 0.968718466195762
   sBall3:
     shape: CIRCLE
     size: 0.04
@@ -35,12 +35,18 @@ switch:
     shape: CIRCLE
     size: 0.04
     x: 0.6223534573723569
-    y: 0.9729361444415005
+    y: 0.9729361444415006
   sLeftFlipperButton:
     shape: OCTAGON
     size: 0.08
     x: 0.005184207368294731
-    y: 0.9687184661957619
+    y: 0.968718466195762
+  sLeftInlane:
+    x: 0.17581747810384377
+    y: 0.6995645863570392
+  sLeftOutlane:
+    x: 0.10100152997454855
+    y: 0.7184325108853411
   sLeftSlingLower:
     x: 0.2579554921985079
     y: 0.7239741638437314
@@ -50,13 +56,19 @@ switch:
   sPlungerLane:
     shape: RECTANGLE
     size: 0.04
-    x: 0.9121904361802308
-    y: 0.8763897772845168
+    x: 0.9445513451323522
+    y: 0.8998548621190131
   sRightFlipperButton:
     shape: OCTAGON
     size: 0.08
-    x: 0.924516980679227
-    y: 0.9687184661957619
+    x: 0.893572038199165
+    y: 0.968718466195762
+  sRightInlane:
+    x: 0.7444186838864875
+    y: 0.7198838896952104
+  sRightOutlane:
+    x: 0.8267162268287123
+    y: 0.748911465892598
   sRightSlingLower:
     x: 0.6392810024049977
     y: 0.7400950460345836
@@ -66,5 +78,5 @@ switch:
   sStartButton:
     shape: OCTAGON
     size: 0.07
-    x: 0.17280691227649103
+    x: 0.16702281087834858
     y: 0.9673636151940895
