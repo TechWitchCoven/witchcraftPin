@@ -23,9 +23,9 @@ switches:
   sBall6:
     number: pio1-7
   sRightOutlane:
-    number: pio1-12
+    number: pio1-11
   sRightInlane:
-    number: pio1-13
+    number: pio1-12
   sRightSlingUpper:
     number: pio1-13
     debounce: quick

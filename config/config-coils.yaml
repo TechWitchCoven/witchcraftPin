@@ -22,13 +22,13 @@ coils:
   cLeftSling:
     number: pio1-4
     default_pulse_ms: 18
-      platform_settings:
+    platform_settings:
       recycle_ms: 40
   cRightSling:
     number: pio1-5
-      default_pulse_ms: 18
-      platform_settings:
-        recycle_ms: 40
+    default_pulse_ms: 18
+    platform_settings:
+      recycle_ms: 40
   cAutoPlunger:
     number: pio1-3
   cSpringPopPost:
