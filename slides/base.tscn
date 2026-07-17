@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://b3m6yscl4uwnk"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_b71wd"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_06ewq"]
+[ext_resource type="Theme" uid="uid://csuihgabbajxo" path="res://body.tres" id="3_mixwp"]
+
+[node name="Base" type="Control" unique_id=1614008481]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_b71wd")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=982646326]
+layout_mode = 0
+offset_right = 1364.0
+offset_bottom = 770.0
+color = Color(0.1552, 0.16, 0.15991999, 1)
+
+[node name="MPFVariable" type="Label" parent="." unique_id=777870229]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 613.0
+offset_right = 940.0
+offset_bottom = 750.0
+theme_override_font_sizes/font_size = 90
+text = "999,999,999"
+horizontal_alignment = 1
+script = ExtResource("2_06ewq")
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="MPFVariable" type="Label" parent="MPFVariable" unique_id=513562480]
+layout_mode = 0
+offset_left = -412.0
+offset_top = -599.0
+offset_right = -201.0
+offset_bottom = -489.0
+theme = ExtResource("3_mixwp")
+text = "Ball 3"
+script = ExtResource("2_06ewq")
+variable_name = "ball"
+template_string = "\"Ball %s\""
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
