@@ -62,14 +62,14 @@ switches:
   sMenuSelectButton:
     number: cabio-3
     tags: service_enter
+  sInterlock:
+    number: cabio-7
   sLeftFlipperButton:
     number: cabio-8
     debounce: quick
   sStartButton:
     number: cabio-9
     tags: start
-  sPlungerButton:
-    number: cabio-10
   sRightFlipperButton:
     number: cabio-16
     debounce: quick
