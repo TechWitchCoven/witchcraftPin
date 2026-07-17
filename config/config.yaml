@@ -37,7 +37,6 @@ ball_devices:
         eject_timeouts: 3s
         eject_coil: cAutoPlunger
         mechanical_eject: true
-        player_controlled_eject_event: sPlungerButton_active
 
 autofire_coils:
     rightSlingUpper:
