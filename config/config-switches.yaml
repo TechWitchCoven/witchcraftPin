@@ -22,14 +22,24 @@ switches:
     number: pio1-6
   sBall6:
     number: pio1-7
+  sRightOutlane:
+    number: pio1-12
+  sRightInlane:
+    number: pio1-13
   sRightSlingUpper:
     number: pio1-13
+    debounce: quick
   sRightSlingLower:
     number: pio1-14
+    debounce: quick
   sRightFlipperEOS:
     number: pio1-15
     type: NC
     debounce: quick
+  sLeftOutlane:
+    number: pio1-27
+  sLeftInlane:
+    number: pio1-28
   sLeftSlingUpper:
     number: pio1-29
     debounce: quick
