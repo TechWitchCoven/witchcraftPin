@@ -73,3 +73,53 @@ switches:
   sRightFlipperButton:
     number: cabio-16
     debounce: quick
+  sCrystalLeftTarget:
+    number: pio2-0
+  sCrystalCenterTarget:
+    number: pio2-1
+  sCrystalRightTarget:
+    number: pio2-2
+  sSpringEntryTarget:
+    number: pio2-3
+  sSpringBashTarget:
+    number: pio2-5
+    debounce: quick
+  sCauldronLeftOpto:
+    number: pio2-8
+    type: NC
+    debounce: quick
+  sCauldronRightOpto:
+    number: pio2-9
+    type: NC
+    debounce: quick
+  sCauldronLeftProx:
+    number: pio2-10
+    debounce: quick
+  sCauldronRightProx:
+    number: pio2-11
+    debounce: quick
+  sCauldronLeftSpinner:
+    number: pio2-12
+    debounce: quick
+  sCauldronRightSpinner:
+    number: pio2-13
+    debounce: quick
+  sCauldronMixOpto:
+    number: pio2-14
+    type: NC
+    debounce: quick
+  sMTarget:
+    number: pio2-16
+    debounce: quick
+  sATarget:
+    number: pio2-17
+    debounce: quick
+  sGTarget:
+    number: pio2-18
+    debounce: quick
+  sITarget:
+    number: pio2-19
+    debounce: quick
+  sCTarget:
+    number: pio2-20
+    debounce: quick  
