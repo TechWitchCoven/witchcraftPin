@@ -1,8 +1,8 @@
 #config_version=6
 
 mode:
-  start_events: mode_start_flipperlanes_base
-  stop_events: mode_stop_flipperlanes_base, ball_will_end
+  start_events: start-mode-flipperlanes-base
+  stop_events: stop-mode-flipperlanes-base, ball_will_end
   priority: 1500
 
 shots:
