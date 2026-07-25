@@ -69,4 +69,8 @@ settings:
         key_type: int
         sort: 100    
 
+virtual_platform_start_active_switches:
+    - sBall1
+    - sBall2
+
         

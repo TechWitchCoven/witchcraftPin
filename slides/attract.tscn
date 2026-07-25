@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_2wi4k"]
 [ext_resource type="Script" uid="uid://dpe3dq8axt3g7" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_hhxni"]
-[ext_resource type="Script" uid="uid://d4ky3s4bg1ouq" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="3_f161n"]
 [ext_resource type="Texture2D" uid="uid://dhaab2wljfb7n" path="res://mpf/mpf-logo-200.png" id="4_cq3lo"]
 [ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_f161n"]
 
@@ -27,29 +26,9 @@ script = ExtResource("2_hhxni")
 carousel_name = "attract"
 metadata/_custom_type_script = "uid://dpe3dq8axt3g7"
 
-[node name="mpflogo" type="Control" parent="MPFCarousel" unique_id=2048674067]
-visible = false
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("3_f161n")
-metadata/_custom_type_script = "uid://d4ky3s4bg1ouq"
-
-[node name="Sprite2D" type="Sprite2D" parent="MPFCarousel/mpflogo" unique_id=1585690947]
-position = Vector2(718, 448)
-scale = Vector2(2, 2)
-texture = ExtResource("4_cq3lo")
-
-[node name="title" type="Control" parent="MPFCarousel" unique_id=224844673]
-visible = false
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("3_f161n")
-metadata/_custom_type_script = "uid://d4ky3s4bg1ouq"
+[node name="title" type="Node2D" parent="MPFCarousel" unique_id=367382092]
 
 [node name="Label" type="Label" parent="MPFCarousel/title" unique_id=785683686]
-layout_mode = 0
 offset_left = 509.0
 offset_top = 368.0
 offset_right = 910.0
@@ -57,16 +36,16 @@ offset_bottom = 478.0
 theme_override_font_sizes/font_size = 80
 text = "Witchcraft"
 
-[node name="credits" type="Control" parent="MPFCarousel" unique_id=2133095708]
-visible = false
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("3_f161n")
-metadata/_custom_type_script = "uid://d4ky3s4bg1ouq"
+[node name="mpflogo" type="Node2D" parent="MPFCarousel" unique_id=882214085]
+
+[node name="Sprite2D" type="Sprite2D" parent="MPFCarousel/mpflogo" unique_id=1585690947]
+position = Vector2(718, 448)
+scale = Vector2(2, 2)
+texture = ExtResource("4_cq3lo")
+
+[node name="credits" type="Node2D" parent="MPFCarousel" unique_id=61502539]
 
 [node name="MPFVariable" type="Label" parent="MPFCarousel/credits" unique_id=361630050]
-layout_mode = 0
 offset_left = 454.0
 offset_top = 374.0
 offset_right = 968.0
