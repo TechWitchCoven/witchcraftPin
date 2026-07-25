@@ -2,8 +2,11 @@
 
 [ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_2wi4k"]
 [ext_resource type="Script" uid="uid://dpe3dq8axt3g7" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_hhxni"]
-[ext_resource type="Texture2D" uid="uid://dhaab2wljfb7n" path="res://mpf/mpf-logo-200.png" id="4_cq3lo"]
 [ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_f161n"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hhxni"]
+resource_local_to_scene = true
+load_path = "res://.godot/imported/mpf-logo-200.png-2ba6ef5c0ee7fa596ace48ce19b4106a.ctex"
 
 [node name="Attract" type="Control" unique_id=380517290]
 layout_mode = 3
@@ -41,7 +44,7 @@ text = "Witchcraft"
 [node name="Sprite2D" type="Sprite2D" parent="MPFCarousel/mpflogo" unique_id=1585690947]
 position = Vector2(718, 448)
 scale = Vector2(2, 2)
-texture = ExtResource("4_cq3lo")
+texture = SubResource("CompressedTexture2D_hhxni")
 
 [node name="credits" type="Node2D" parent="MPFCarousel" unique_id=61502539]
 
