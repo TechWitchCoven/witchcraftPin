@@ -8,6 +8,7 @@ config:
 modes:
     - service
     - base
+    - flipperlanes_base
 
 
 flippers:

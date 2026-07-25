@@ -1,8 +1,15 @@
 #config_version=6
 
 mode:
-  start_events: ball_starting
+  start_events: ball_started
+  stop_events: ball_ending
   priority: 100
 
 slide_player:
   mode_base_started: base
+
+event_player:
+  mode_base_started:
+    - mode_start_flipperlanes_base
+  mode_base_will_stop:
+    - mode_stop_flipperlanes_base

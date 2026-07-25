@@ -1,0 +1,20 @@
+#config_version=6
+
+mode:
+  start_events: mode_start_flipperlanes_base
+  stop_events: mode_stop_flipperlanes_base, ball_will_end
+  priority: 1500
+
+shots:
+  leftInnerLane:
+    switch: sLeftInlane
+  leftOuterLane:
+    switch: sLeftOutlane
+  rightInnerLane:
+    switch: sRightInlane
+  rightOuterLane:
+    switch: sRightOutlane
+
+shot_groups:
+  lower_lanes:
+    shots: leftInnerLane, leftOuterLane, rightInnerLane,rightOuterLane

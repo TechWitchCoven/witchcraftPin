@@ -10,18 +10,18 @@ anchors_preset = 0
 script = ExtResource("1_b71wd")
 metadata/_custom_type_script = "uid://dru3usokwlhd3"
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=982646326]
+[node name="Generic Background" type="ColorRect" parent="." unique_id=982646326]
 layout_mode = 0
 offset_right = 1364.0
 offset_bottom = 770.0
 color = Color(0.1552, 0.16, 0.15991999, 1)
 
-[node name="MPFVariable" type="Label" parent="." unique_id=777870229]
+[node name="Score Label" type="Label" parent="." unique_id=777870229]
 layout_mode = 0
-offset_left = 426.0
-offset_top = 613.0
-offset_right = 940.0
-offset_bottom = 750.0
+offset_left = 594.0
+offset_top = 558.0
+offset_right = 1106.0
+offset_bottom = 682.0
 theme_override_font_sizes/font_size = 90
 text = "999,999,999"
 horizontal_alignment = 1
@@ -31,15 +31,30 @@ comma_separate = true
 min_digits = 2
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
 
-[node name="MPFVariable" type="Label" parent="MPFVariable" unique_id=513562480]
-layout_mode = 0
-offset_left = -412.0
-offset_top = -599.0
-offset_right = -201.0
-offset_bottom = -489.0
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1188033125]
+layout_mode = 1
+offset_right = 1364.0
+offset_bottom = 177.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 20
+
+[node name="HFlowContainer" type="HFlowContainer" parent="MarginContainer" unique_id=1163148308]
+layout_mode = 2
+
+[node name="MPFVariable" type="Label" parent="MarginContainer/HFlowContainer" unique_id=271519620]
+layout_mode = 2
+text = "Player 2"
+script = ExtResource("2_06ewq")
+variable_name = "player"
+min_players = 2
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="Ball Number Label" type="Label" parent="MarginContainer/HFlowContainer" unique_id=513562480]
+layout_mode = 2
 theme = ExtResource("3_mixwp")
 text = "Ball 3"
 script = ExtResource("2_06ewq")
 variable_name = "ball"
-template_string = "\"Ball %s\""
+template_string = "Ball %s"
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
