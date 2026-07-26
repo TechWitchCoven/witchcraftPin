@@ -12,6 +12,7 @@ modes:
     - global
     - potionQualifier
     - potionSelection
+    - cauldronManager
 
 
 flippers:
