@@ -9,6 +9,7 @@ modes:
     - service
     - base
     - flipperlanes_base
+    - global
 
 
 flippers:
