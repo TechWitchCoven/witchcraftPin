@@ -11,6 +11,7 @@ modes:
     - flipperlanes_base
     - global
     - potionQualifier
+    - potionSelection
 
 
 flippers:
