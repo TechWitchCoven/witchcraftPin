@@ -11,5 +11,7 @@ slide_player:
 event_player:
   mode_base_started:
     - start-mode-flipperlanes-base
+    - start-mode-global
   mode_base_will_stop:
     - stop-mode-flipperlanes-base
+    - stop-mode-global
