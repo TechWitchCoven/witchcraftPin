@@ -10,6 +10,7 @@ modes:
     - base
     - flipperlanes_base
     - global
+    - potionQualifier
 
 
 flippers:
@@ -54,6 +55,14 @@ autofire_coils:
     leftSlingLower:
         coil: cLeftSling
         switch: sLeftSlingLower
+
+spinners:
+    leftFireSpinner:
+        switch: sCauldronLeftSpinner
+        active_ms: 500
+    rightFireSpinner:
+        switch: sCauldronRightSpinner
+        active_ms: 500
 
 playfields:
     playfield:
