@@ -18,8 +18,8 @@ shots:
 shot_groups:
   lower_lanes:
     shots: leftInnerLane, leftOuterLane, rightInnerLane, rightOuterLane
-    rotate_left_events: sLeftFlipperButton
-    rotate_right_events: sRightFlipperButton
+    rotate_left_events: sLeftFlipperButton_active
+    rotate_right_events: sRightFlipperButton_active
 
 variable_player:
   leftInnerLane_hit:
