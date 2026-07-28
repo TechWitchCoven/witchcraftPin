@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cu0imwapscntw"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_8v517"]
+[ext_resource type="Texture2D" uid="uid://dhaab2wljfb7n" path="res://mpf/mpf-logo-200.png" id="2_hmv1w"]
+
+[node name="PotionSelection" type="Control" unique_id=1364389023]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8v517")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2008834361]
+position = Vector2(574, 291)
+texture = ExtResource("2_hmv1w")
+
+[node name="Label" type="Label" parent="." unique_id=1975066613]
+layout_mode = 0
+offset_left = 438.0
+offset_top = 262.0
+offset_right = 837.0
+offset_bottom = 285.0
+text = "Shoot the flashing shots to select a Potion to Create"
