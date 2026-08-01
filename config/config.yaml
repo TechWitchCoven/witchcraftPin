@@ -13,6 +13,7 @@ modes:
     - potionQualifier
     - potionSelection
     - cauldronManager
+    - targetManager
 
 
 flippers:
