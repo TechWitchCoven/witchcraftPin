@@ -63,7 +63,8 @@ layout_mode = 2
 theme = ExtResource("3_mixwp")
 text = "Player 2"
 script = ExtResource("2_06ewq")
-variable_name = "player"
+variable_name = "number"
+template_string = "Player %s"
 min_players = 2
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
 
