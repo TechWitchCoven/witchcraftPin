@@ -12,6 +12,10 @@ event_player:
   mode_base_started:
     - start-mode-flipperlanes-base
     - start-mode-global
+    - start-mode-potionManger
+    - start-mode-targetManager
   mode_base_will_stop:
     - stop-mode-flipperlanes-base
     - stop-mode-global
+    - stop-mode-potionManager
+    - stop-mode-targetManager
