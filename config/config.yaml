@@ -3,44 +3,18 @@
 config:
     - config-hardware.yaml
     - config-switches.yaml
+    - config-coils.yaml
 
 modes:
     - service
+    - base
+    - flipperlanes_base
+    - global
+    - potionQualifier
+    - potionSelection
+    - cauldronManager
+    - targetManager
 
-
-coils:
-    cBallTroughEject:
-        number: pio1-2
-        default_pulse_ms: 15
-        platform_settings:
-            recycle_ms: 10ms
-            pwm2_ms: 15ms
-    cLeftFlipperPower:
-        number: pio1-1
-        default_pulse_ms: 25
-    cLeftFlipperHold:
-        number: pio1-0
-        allow_enable: true
-    cRightFlipperPower:
-        number: pio1-7
-        default_pulse_ms: 25
-    cRightFlipperHold:
-        number: pio1-6
-        allow_enable: true
-    cLeftSling:
-        number: pio1-4
-        default_pulse_ms: 18
-        platform_settings:
-            recycle_ms: 40
-    cRightSling:
-        number: pio1-5
-        default_pulse_ms: 18
-        platform_settings:
-            recycle_ms: 40
-    cAutoPlunger:
-        number: pio1-3
-    cSinglePopTarget:
-        number: pio2-7
 
 flippers:
     leftFlipper:
@@ -70,7 +44,6 @@ ball_devices:
         eject_timeouts: 3s
         eject_coil: cAutoPlunger
         mechanical_eject: true
-        player_controlled_eject_event: sPlungerButton_active
 
 autofire_coils:
     rightSlingUpper:
@@ -85,6 +58,14 @@ autofire_coils:
     leftSlingLower:
         coil: cLeftSling
         switch: sLeftSlingLower
+
+spinners:
+    leftFireSpinner:
+        switch: sCauldronLeftSpinner
+        active_ms: 500
+    rightFireSpinner:
+        switch: sCauldronRightSpinner
+        active_ms: 500
 
 playfields:
     playfield:
@@ -101,5 +82,9 @@ settings:
         default: 500000
         key_type: int
         sort: 100    
+
+virtual_platform_start_active_switches:
+    - sBall1
+    - sBall2
 
         

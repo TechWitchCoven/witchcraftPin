@@ -1,0 +1,16 @@
+#config_version=6
+
+mode:
+  start_events: start-mode-cauldronManager
+  stop_events: stop-mode-cauldronManager
+  priority: 155
+
+sequence_shots:
+  left_ramp:
+    switch_sequence: sCauldronLeftOpto,sCauldronLeftProx
+    sequence_timeout: 1s
+    allow_multiple_active: true
+  right_ramp:
+    switch_sequence: sCauldronRightOpto,sCauldronRightProx
+    sequence_timeout: 1s
+    allow_multiple_active: true

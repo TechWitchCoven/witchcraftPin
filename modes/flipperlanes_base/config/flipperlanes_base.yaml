@@ -1,0 +1,32 @@
+#config_version=6
+
+mode:
+  start_events: start-mode-flipperlanes-base
+  stop_events: stop-mode-flipperlanes-base, ball_will_end
+  priority: 150
+
+shots:
+  leftInnerLane:
+    switch: sLeftInlane
+  leftOuterLane:
+    switch: sLeftOutlane
+  rightInnerLane:
+    switch: sRightInlane
+  rightOuterLane:
+    switch: sRightOutlane
+
+shot_groups:
+  lower_lanes:
+    shots: leftInnerLane, leftOuterLane, rightInnerLane, rightOuterLane
+    rotate_left_events: sLeftFlipperButton_active
+    rotate_right_events: sRightFlipperButton_active
+
+variable_player:
+  leftInnerLane_hit:
+    score: 1_000
+  leftOuterLane_hit:
+    score: 1_000
+  rightInnerLane_hit:
+    score: 1_000
+  rightOuterLane_hit:
+    score: 1_000

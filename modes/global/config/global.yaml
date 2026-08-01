@@ -1,0 +1,14 @@
+#config_version=6
+
+mode:
+  start_events: start-mode-global
+  stop_events: stop-mode-global, ball_will_end
+  priority: 500
+
+event_player:
+  mode_global_started:
+    - start-mode-potionQualifier
+  mode_global_stopping:
+    - stop-mode-potionQualifier
+
+

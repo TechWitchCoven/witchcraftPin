@@ -1,0 +1,14 @@
+#config_version=6
+
+
+auditor:
+  audit:
+    - events
+    - player
+  events:
+    - extra_ball_awarded
+    - player_added
+  player:
+    - score
+    - game_time
+  num_player_top_records: 1

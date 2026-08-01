@@ -1,0 +1,21 @@
+#config_version=6
+
+mode:
+  start_events: ball_started
+  stop_events: ball_ending
+  priority: 100
+
+slide_player:
+  mode_base_started: base
+
+event_player:
+  mode_base_started:
+    - start-mode-flipperlanes-base
+    - start-mode-global
+    - start-mode-potionManger
+    - start-mode-targetManager
+  mode_base_will_stop:
+    - stop-mode-flipperlanes-base
+    - stop-mode-global
+    - stop-mode-potionManager
+    - stop-mode-targetManager

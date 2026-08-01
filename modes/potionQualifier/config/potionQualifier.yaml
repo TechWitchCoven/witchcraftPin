@@ -1,0 +1,25 @@
+#config_version=6
+
+mode:
+  start_events: start-mode-potionQualifier
+  stop_events: stop-mode-potionQualifier
+  priority: 600
+
+variable_player:
+  sCauldronLeftSpinner_active:
+    leftFireLevel: 1
+  sCauldronRightSpinner_active:
+    rightFireLevel: 1
+  mode_potionQualifier_started:
+    leftFireLevel:
+      int: 0
+      action: set
+    rightFireLevel:
+      int: 0
+      action: set
+
+event_player:
+  sCauldronLeftSpinner_active:
+    - start-mode-potionSelection{current_player.leftFireLevel>=50 and current_player.rightFireLevel>=50}
+  sCauldronRightSpinner_active:
+    - start-mode-potionSelection{current_player.leftFireLevel>=50 and current_player.rightFireLevel>=50}

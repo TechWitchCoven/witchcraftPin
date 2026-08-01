@@ -1,0 +1,30 @@
+#config_version=6
+
+mode:
+  start_events: start_mode_targetManager
+  stop_events: stop_mode_targetManager
+  priority: 160
+
+shots:
+  magicMShot:
+    switch: sMTarget
+  magicAShot:
+    switch: sATarget
+  magicGShot:
+    switch: sGTarget
+  magicIShot:
+    switch: sITarget
+  magicCShot:
+    switch: sCTarget
+
+variable_player:
+  magicMShot_hit:
+    score: 1_000
+  magicAShot_hit:
+    score: 1_000
+  magicGShot_hit:
+    score: 1_000
+  magicIShot_hit:
+    score: 1_000
+  magicCShot_hit:
+    score: 1_000

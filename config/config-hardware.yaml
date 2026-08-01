@@ -8,14 +8,14 @@ fast:
         controller: neuron
         port: /dev/ttyAMA2
         io_loop:
-            pio1:
-                model: FP-I/O-3208
-                order: 1
-            pio2:
-                model: FP-I/O-3208
-                order: 2
             cabio:
                 model: FP-I/O-0024
+                order: 1
+            pio1:
+                model: FP-I/O-3208
+                order: 2
+            pio2:
+                model: FP-I/O-3208
                 order: 3
         baud: 921600
         debug: false
