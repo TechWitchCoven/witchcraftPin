@@ -1,90 +1,78 @@
 #config_version=6
 
 config:
-    - config-hardware.yaml
-    - config-switches.yaml
-    - config-coils.yaml
-
-modes:
-    - service
-    - base
-    - flipperlanes_base
-    - global
-    - potionQualifier
-    - potionSelection
-    - cauldronManager
-    - targetManager
-
+  - config-hardware.yaml
+  - config-switches.yaml
+  - config-coils.yaml
+  - config-modes.yaml
 
 flippers:
-    leftFlipper:
-        main_coil: cLeftFlipperPower
-        hold_coil: cLeftFlipperHold
-        activation_switch: sLeftFlipperButton
-        eos_switch: sLeftFlipperEOS
-        use_eos: true
-    rightFlipper:
-        main_coil: cRightFlipperPower
-        hold_coil: cRightFlipperHold
-        activation_switch: sRightFlipperButton
-        eos_switch: sRightFlipperEOS
-        use_eos: true
+  leftFlipper:
+    main_coil: cLeftFlipperPower
+    hold_coil: cLeftFlipperHold
+    activation_switch: sLeftFlipperButton
+    eos_switch: sLeftFlipperEOS
+    use_eos: true
+  rightFlipper:
+    main_coil: cRightFlipperPower
+    hold_coil: cRightFlipperHold
+    activation_switch: sRightFlipperButton
+    eos_switch: sRightFlipperEOS
+    use_eos: true
 
 ball_devices:
-    bdTrough:
-        ball_switches: sBall1,sBall2,sBall3,sBall4,sBall5,sBall6
-        eject_coil: cBallTroughEject
-        tags: trough, home, drain
-        jam_switch: sBallJam
-        eject_coil_jam_pulse: 15ms
-        eject_targets: bdPlunger
-    bdPlunger:
-        ball_switches: sPlungerLane
-        entrance_count_delay: 300ms
-        eject_timeouts: 3s
-        eject_coil: cAutoPlunger
-        mechanical_eject: true
+  bdTrough:
+    ball_switches: sBall1,sBall2,sBall3,sBall4,sBall5,sBall6
+    eject_coil: cBallTroughEject
+    tags: trough, home, drain
+    jam_switch: sBallJam
+    eject_coil_jam_pulse: 15ms
+    eject_targets: bdPlunger
+  bdPlunger:
+    ball_switches: sPlungerLane
+    entrance_count_delay: 300ms
+    eject_timeouts: 3s
+    eject_coil: cAutoPlunger
+    mechanical_eject: true
 
 autofire_coils:
-    rightSlingUpper:
-        coil: cRightSling
-        switch: sRightSlingUpper
-    rightSlingLower:
-        coil: cRightSling
-        switch: sRightSlingLower
-    leftSlingUpper:
-        coil: cLeftSling
-        switch: sLeftSlingUpper
-    leftSlingLower:
-        coil: cLeftSling
-        switch: sLeftSlingLower
+  rightSlingUpper:
+    coil: cRightSling
+    switch: sRightSlingUpper
+  rightSlingLower:
+    coil: cRightSling
+    switch: sRightSlingLower
+  leftSlingUpper:
+    coil: cLeftSling
+    switch: sLeftSlingUpper
+  leftSlingLower:
+    coil: cLeftSling
+    switch: sLeftSlingLower
 
 spinners:
-    leftFireSpinner:
-        switch: sCauldronLeftSpinner
-        active_ms: 500
-    rightFireSpinner:
-        switch: sCauldronRightSpinner
-        active_ms: 500
+  leftFireSpinner:
+    switch: sCauldronLeftSpinner
+    active_ms: 500
+  rightFireSpinner:
+    switch: sCauldronRightSpinner
+    active_ms: 500
 
 playfields:
-    playfield:
-        tags: default
-        default_source_device: bdPlunger
+  playfield:
+    tags: default
+    default_source_device: bdPlunger
 
 settings:
-    replay_score:
-        label: Replay replay_score
-        values:
-            500000: "500000 (default)"
-            1000000: "1000000"
-            1500000: "1500000"
-        default: 500000
-        key_type: int
-        sort: 100    
+  replay_score:
+    label: Replay replay_score
+    values:
+      500000: "500000 (default)"
+      1000000: "1000000"
+      1500000: "1500000"
+    default: 500000
+    key_type: int
+    sort: 100    
 
 virtual_platform_start_active_switches:
-    - sBall1
-    - sBall2
-
-        
+  - sBall1
+  - sBall2
