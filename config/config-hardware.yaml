@@ -4,10 +4,9 @@ hardware:
     platform: fast, virtual
 
 fast:
-<<<<<<< HEAD
     net:
         controller: neuron
-        port: /dev/ttyAMA2
+        port: /dev/ttyACM1
         io_loop:
             cabio:
                 model: FP-I/O-0024
@@ -24,11 +23,9 @@ fast:
         default_quick_debounce_open: 2ms
         default_quick_debounce_close: 2ms
         default_normal_debounce_open: 4ms
-        default_normal_debounce_close: 4ms
-=======
-    
+        default_normal_debounce_close: 4ms    
     aud:
-        port: auto
+        port: /dev/ttyACM0
         main_amp_enabled: true
         sub_amp_enabled: false
         headphones_amp_enabled: false
@@ -56,4 +53,3 @@ fast:
 
         headphones_level: headphones
         mute_speakers_with_headphones: true
->>>>>>> audioTests
