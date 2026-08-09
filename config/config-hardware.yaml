@@ -6,7 +6,7 @@ hardware:
 fast:
     net:
         controller: neuron
-        port: /dev/ttyACM1
+        port: /dev/ttyAMA2
         io_loop:
             cabio:
                 model: FP-I/O-0024
@@ -23,7 +23,20 @@ fast:
         default_quick_debounce_open: 2ms
         default_quick_debounce_close: 2ms
         default_normal_debounce_open: 4ms
-        default_normal_debounce_close: 4ms    
+        default_normal_debounce_close: 4ms
+    exp:
+        port: /dev/ttyAMA4
+        boards:
+            lowerPlayfieldEXP:
+                model: FP-EXP-0081
+                led_fade_time: 100ms
+        baud: 921600
+    exp_int:
+        port: /dev/ttyAMA3
+        boards:
+            neuron:
+                model: FP-EXP-2000
+        baud: 921600
     aud:
         port: /dev/ttyACM0
         main_amp_enabled: true
