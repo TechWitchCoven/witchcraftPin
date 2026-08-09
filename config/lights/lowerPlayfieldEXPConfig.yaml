@@ -1,6 +1,8 @@
 #config_version=6
 
 lights:
+  rightGuideLowerGI:
+    number: lowerPlayfieldEXP-1-1
   rightGuideUpperGI:
     number: lowerPlayfieldEXP-1-2
   dLowerInsert:
@@ -33,7 +35,33 @@ lights:
     number: lowerPlayfieldEXP-1-15
   iUpperInsert:
     number: lowerPlayfieldEXP-1-16
-  bUpperInsert:
-    number: lowerPlayfieldEXP-1-17
-  bLowerInsert:
-    number: lowerPlayfieldEXP-1-18
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
