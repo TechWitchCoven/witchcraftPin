@@ -30,6 +30,8 @@ fast:
             lowerPlayfieldEXP:
                 model: FP-EXP-0081
                 led_fade_time: 100ms
+            upperPlayfieldEXP:
+                model: FP-EXP-0051
         baud: 921600
     exp_int:
         port: /dev/ttyAMA3
