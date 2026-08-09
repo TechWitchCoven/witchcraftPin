@@ -8,18 +8,32 @@ mode:
 shots:
   leftInnerLane:
     switch: sLeftInlane
+    profile: bindLaneProfile
   leftOuterLane:
     switch: sLeftOutlane
+    profile: bindLaneProfile
   rightInnerLane:
     switch: sRightInlane
+    profile: bindLaneProfile
   rightOuterLane:
     switch: sRightOutlane
+    profile: bindLaneProfile
+    show_tokens:
+      led: dInsert
 
 shot_groups:
-  lower_lanes:
+  bindLaneGroup:
     shots: leftInnerLane, leftOuterLane, rightInnerLane, rightOuterLane
     rotate_left_events: sLeftFlipperButton_active
     rotate_right_events: sRightFlipperButton_active
+
+shot_profiles:
+  bindLaneProfile:
+    states:
+      - name:
+        show: off
+      - name: 
+        show: on
 
 variable_player:
   leftInnerLane_hit:

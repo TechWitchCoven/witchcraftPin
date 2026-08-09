@@ -5,6 +5,7 @@ config:
   - config-switches.yaml
   - config-coils.yaml
   - config-modes.yaml
+  - lights/config.yaml
 
 flippers:
   leftFlipper:

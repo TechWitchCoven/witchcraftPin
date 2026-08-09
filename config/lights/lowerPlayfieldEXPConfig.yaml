@@ -1,0 +1,39 @@
+#config_version=6
+
+lights:
+  rightGuideUpperGI:
+    number: lowerPlayfieldEXP-1-2
+  dLowerInsert:
+    number: lowerPlayfieldEXP-1-3
+    tags: dInsert
+  dUpperInsert:
+    number: lowerPlayfieldEXP-1-4
+    tags: dInsert
+  nUpperInsert:
+    number: lowerPlayfieldEXP-1-5
+  nLowerInsert:
+    number: lowerPlayfieldEXP-1-6
+  rightSlingUpperGI:
+    number: lowerPlayfieldEXP-1-7
+  rightSlingLowerGI:
+    number: lowerPlayfieldEXP-1-8
+  ballSaveUpperInsert:
+    number: lowerPlayfieldEXP-1-9
+  ballSaveLowerInsert:
+    number: lowerPlayfieldEXP-1-10
+  leftGuideLowerGI:
+    number: lowerPlayfieldEXP-1-11
+  leftGuideUpperGI:
+    number: lowerPlayfieldEXP-1-12
+  leftSlingLowerGI:
+    number: lowerPlayfieldEXP-1-13
+  leftSlingUpperGI:
+    number: lowerPlayfieldEXP-1-14
+  iLowerInsert:
+    number: lowerPlayfieldEXP-1-15
+  iUpperInsert:
+    number: lowerPlayfieldEXP-1-16
+  bUpperInsert:
+    number: lowerPlayfieldEXP-1-17
+  bLowerInsert:
+    number: lowerPlayfieldEXP-1-18
