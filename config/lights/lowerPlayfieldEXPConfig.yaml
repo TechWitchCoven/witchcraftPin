@@ -7,8 +7,10 @@ lights:
     number: lowerpfexp-5-2
   dLowerInsert:
     number: lowerpfexp-5-3
+    tags: dInsert
   dUpperInsert:
     number: lowerpfexp-5-4
+    tags: dInsert
   nUpperInsert:
     number: lowerpfexp-5-5
   nLowerInsert:
