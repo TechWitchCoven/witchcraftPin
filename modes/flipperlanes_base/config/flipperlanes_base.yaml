@@ -32,7 +32,7 @@ shot_profiles:
     states:
       - name:
         show: off
-      - name: 
+      - name: hit
         show: on
 
 variable_player:
