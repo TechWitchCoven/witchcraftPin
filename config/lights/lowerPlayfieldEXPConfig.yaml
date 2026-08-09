@@ -2,100 +2,38 @@
 
 lights:
   rightGuideLowerGI:
-    number: lowerPlayfieldEXP-5-1
+    number: lowerpfexp-5-1
   rightGuideUpperGI:
-    number: lowerPlayfieldEXP-5-2
+    number: lowerpfexp-5-2
   dLowerInsert:
-    number: lowerPlayfieldEXP-5-3
-    tags: dInsert
+    number: lowerpfexp-5-3
   dUpperInsert:
-    number: lowerPlayfieldEXP-5-4
-    tags: dInsert
+    number: lowerpfexp-5-4
   nUpperInsert:
-    number: lowerPlayfieldEXP-5-5
+    number: lowerpfexp-5-5
   nLowerInsert:
-    number: lowerPlayfieldEXP-5-6
+    number: lowerpfexp-5-6
   rightSlingUpperGI:
-    number: lowerPlayfieldEXP-5-7
+    number: lowerpfexp-5-7
   rightSlingLowerGI:
-    number: lowerPlayfieldEXP-5-8
+    number: lowerpfexp-5-8
   ballSaveUpperInsert:
-    number: lowerPlayfieldEXP-5-9
+    number: lowerpfexp-5-9
   ballSaveLowerInsert:
-    number: lowerPlayfieldEXP-5-10
+    number: lowerpfexp-5-10
   leftGuideLowerGI:
-    number: lowerPlayfieldEXP-5-11
+    number: lowerpfexp-5-11
   leftGuideUpperGI:
-    number: lowerPlayfieldEXP-5-12
+    number: lowerpfexp-5-12
   leftSlingLowerGI:
-    number: lowerPlayfieldEXP-5-13
+    number: lowerpfexp-5-13
   leftSlingUpperGI:
-    number: lowerPlayfieldEXP-5-14
+    number: lowerpfexp-5-14
   iLowerInsert:
-    number: lowerPlayfieldEXP-5-15
+    number: lowerpfexp-5-15
   iUpperInsert:
-    number: lowerPlayfieldEXP-5-16
+    number: lowerpfexp-5-16
   bUpperInsert:
-    number: lowerPlayfieldEXP-5-17
+    number: lowerpfexp-5-17
   bLowerInsert:
-    number: lowerPlayfieldEXP-5-18
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    number: lowerpfexp-5-18

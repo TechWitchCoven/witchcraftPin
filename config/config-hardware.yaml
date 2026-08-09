@@ -27,7 +27,7 @@ fast:
     exp:
         port: /dev/ttyAMA4
         boards:
-            lowerPlayfieldEXP:
+            lowerpfexp:
                 model: FP-EXP-0081
                 led_fade_time: 100ms
         baud: 921600
