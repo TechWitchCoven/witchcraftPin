@@ -9,12 +9,18 @@ shots:
   leftInnerLane:
     switch: sLeftInlane
     profile: bindLaneProfile
+    show_tokens:
+      led: bInsert
   leftOuterLane:
     switch: sLeftOutlane
     profile: bindLaneProfile
+    show_tokens:
+      led: iInsert
   rightInnerLane:
     switch: sRightInlane
     profile: bindLaneProfile
+    show_tokens:
+      led: nInsert
   rightOuterLane:
     switch: sRightOutlane
     profile: bindLaneProfile

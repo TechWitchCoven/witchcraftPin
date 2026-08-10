@@ -8,13 +8,19 @@ lights:
   dLowerInsert:
     number: lowerpfexp-5-3
     tags: dInsert
+    type: rgb
   dUpperInsert:
     number: lowerpfexp-5-4
     tags: dInsert
+    type: rgb
   nUpperInsert:
     number: lowerpfexp-5-5
+    tags: nInsert
+    type: rgb
   nLowerInsert:
     number: lowerpfexp-5-6
+    tags: nInsert
+    type: rgb
   rightSlingUpperGI:
     number: lowerpfexp-5-7
   rightSlingLowerGI:
@@ -33,9 +39,17 @@ lights:
     number: lowerpfexp-5-14
   iLowerInsert:
     number: lowerpfexp-5-15
+    tags: iInsert
+    type: rgb
   iUpperInsert:
     number: lowerpfexp-5-16
+    tags: iInsert
+    type: rgb
   bUpperInsert:
     number: lowerpfexp-5-17
+    tags: dInsert
+    type: rgb
   bLowerInsert:
     number: lowerpfexp-5-18
+    tags: dInsert
+    type: rgb
