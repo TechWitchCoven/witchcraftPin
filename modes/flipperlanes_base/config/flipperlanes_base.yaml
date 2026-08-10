@@ -32,6 +32,7 @@ shot_groups:
     shots: leftInnerLane, leftOuterLane, rightInnerLane, rightOuterLane
     rotate_left_events: sLeftFlipperButton_active
     rotate_right_events: sRightFlipperButton_active
+    reset_events: bindLaneGroup_hit_complete
 
 shot_profiles:
   bindLaneProfile:
@@ -50,3 +51,6 @@ variable_player:
     score: 1_000
   rightOuterLane_hit:
     score: 1_000
+  bindLaneGroup_hit_complete:
+    score: 10_000
+    bonus_multiplier: 1
