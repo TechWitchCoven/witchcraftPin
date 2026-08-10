@@ -29,7 +29,7 @@ shots:
 
 shot_groups:
   bindLaneGroup:
-    shots: leftInnerLane, leftOuterLane, rightInnerLane, rightOuterLane
+    shots: leftOuterLane, leftInnerLane, rightInnerLane, rightOuterLane
     rotate_left_events: sLeftFlipperButton_active
     rotate_right_events: sRightFlipperButton_active
     reset_events: bindLaneGroup_hit_complete
