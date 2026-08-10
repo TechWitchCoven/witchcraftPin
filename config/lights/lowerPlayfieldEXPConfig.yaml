@@ -47,9 +47,9 @@ lights:
     type: rgb
   bUpperInsert:
     number: lowerpfexp-5-17
-    tags: dInsert
+    tags: bInsert
     type: rgb
   bLowerInsert:
     number: lowerpfexp-5-18
-    tags: dInsert
+    tags: bInsert
     type: rgb
