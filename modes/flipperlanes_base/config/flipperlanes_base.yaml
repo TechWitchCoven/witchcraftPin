@@ -10,25 +10,25 @@ shots:
     switch: sLeftInlane
     profile: bindLaneProfile
     show_tokens:
-      light: iInsert
+      lights: iInsert
       color: 888888
   leftOuterLane:
     switch: sLeftOutlane
     profile: bindLaneProfile
     show_tokens:
-      light: bInsert
+      lights: bInsert
       color: 888888
   rightInnerLane:
     switch: sRightInlane
     profile: bindLaneProfile
     show_tokens:
-      light: nInsert
+      lights: nInsert
       color: 888888
   rightOuterLane:
     switch: sRightOutlane
     profile: bindLaneProfile
     show_tokens:
-      light: dInsert
+      lights: dInsert
       color: 888888
 
 shot_groups:
@@ -40,14 +40,13 @@ shot_groups:
 
 shot_profiles:
   bindLaneProfile:
-    advance_on_hit: True
     states:
-      - name: lit
+      - name: hit
         show: flicker_color_on
         loops: -1
         speed: 3
         sync_ms: 0
-      - name: unlit
+      - name:
         show: flicker_color_off
         loops: -1
         speed: 3
