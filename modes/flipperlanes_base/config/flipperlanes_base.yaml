@@ -36,13 +36,14 @@ shot_groups:
 
 shot_profiles:
   bindLaneProfile:
+    advance_on_hit: True
     states:
-      - name: hit
+      - name: lit
         show: flicker_color_on
         loops: -1
         speed: 3
         sync_ms: 0
-      - name:
+      - name: unlit
         show: flicker_color_off
         loops: -1
         speed: 3
