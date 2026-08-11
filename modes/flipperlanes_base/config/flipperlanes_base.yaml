@@ -41,12 +41,12 @@ shot_groups:
 shot_profiles:
   bindLaneProfile:
     states:
-      - name: hit
+      - name:
         show: flicker_color_on
         loops: -1
         speed: 3
         sync_ms: 0
-      - name:
+      - name: hit
         show: flicker_color_off
         loops: -1
         speed: 3
