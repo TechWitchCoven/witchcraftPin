@@ -11,21 +11,25 @@ shots:
     profile: bindLaneProfile
     show_tokens:
       light: iInsert
+      color: 888888
   leftOuterLane:
     switch: sLeftOutlane
     profile: bindLaneProfile
     show_tokens:
       light: bInsert
+      color: 888888
   rightInnerLane:
     switch: sRightInlane
     profile: bindLaneProfile
     show_tokens:
       light: nInsert
+      color: 888888
   rightOuterLane:
     switch: sRightOutlane
     profile: bindLaneProfile
     show_tokens:
       light: dInsert
+      color: 888888
 
 shot_groups:
   bindLaneGroup:
