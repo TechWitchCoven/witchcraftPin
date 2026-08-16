@@ -55,17 +55,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": ".gitignore",
-			"settings":
-			{
-				"buffer_size": 385,
-				"line_ending": "Windows"
-			},
-			"undo_stack":
-			[
-			]
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -111,9 +100,7 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Livy/Documents/PinballCode/witchcraftPin",
-		"/C/Users/Livy/Documents/PinballCode/witchcraftPin/addons",
-		"/C/Users/Livy/Documents/PinballCode/witchcraftPin/addons/mpf-gmc"
+		"/Users/livymaziarka/Documents/witchcraftPin"
 	],
 	"file_history":
 	[
@@ -188,36 +175,6 @@
 		{
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": ".gitignore",
-					"selected": true,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 385,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								385,
-								385
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Git Formats/Git Ignore.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"stack_multiselect": false,
-					"type": "text"
-				}
 			]
 		}
 	],
