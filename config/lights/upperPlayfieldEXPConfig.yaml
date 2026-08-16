@@ -1,0 +1,39 @@
+#config_version=6
+
+lights:
+
+  #Port 1 Light Config
+  rightRampArrowTipInsert:
+    number: upperpfexp-1-1
+  rightRampArrowBaseInsert:
+    number: upperpfexp-1-2
+  batwingTopInsert:
+    number: upperpfexp-1-3
+  batwingBottomInsert:
+    number: upperpfexp-1-4
+  rightRampArrowCenterInsert:
+    number: upperpfexp-1-5
+  magicIInsert:
+    number: upperpfexp-1-6
+  leftUpperCrystalInsert:
+    number: upperpfexp-1-7
+  leftLowerCrystalInsert:
+    number: upperpfexp-1-8
+  centerLowerCrystalInsert:
+    number: upperpfexp-1-9
+  centerUpperCrystalInsert:
+    number: upperpfexp-1-10
+  rightUpperCrystalInsert:
+    number: upperpfexp-1-11
+  rightLowerCrystalInsert:
+    number: upperpfexp-1-12
+  magicCInsert:
+    number: upperpfexp-1-13
+  springArrowTipInsert:
+    number: upperpfexp-1-14
+  springArrowCenterInsert:
+    number: upperpfexp-1-15
+  springArrowCenterInsert:
+    number: upperpfexp-1-16
+  springBallLockInsert:
+    number: upperpfexp-1-17
