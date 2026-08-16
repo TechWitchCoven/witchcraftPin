@@ -2,3 +2,4 @@
 
 config:
   - lowerPlayfieldEXPConfig.yaml
+  - upperPlayfieldEXPConfig.yaml

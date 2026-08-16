@@ -33,7 +33,7 @@ lights:
     number: upperpfexp-1-14
   springArrowCenterInsert:
     number: upperpfexp-1-15
-  springArrowCenterInsert:
+  springArrowLowerInsert:
     number: upperpfexp-1-16
   springBallLockInsert:
     number: upperpfexp-1-17
