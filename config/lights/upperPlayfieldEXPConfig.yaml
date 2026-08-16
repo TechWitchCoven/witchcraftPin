@@ -37,3 +37,51 @@ lights:
     number: upperpfexp-1-16
   springBallLockInsert:
     number: upperpfexp-1-17
+
+  #Port 2 Inserts
+  magicGInsert:
+    number: upperpfexp-2-1
+  rightOrbitArrowTipInsert:
+    number: upperpfexp-2-2
+  rightOrbitArrowCenterInsert:
+    number: upperpfexp-2-3
+  rightOrbitArrowBaseInsert:
+    number: upperpfexp-2-4
+  webLowerInsert:
+    number: upperpfexp-2-5
+  webUpperInsert:
+    number: upperpfexp-2-6
+  cauldronArrowTipInsert:
+    number: upperpfexp-2-7
+  cauldronArrowCenterInsert:
+    number: upperpfexp-2-8
+  cauldronArrowBaseInsert:
+    number: upperpfexp-2-9
+  eyeUpperInsert:
+    number: upperpfexp-2-10
+  eyeLowerInsert:
+    number: upperpfexp-2-11
+  ravenLowerInsert:
+    number: upperpfexp-2-12
+  ravenUpperInsert:
+    number: upperpfexp-2-13
+  leftOrbitArrowBaseInsert:
+    number: upperpfexp-2-14
+  leftOrbitArrowTipInsert:
+    number: upperpfexp-2-15
+  leftOrbitArrowCenterInsert:
+    number: upperpfexp-2-16
+  magicAInsert:
+    number: upperpfexp-2-17
+  leftRampArrowCenterInsert:
+    number: upperpfexp-2-18
+  leftRampArrowBaseInsert:
+    number: upperpfexp-2-19
+  dragonScaleLowerInsert:
+    number: upperpfexp-2-20
+  dragonScaleUpperInsert:
+    number: upperpfexp-2-21
+  leftRampTipInsert:
+    number: upperpfexp-2-22
+  magicMInsert:
+    number: upperpfexp-2-23
