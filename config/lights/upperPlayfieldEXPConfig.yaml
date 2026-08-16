@@ -15,6 +15,8 @@ lights:
     number: upperpfexp-1-5
   magicIInsert:
     number: upperpfexp-1-6
+    tags: magicIInsert
+    type: rgb
   leftUpperCrystalInsert:
     number: upperpfexp-1-7
   leftLowerCrystalInsert:
@@ -29,6 +31,8 @@ lights:
     number: upperpfexp-1-12
   magicCInsert:
     number: upperpfexp-1-13
+    tags: magicCInsert
+    type: rgb
   springArrowTipInsert:
     number: upperpfexp-1-14
   springArrowCenterInsert:
@@ -41,6 +45,8 @@ lights:
   #Port 2 Inserts
   magicGInsert:
     number: upperpfexp-2-1
+    tags: magicGInsert
+    type: rgb
   rightOrbitArrowTipInsert:
     number: upperpfexp-2-2
   rightOrbitArrowCenterInsert:
@@ -73,6 +79,8 @@ lights:
     number: upperpfexp-2-16
   magicAInsert:
     number: upperpfexp-2-17
+    tags: magicAInsert
+    type: rgb
   leftRampArrowCenterInsert:
     number: upperpfexp-2-18
   leftRampArrowBaseInsert:
@@ -85,3 +93,5 @@ lights:
     number: upperpfexp-2-22
   magicMInsert:
     number: upperpfexp-2-23
+    tags: magicMInsert
+    type: rgb
