@@ -115,11 +115,11 @@ switches:
     number: pio2-17
     debounce: quick
   sGTarget:
-    number: pio2-18
+    number: pio2-20
     debounce: quick
   sITarget:
     number: pio2-19
     debounce: quick
   sCTarget:
-    number: pio2-20
+    number: pio2-18
     debounce: quick  
