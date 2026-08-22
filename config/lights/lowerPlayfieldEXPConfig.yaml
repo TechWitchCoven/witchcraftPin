@@ -5,8 +5,11 @@ lights:
   #Port 5 Light Configuration
   rightGuideLowerGI:
     number: lowerpfexp-5-1
+    tags: playfieldLight, playfieldGI
+    type: grb
   rightGuideUpperGI:
     number: lowerpfexp-5-2
+    tags: playfieldLight, playfieldGI
   dLowerInsert:
     number: lowerpfexp-5-3
     tags: dInsert
