@@ -59,14 +59,19 @@ shot_profiles:
 variable_player:
   magicMShot_hit:
     score: 1_000
+    bonus_switches: 1
   magicAShot_hit:
     score: 1_000
+    bonus_switches: 1
   magicGShot_hit:
     score: 1_000
+    bonus_switches: 1
   magicIShot_hit:
     score: 1_000
+    bonus_switches: 1
   magicCShot_hit:
     score: 1_000
+    bonus_switches: 1
   magicGroup_hit_complete:
     score: 10_000
     bonus_multiplier: 1

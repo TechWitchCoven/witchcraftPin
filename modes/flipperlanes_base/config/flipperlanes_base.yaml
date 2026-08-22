@@ -55,12 +55,16 @@ shot_profiles:
 variable_player:
   leftInnerLane_hit:
     score: 1_000
+    bonus_switches: 1
   leftOuterLane_hit:
     score: 1_000
+    bonus_switches: 1
   rightInnerLane_hit:
     score: 1_000
+    bonus_switches: 1
   rightOuterLane_hit:
     score: 1_000
+    bonus_switches: 1
   bindLaneGroup_hit_complete:
     score: 10_000
     bonus_multiplier: 1
