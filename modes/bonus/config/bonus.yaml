@@ -1,0 +1,18 @@
+#config-version=6
+
+mode_settings:
+  display_delay_ms: 1s
+  hurry_up_delay_ms: 0
+  bonus_entries:
+    - event: bonus_switches
+      score: 100
+      reset_player_score_entry: True
+    - event: bonus_spinners
+      score: 1_000
+      reset_player_score_entry: True
+
+  slide_player:
+    mode_bonus_started: bonus_start_slide
+    bonus_switches: bonus_switches_slide
+    bonus_spinners: bonus_math_slide
+    bonus_total: bonus_total_slide
