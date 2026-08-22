@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blaegqxvotiww"
-path="res://.godot/imported/playfield.jpg-a0ea010dc388fee9f0066776639f8c2c.ctex"
+uid="uid://bstbnxeiem3hb"
+path="res://.godot/imported/playfield_ww1.jpg-0e3dd635565f5318435be7005bc1a9be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://monitor/archive/playfield.jpg"
-dest_files=["res://.godot/imported/playfield.jpg-a0ea010dc388fee9f0066776639f8c2c.ctex"]
+source_file="res://monitor/archive/playfield_ww1.jpg"
+dest_files=["res://.godot/imported/playfield_ww1.jpg-0e3dd635565f5318435be7005bc1a9be.ctex"]
 
 [params]
 
