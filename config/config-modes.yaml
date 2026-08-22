@@ -3,6 +3,7 @@
 modes:
   - service
   - base
+  - bonus
   - flipperlanes_base
   - global
   - potionQualifier
