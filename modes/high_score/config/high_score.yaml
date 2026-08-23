@@ -1,0 +1,32 @@
+#config_version=6
+
+mode:
+  priority: 280
+  start_events: game_ending, start_high_score
+  use_wait_queue: true
+high_score:
+  _overwrite: true
+  enter_initials_timeout: 60
+  award_slide_display_time: 4s
+  categories: !!omap
+    - score:
+      - Grand Champion
+      - High Score 1
+      - High Score 2
+      - High Score 3
+      - High Score 4
+      - High Score 5
+      - High Score 6
+      - High Score 7
+      - High Score 8
+  defaults:
+    score:
+        - TWA: 1_000
+        - TWC: 999
+        - TWL: 871
+        - ICM: 654
+        - GHF: 546
+        - LSK: 356
+        - BSK: 234
+        - MSK: 222
+        - KGK: 125

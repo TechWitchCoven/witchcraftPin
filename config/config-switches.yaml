@@ -67,12 +67,14 @@ switches:
   sLeftFlipperButton:
     number: cabio-8
     debounce: quick
+    tags: left_flipper, text_input_left
   sStartButton:
     number: cabio-9
-    tags: start
+    tags: start, text_input_select
   sRightFlipperButton:
     number: cabio-16
     debounce: quick
+    tags: right_flipper, text_input_right
   sCrystalLeftTarget:
     number: pio2-0
   sCrystalCenterTarget:

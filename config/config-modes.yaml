@@ -4,6 +4,7 @@ modes:
   - service
   - base
   - bonus
+  - high_score
   - flipperlanes_base
   - global
   - potionQualifier
