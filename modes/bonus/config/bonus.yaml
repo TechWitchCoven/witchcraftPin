@@ -15,8 +15,15 @@ mode_settings:
       score: 1_000
       reset_player_score_entry: True
 
-  slide_player:
-    mode_bonus_started: bonus_start_slide
-    bonus_switches: bonus_switches_slide
-    bonus_spinners: bonus_math_slide
-    bonus_total: bonus_total_slide
+slide_player:
+  mode_bonus_started: bonus
+
+  bonus_start:
+    bonus:
+      action: update
+      tokens:
+          entry: initial
+
+  bonus_entry:
+    bonus:
+      action: update
