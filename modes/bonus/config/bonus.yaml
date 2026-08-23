@@ -1,4 +1,4 @@
-#config-version=6
+#config_version=6
 
 mode_settings:
   display_delay_ms: 1s
@@ -9,7 +9,9 @@ mode_settings:
       score: 100
       text: "Switches"
       reset_player_score_entry: True
-    - event: bonus_spinners
+    - entry: bonus_spinners
+      player_score_entry: potionSpinners
+      text: "Spinners"
       score: 1_000
       reset_player_score_entry: True
 

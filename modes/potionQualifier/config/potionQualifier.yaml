@@ -8,8 +8,10 @@ mode:
 variable_player:
   sCauldronLeftSpinner_active:
     leftFireLevel: 1
+    potionSpinners: 1
   sCauldronRightSpinner_active:
     rightFireLevel: 1
+    potionSpinners: 1
   mode_potionQualifier_started:
     leftFireLevel:
       int: 0
