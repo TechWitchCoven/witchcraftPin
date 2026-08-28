@@ -30,6 +30,10 @@ event_player:
     - bumperOneTickReverse
     - resetTickTimer
 
-  cauldronManager_will_stop:
+  mode_cauldronManager_started:
+    - cauldronOneTickForward
+    - bumperOneTickReverse
+
+  mode_cauldronManager_will_stop:
     - cauldronStop
     - bumperStop
