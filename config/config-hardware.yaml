@@ -73,3 +73,40 @@ fast:
 
         headphones_level: headphones
         mute_speakers_with_headphones: true
+
+dc_motors:
+    cauldronMotor:
+        number: upperpfexp-1
+        control_events:
+            cauldronOneTickForwardCrawl:
+                duration: 1050ms
+                power: 0.75
+            cauldronOneTickForward:
+                duration: 1050ms
+                power: 1
+            cauldronOneTickReverseCrawl:
+                action: reverse_pulse
+                duration: 1050ms
+                power: 0.75
+            cauldronOneTickReverse:
+                action: reverse_pulse
+                duration: 1050ms
+                power: 1
+    bumperMotor:
+        number: upperpfexp-2
+        control_events:
+            bumperOneTickForwardCrawl:
+                duration: 1050ms
+                power: 0.75
+            bumperOneTickForward:
+                duration: 1050ms
+                power: 1
+            bumperOneTickReverseCrawl:
+                action: reverse_pulse
+                duration: 1050ms
+                power: 0.75
+            bumperOneTickReverse:
+                action: reverse_pulse
+                duration: 1050ms
+                power: 1
+
