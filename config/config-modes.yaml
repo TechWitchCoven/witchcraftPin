@@ -11,3 +11,4 @@ modes:
   - potionSelection
   - cauldronManager
   - targetManager
+  - ballSaveManager
