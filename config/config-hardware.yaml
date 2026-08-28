@@ -96,17 +96,17 @@ dc_motors:
         number: upperpfexp-2
         control_events:
             bumperOneTickForwardCrawl:
-                duration: 1050ms
+                duration: 5050ms
                 power: 0.75
             bumperOneTickForward:
-                duration: 1050ms
+                duration: 5050ms
                 power: 1
             bumperOneTickReverseCrawl:
                 action: reverse_pulse
-                duration: 1050ms
+                duration: 5050ms
                 power: 0.75
             bumperOneTickReverse:
                 action: reverse_pulse
-                duration: 1050ms
+                duration: 5050ms
                 power: 1
 
