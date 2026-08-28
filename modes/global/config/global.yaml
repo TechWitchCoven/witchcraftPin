@@ -11,4 +11,9 @@ event_player:
   mode_global_stopping:
     - stop-mode-potionQualifier
 
+sound_player:
+  mode_global_started:
+    NotAsItSeems:
+      bus: music
+
 

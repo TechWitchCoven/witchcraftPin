@@ -14,7 +14,7 @@ slide_player:
 
 sound_player:
   mode_attract_started:
-    bensound-enigmatic:
+    Inspired:
       bus: music
 
 timers:
