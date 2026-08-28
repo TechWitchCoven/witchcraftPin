@@ -79,19 +79,21 @@ dc_motors:
         number: upperpfexp-1
         control_events:
             cauldronOneTickForwardCrawl:
-                duration: 1050ms
+                duration: 5050ms
                 power: 0.75
             cauldronOneTickForward:
-                duration: 1050ms
+                duration: 5050ms
                 power: 1
             cauldronOneTickReverseCrawl:
                 action: reverse_pulse
-                duration: 1050ms
+                duration: 5050ms
                 power: 0.75
             cauldronOneTickReverse:
                 action: reverse_pulse
-                duration: 1050ms
+                duration: 5050ms
                 power: 1
+            cauldronStop:
+                action: stop
     bumperMotor:
         number: upperpfexp-2
         control_events:
@@ -109,4 +111,5 @@ dc_motors:
                 action: reverse_pulse
                 duration: 5050ms
                 power: 1
-
+            bumperStop:
+                action: stop
