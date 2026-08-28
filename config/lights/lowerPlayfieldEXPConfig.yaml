@@ -32,8 +32,12 @@ lights:
     number: lowerpfexp-5-8
   ballSaveUpperInsert:
     number: lowerpfexp-5-9
+    tags: ballSaveInsert
+    type: rgb
   ballSaveLowerInsert:
     number: lowerpfexp-5-10
+    tags: ballSaveInsert
+    type: rgb
   leftGuideLowerGI:
     number: lowerpfexp-5-11
   leftGuideUpperGI:
