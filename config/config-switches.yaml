@@ -77,10 +77,13 @@ switches:
     tags: right_flipper, text_input_right
   sCrystalLeftTarget:
     number: pio2-0
+    type: NC
   sCrystalCenterTarget:
     number: pio2-1
+    type: NC
   sCrystalRightTarget:
     number: pio2-2
+    type: NC
   sSpringEntryTarget:
     number: pio2-3
   sSpringBashTarget:
