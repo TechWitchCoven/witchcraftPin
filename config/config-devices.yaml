@@ -58,9 +58,15 @@ drop_targets:
     switch: sCrystalCenterTarget
   rightCrystal:
     switch: sCrystalRightTarget
+  springEntry:
+    switch: sSpringEntryTarget
 
 drop_target_banks:
   crystalBank:
     drop_targets: leftCrystal, centerCrystal, rightCrystal
     reset_coils: cSpring3Reset
+    reset_events: machine_reset_phase_3, ball_starting
+  springBank:
+    drop_targets: springEntry
+    reset_coils: cSpring1Reset
     reset_events: machine_reset_phase_3, ball_starting

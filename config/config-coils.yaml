@@ -32,7 +32,7 @@ coils:
     number: pio2-2
   cSpring3Reset:
     number: pio2-0
-    default_pulse_ms: 20
+    default_pulse_ms: 25
   cSpring3Knock:
     number: pio2-1
   cSpring1Reset:
