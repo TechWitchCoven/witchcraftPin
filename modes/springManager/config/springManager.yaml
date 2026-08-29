@@ -1,0 +1,22 @@
+#config_version=6
+
+modes:
+	start_events: start-mode-springManager
+	stop_events: stop-mode-springManager
+	priority: 175
+
+variable_player:
+  drop_target_leftCrystal_down:
+    leftCrystalAttunement: 1
+    dropTargetHits: 1
+  drop_target_centerCrystal_down:
+    centerCrystalAttunement: 1
+    dropTargetHits: 1
+  drop_target_rightCrystal_down:
+    rightCrystalAttunement: 1
+    dropTargetHits: 1
+  drop_target_springEntry_down:
+    springEntryCrystalAttunement: 1
+    dropTargetHits: 1
+
+#show_player:
