@@ -3,27 +3,27 @@
 coils:
   cBallTroughEject:
     number: pio1-2
-    default_pulse_ms: 40
+    default_pulse_ms: 25
   cLeftFlipperPower:
     number: pio1-1
-    default_pulse_ms: 35
+    default_pulse_ms: 40
   cLeftFlipperHold:
     number: pio1-0
     allow_enable: true
   cRightFlipperPower:
     number: pio1-7
-    default_pulse_ms: 35
+    default_pulse_ms: 40
   cRightFlipperHold:
     number: pio1-6
     allow_enable: true
   cLeftSling:
     number: pio1-4
-    default_pulse_ms: 18
+    default_pulse_ms: 15
     platform_settings:
       recycle_ms: 40
   cRightSling:
     number: pio1-5
-    default_pulse_ms: 18
+    default_pulse_ms: 15
     platform_settings:
       recycle_ms: 40
   cAutoPlunger:
@@ -32,7 +32,9 @@ coils:
     number: pio2-2
   cSpring3Reset:
     number: pio2-0
+    default_pulse_ms: 20
   cSpring3Knock:
     number: pio2-1
   cSpring1Reset:
     number: pio2-3
+    default_pulse_ms: 15
