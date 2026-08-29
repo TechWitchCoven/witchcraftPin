@@ -10,11 +10,11 @@ anchors_preset = 0
 script = ExtResource("1_b71wd")
 metadata/_custom_type_script = "uid://dru3usokwlhd3"
 
-[node name="Generic Background" type="ColorRect" parent="." unique_id=982646326]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=680797480]
 layout_mode = 0
-offset_right = 1364.0
-offset_bottom = 770.0
-color = Color(0.1552, 0.16, 0.15991999, 1)
+offset_right = 1366.0
+offset_bottom = 768.0
+color = Color(0.26147848, 0.04918897, 0.34420156, 1)
 
 [node name="Bottom Margin Container" type="MarginContainer" parent="." unique_id=1097148550]
 layout_mode = 1

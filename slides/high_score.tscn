@@ -9,6 +9,12 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_adeqt")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1646441287]
+layout_mode = 0
+offset_right = 1366.0
+offset_bottom = 768.0
+color = Color(0.26147848, 0.04918897, 0.34420156, 1)
+
 [node name="Label" type="Label" parent="." unique_id=917730184]
 layout_mode = 0
 offset_left = 691.0
