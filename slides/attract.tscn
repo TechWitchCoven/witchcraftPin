@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_2wi4k"]
 [ext_resource type="Script" uid="uid://dpe3dq8axt3g7" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_hhxni"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_f161n"]
 [ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_f161n"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hhxni"]
@@ -38,6 +39,12 @@ offset_right = 910.0
 offset_bottom = 478.0
 theme_override_font_sizes/font_size = 80
 text = "Witchcraft"
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="MPFCarousel/title" unique_id=1867943677]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_f161n")
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
 
 [node name="mpflogo" type="Node2D" parent="MPFCarousel" unique_id=882214085]
 
