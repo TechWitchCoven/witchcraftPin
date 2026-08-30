@@ -38,7 +38,7 @@ show_player:
         lights: ballSaveInsert
         color: 880088
 
-  ball_save_default_disabled:
+  ball_save_default_grace_period:
     off:
       show_tokens: 
         lights: ballSaveInsert
