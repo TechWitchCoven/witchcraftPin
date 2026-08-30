@@ -65,7 +65,7 @@ drop_target_banks:
   crystalBank:
     drop_targets: leftCrystal, centerCrystal, rightCrystal
     reset_coils: cSpring3Reset
-    reset_events: machine_reset_phase_3, ball_starting
+    reset_events: machine_reset_phase_3, ball_starting, request_crystalBank_reset
   springBank:
     drop_targets: springEntry
     reset_coils: cSpring1Reset

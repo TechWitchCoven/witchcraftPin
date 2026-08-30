@@ -73,3 +73,7 @@ variable_player:
   drop_target_springEntry_down:
     springEntryCrystalAttunement: 1
     dropTargetHits: 1
+
+event_player:
+  drop_target_bank_crystalBank_down:
+    - request_crystalBank_reset{current_player.leftCrystalAttunement<2 or current_player.centerCrystalAttunement<2 or current_player.rightCrystalAttunement<2}
