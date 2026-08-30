@@ -14,6 +14,11 @@ mode_settings:
       text: "Spinners"
       score: 1_000
       reset_player_score_entry: True
+    - entry: bonus_drops
+      player_score_entry: dropTargetsHit
+      text: "Drop Targets Hit"
+      score: 1_000
+      reset_player_score_entry: True
 
 slide_player:
   mode_bonus_started: bonus
