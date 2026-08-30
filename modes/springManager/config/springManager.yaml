@@ -19,4 +19,14 @@ variable_player:
     springEntryCrystalAttunement: 1
     dropTargetHits: 1
 
-#show_player:
+show_player:
+  drop_target_leftCrystal_down{current_player.leftCrystalAttunement<=1}:
+    led_color:
+      show_tokens:
+        lights: leftUpperCrystalInsert
+        color: 660088
+  drop_target_leftCrystal_down{current_player.leftCrystalAttunement>=2}:
+    led_color:
+      show_tokens:
+        lights: leftUpperCrystalInsert
+        color: BB00DD
