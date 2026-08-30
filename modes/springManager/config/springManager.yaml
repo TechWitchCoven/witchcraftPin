@@ -24,9 +24,29 @@ show_player:
     led_color:
       show_tokens:
         lights: leftUpperCrystalInsert
-        color: 660088
+        color: 882222
   drop_target_leftCrystal_down{current_player.leftCrystalAttunement>=2}:
     led_color:
       show_tokens:
         lights: leftUpperCrystalInsert
-        color: BB00DD
+        color: DD4444
+  drop_target_centerCrystal_down{current_player.centerCrystalAttunement<=1}:
+    led_color:
+      show_tokens:
+        lights: centerUpperCrystalInsert
+        color: 222288
+  drop_target_centerCrystal_down{current_player.centerCrystalAttunement>=2}:
+    led_color:
+      show_tokens:
+        lights: centerUpperCrystalInsert
+        color: 4444DD
+  drop_target_rightCrystal_down{current_player.rightCrystalAttunement<=1}:
+    led_color:
+      show_tokens:
+        lights: rightUpperCrystalInsert
+        color: 888844
+  drop_target_rightCrystal_down{current_player.rightCrystalAttunement>=2}:
+    led_color:
+      show_tokens:
+        lights: rightUpperCrystalInsert
+        color: DDDD44
