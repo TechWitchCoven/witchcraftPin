@@ -5,6 +5,61 @@ mode:
   stop_events: stop-mode-springManager
   priority: 175
 
+shots:
+  leftT1Crystal:
+    hit_events: drop_target_leftCrystal_down
+    profile: leftCrystalProfile
+    show_tokens:
+      lights: leftUpperCrystalInsert
+  centerT1Crystal:
+    hit_events: drop_target_centerCrystal_down
+    profile: centerCrystalProfile
+    show_tokens:
+      lights: centerUpperCrystalInsert
+  rightT1Crystal:
+    hit_events: drop_target_rightCrystal_down
+    profile: rightCrystalProfile
+    show_tokens:
+      lights: rightUpperCrystalInsert
+
+shot_profiles:
+  leftCrystalProfile:
+    states:
+      - name: dull
+        show: off
+      - name: surging
+        show: led_color
+        show_tokens:
+          color: 882222
+      - name: attuned
+        show: led_color
+        show_tokens:
+          color: DD4444
+  centerCrystalProfile:
+    states:
+      - name: dull
+        show: off
+      - name: surging
+        show: led_color
+        show_tokens:
+          color: 222288
+      - name: attuned
+        show: led_color
+        show_tokens:
+          color: 4444DD
+  rightCrystalProfile:
+    states:
+      - name: dull
+        show: off
+      - name: surging
+        show: led_color
+        show_tokens:
+          color: 888822
+      - name: attuned
+        show: led_color
+        show_tokens:
+          color: DDDD44
+
 variable_player:
   drop_target_leftCrystal_down:
     leftCrystalAttunement: 1
@@ -18,35 +73,3 @@ variable_player:
   drop_target_springEntry_down:
     springEntryCrystalAttunement: 1
     dropTargetHits: 1
-
-show_player:
-  drop_target_leftCrystal_down{current_player.leftCrystalAttunement<=1}:
-    led_color:
-      show_tokens:
-        lights: leftUpperCrystalInsert
-        color: 882222
-  drop_target_leftCrystal_down{current_player.leftCrystalAttunement>=2}:
-    led_color:
-      show_tokens:
-        lights: leftUpperCrystalInsert
-        color: DD4444
-  drop_target_centerCrystal_down{current_player.centerCrystalAttunement<=1}:
-    led_color:
-      show_tokens:
-        lights: centerUpperCrystalInsert
-        color: 222288
-  drop_target_centerCrystal_down{current_player.centerCrystalAttunement>=2}:
-    led_color:
-      show_tokens:
-        lights: centerUpperCrystalInsert
-        color: 4444DD
-  drop_target_rightCrystal_down{current_player.rightCrystalAttunement<=1}:
-    led_color:
-      show_tokens:
-        lights: rightUpperCrystalInsert
-        color: 888844
-  drop_target_rightCrystal_down{current_player.rightCrystalAttunement>=2}:
-    led_color:
-      show_tokens:
-        lights: rightUpperCrystalInsert
-        color: DDDD44
