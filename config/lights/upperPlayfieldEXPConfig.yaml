@@ -5,14 +5,17 @@ lights:
   #Port 1 Light Config
   rightRampArrowTipInsert:
     number: upperpfexp-1-1
+    tags: potionSelectionTipInsert
   rightRampArrowBaseInsert:
     number: upperpfexp-1-2
+    tags: potionSelectionBaseInsert
   batwingTopInsert:
     number: upperpfexp-1-3
   batwingBottomInsert:
     number: upperpfexp-1-4
   rightRampArrowCenterInsert:
     number: upperpfexp-1-5
+    tags: potionSelectionCenterInsert
   magicIInsert:
     number: upperpfexp-1-6
     tags: magicIInsert
@@ -49,10 +52,13 @@ lights:
     type: rgb
   rightOrbitArrowTipInsert:
     number: upperpfexp-2-2
+    tags: potionSelectionTipInsert
   rightOrbitArrowCenterInsert:
     number: upperpfexp-2-3
+    tags: potionSelectionCenterInsert
   rightOrbitArrowBaseInsert:
     number: upperpfexp-2-4
+    tags: potionSelectionBaseInsert
   webLowerInsert:
     number: upperpfexp-2-5
   webUpperInsert:
@@ -73,24 +79,30 @@ lights:
     number: upperpfexp-2-13
   leftOrbitArrowBaseInsert:
     number: upperpfexp-2-14
+    tags: potionSelectionBaseInsert
   leftOrbitArrowTipInsert:
     number: upperpfexp-2-15
+    tags: potionSelectionTipInsert
   leftOrbitArrowCenterInsert:
     number: upperpfexp-2-16
+    tags: potionSelectionCenterInsert
   magicAInsert:
     number: upperpfexp-2-17
     tags: magicAInsert
     type: rgb
   leftRampArrowCenterInsert:
     number: upperpfexp-2-18
+    tags: potionSelectionCenterInsert
   leftRampArrowBaseInsert:
     number: upperpfexp-2-19
+    tags: potionSelectionBaseInsert
   dragonScaleLowerInsert:
     number: upperpfexp-2-20
   dragonScaleUpperInsert:
     number: upperpfexp-2-21
   leftRampTipInsert:
     number: upperpfexp-2-22
+    tags: potionSelectionTipInsert
   magicMInsert:
     number: upperpfexp-2-23
     tags: magicMInsert
