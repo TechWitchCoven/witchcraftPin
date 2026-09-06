@@ -1,0 +1,21 @@
+#show_version=6
+- time: 0
+  lights:
+    (tip): (color)%20
+    (center): (color)%20
+    (base): (color)%80
+- time: +250ms
+  lights:
+    (tip): (color)%20
+    (center): (color)%80
+    (base): (color)%80
+- time: +250ms
+  lights:
+    (tip): (color)%80
+    (center): (color)%80
+    (base): (color)%80
+- time: +500ms
+  lights:
+    (tip): (color)%20
+    (center): (color)%20
+    (base): (color)%20
