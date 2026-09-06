@@ -29,3 +29,10 @@ timers:
         action: stop
       - event: flipper_cradle_release
         action: restart
+
+show_player:
+  mode_attract_started:
+    flash:
+      speed: 2
+      show_tokens:
+        lights: startLight
