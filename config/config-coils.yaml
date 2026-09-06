@@ -38,3 +38,6 @@ coils:
   cSpring1Reset:
     number: pio2-3
     default_pulse_ms: 15
+  cStartButtonLED:
+    number: cabio-2
+    allow_enable: true
