@@ -9,3 +9,5 @@ config:
 lights:
   startLight:
     number: cStartButtonLED
+    platform: drivers
+    type: r
