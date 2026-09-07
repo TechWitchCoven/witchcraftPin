@@ -42,3 +42,8 @@ show_player:
     off:
       show_tokens: 
         lights: ballSaveInsert
+
+  ball_save_default_disabled:
+    off:
+      show_tokens: 
+        lights: ballSaveInsert
