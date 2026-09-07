@@ -1,22 +1,49 @@
 #config_version=6
 
+# This is the mode definition for tracking game wide ball saves
+
+# The following is the mode config data
+# It contains the start event, based on the defined start event,
+# and corresponding stop event.  The priority is 101 for this mode
 mode:
   start_events: start-mode-ballSaveManager
   stop_events: stop-mode-ballSaveManager
   priority: 101
 
+# The Following Defines Ball Saves for this Mode
 ball_saves:
+
+  # Ball Saves are defined below in the following way:
+  # Ball Save Name:
+  #   active_time: Time Ball Save is Active For
+  #   hurry_up_time: Time Before Ball Save End to trigger Hurry Up Event
+  #   grace_period: Time After Ball Save Ends to still Accept balls
+  #   enable_events: Events that will enable ball save
+  #   timer_start_events: Events that will start ball save timer
+  #   early_ball_save_events: Events that will trigger an early ball save
+  #   auto_launch: Will the saved ball be auto launched to the playfield
+  #   balls_to_save: How Many Balls will be Saved on this Ball Save
   default:
-    active_time: 10s
-    hurry_up_time: 2s
-    grace_period: 2s
+    active_time: 20s
+    hurry_up_time: 4s
+    grace_period: 4s
     enable_events: mode_ballSaveManager_started
     timer_start_events: balldevice_bdPlunger_ball_eject_success
     early_ball_save_events: sLeftOutlane_hit, sRightOutlane_hit
     auto_launch: true
-    balls_to_save: 3
+    balls_to_save: -1
 
+# The following contains the definitions for shows to be played in this mode
 show_player:
+
+  # Show cues are based on events being called, they are defined as such:
+  # Event to Call Show:
+  #   Name of Show To Play:
+  #     speed: Speed of Show Playback
+  #     color: Color to use for Show
+  #     tip, base, center: Specific tags for the shotArrowForward Show to use
+  #                        in order to call the different parts of the arrow 
+  #                        playfield insert
   ball_save_default_timer_start:
     flash_color:
       speed: 2

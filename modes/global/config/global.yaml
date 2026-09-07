@@ -1,17 +1,33 @@
 #config_version=6
 
+# This is the mode definition for tracking global game data
+
+# The following is the mode config data
+# It contains the start event, based on the defined start event,
+# and corresponding stop event.  The priority is 500 for this mode
 mode:
   start_events: start-mode-global
   stop_events: stop-mode-global, ball_will_end
   priority: 500
 
+# The following Defines the events that will be called from this mode
 event_player:
+
+  # Events are defined as follows:
+  # Name of Event to Listen For:
+  #   - Name of Event to Call After Listened Event Occurs{Conditional Statement} 
   mode_global_started:
     - start-mode-potionQualifier
   mode_global_stopping:
     - stop-mode-potionQualifier
 
+# The following defines what sounds will be played in this mode
 sound_player:
+
+  # Sounds will be called in the following way:
+  # Event to Call Music:
+  #   Song File Title:
+  #     bus: Godot Media Bus
   mode_global_started:
     NotAsItSeems:
       bus: music

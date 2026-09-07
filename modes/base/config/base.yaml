@@ -1,14 +1,29 @@
 #config_version=6
 
+# This is the mode definition for the base game mode. Other Modes
+# are called from this mode for running of the game
+
+# The following is the mode config data
+# It contains the start event, based on the defined start event,
+# and corresponding stop event.  The priority is 100 for this mode
 mode:
   start_events: ball_started
   stop_events: ball_ending
   priority: 100
 
+# The following defines what slides will be played in this mode
 slide_player:
+
+  # Slides are defined as follows: 
+  # Event used to call Slide: Slide to be Shown
   mode_base_started: base
 
+# The following Defines the events that will be called from this mode
 event_player:
+
+  # Events are defined as follows:
+  # Name of Event to Listen For:
+  #   - Name of Event to Call After Listened Event Occurs{Conditional Statement} 
   mode_base_started:
     - start-mode-flipperlanes-base
     - start-mode-global

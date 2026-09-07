@@ -1,5 +1,11 @@
 #config_version=6
 
+# This is the mode definition for the cauldron Manager. It is used
+# to manage the various events related to motion in the cauldron
+
+# The following is the mode config data
+# It contains the start event, based on the defined start event,
+# and corresponding stop event.  The priority is 155 for this mode
 mode:
   start_events: start-mode-cauldronManager
   stop_events: stop-mode-cauldronManager
@@ -16,7 +22,17 @@ mode:
 #    sequence_timeout: 1s
 #    allow_multiple_active: true
 
+# The following defines the timers in this mode
 timers:
+
+  # Timers are named and defined as such:
+  # Name of Timer:
+  #   end_value: Final Value in Timer
+  #   tick_interval: Length of Tick
+  #   start_running: Should the timer be running immediately/when enabled
+  #   control_events:
+  #     - event: Name of Event to Call Timer Control Event
+  #       action: Type of Control Event to be Peformed (stop/restart)
   motionTick:
     end_value: 1
     tick_interval: 5s
@@ -25,16 +41,19 @@ timers:
       - event: resetTickTimer
         action: restart
 
+# The following Defines the events that will be called from this mode
 event_player:
+
+  # Events are defined as follows:
+  # Name of Event to Listen For:
+  #   - Name of Event to Call After Listened Event Occurs 
   timer_motionTick_complete:
     - cauldronOneTickForward
     - bumperOneTickReverse
     - resetTickTimer
-
   mode_cauldronManager_started:
     - cauldronOneTickForward
     - bumperOneTickReverse
-
   mode_cauldronManager_will_stop:
     - cauldronStop
     - bumperStop
