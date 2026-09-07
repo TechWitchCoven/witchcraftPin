@@ -38,8 +38,15 @@ event_player:
   # Events are defined as follows:
   # Name of Event to Listen For:
   #   - Name of Event to Call After Listened Event Occurs 
-#  sCauldronRightProx_hit:
-#  sCauldronLeftProx_hit:
+  sCauldronRightProx_hit:
+    - start-mode-potionHealingBrewing
+    - stop-mode-potionSelection
+  sCauldronLeftProx_hit:
+    - start-mode-potionRegenerationBrewing
+    - stop-mode-potionSelection
   sCauldronRightSpinner_active:
     - start-mode-potionSpeedBrewing
+    - stop-mode-potionSelection
+  sCauldronLeftSpinner_active:
+    - start-mode-potionStrengthBrewing
     - stop-mode-potionSelection
