@@ -35,7 +35,7 @@ timers:
   #     - event: Name of Event to Call Timer Control Event
   #       action: Type of Control Event to be Peformed (stop/restart)
   potionBrewingTimer:
-    end_value: 60s
+    end_value: 60
     tick_interval: 500ms
     start_running: true
 
