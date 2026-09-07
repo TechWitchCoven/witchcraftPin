@@ -1,0 +1,110 @@
+Mode Comments
+
+# This is the mode definition for attract mode. 
+
+
+Mode Settings Comment
+
+# The following is the mode settings data
+
+
+Mode Config Comment
+
+# The following is the mode config data
+# It contains the start event, based on the defined start event,
+# and corresponding stop event.  The priority is 500 for this mode
+
+Event Player Comment
+
+# The following Defines the events that will be called from this mode
+event_player:
+
+  # Events are defined as follows:
+  # Name of Event to Listen For:
+  #   - Name of Event to Call After Listened Event Occurs{Conditional Statement}
+
+
+Slide Player Comments
+
+# The following defines what slides will be played in this mode
+slide_player:
+
+  # Slides are defined as follows: 
+  # Event used to call Slide: Slide to be Shown
+
+
+Show Player comments
+
+# The following contains the definitions for shows to be played in this mode
+show_player:
+
+  # Show cues are based on events being called, they are defined as such:
+  # Event to Call Show:
+  #   Name of Show To Play:
+  #     speed: Speed of Show Playback
+  #     color: Color to use for Show
+  #     tip, base, center: Specific tags for the shotArrowForward Show to use
+  #                        in order to call the different parts of the arrow 
+  #                        playfield insert
+
+
+Timer Comments
+
+# The following defines the timers in this mode
+timers:
+
+  # Timers are named and defined as such:
+  # Name of Timer:
+  #   end_value: Final Value in Timer
+  #   tick_interval: Length of Tick
+  #   start_running: Should the timer be running immediately/when enabled
+  #   control_events:
+  #     - event: Name of Event to Call Timer Control Event
+  #       action: Type of Control Event to be Peformed (stop/restart)
+
+
+Sound Player Comments
+
+# The following defines what sounds will be played in this mode
+sound_player:
+
+  # Sounds will be called in the following way:
+  # Event to Call Music:
+  #   Song File Title:
+  #     bus: Godot Media Bus
+
+
+Variable Player Comment
+
+# The following defines the player variable changes for this mode.
+variable_player:
+
+  # Player Variable Names are defined in this mode in two ways, as
+  # an increment via call
+  #
+  # Event Calling the Change in Variable:
+  #   Player Variable: Amount to Change By
+  #
+  # The other way it is changed is by an action as such:
+  #
+  # Event Calling the Change in Variable:
+  #   Player Variable:
+  #     Variable Type: Value for Action
+  #     action: Type of Action to be peformed
+
+
+Ball Saves Comment
+
+# The Following Defines Ball Saves for this Mode
+ball_saves:
+
+  # Ball Saves are defined below in the following way:
+  # Ball Save Name:
+  #   active_time: Time Ball Save is Active For
+  #   hurry_up_time: Time Before Ball Save End to trigger Hurry Up Event
+  #   grace_period: Time After Ball Save Ends to still Accept balls
+  #   enable_events: Events that will enable ball save
+  #   timer_start_events: Events that will start ball save timer
+  #   early_ball_save_events: Events that will trigger an early ball save
+  #   auto_launch: Will the saved ball be auto launched to the playfield
+  #   balls_to_save: How Many Balls will be Saved on this Ball Save
