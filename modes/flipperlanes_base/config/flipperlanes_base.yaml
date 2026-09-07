@@ -97,3 +97,14 @@ variable_player:
   bindLaneGroup_lit_complete:
     score: 10_000
     bonus_multiplier: 1
+
+# The following defines what sounds will be played in this mode
+sound_player:
+
+  # Sounds will be called in the following way:
+  # Event to Call Music:
+  #   Song File Title:
+  #     bus: Godot Media Bus
+  bindLaneGroup_unlit_hit:
+    electric1:
+      bus: effects
