@@ -100,9 +100,11 @@ switches:
   sCauldronLeftProx:
     number: pio2-10
     debounce: quick
+    type: NC
   sCauldronRightProx:
     number: pio2-11
     debounce: quick
+    type: NC
   sCauldronLeftSpinner:
     number: pio2-12
     debounce: quick
