@@ -12,3 +12,4 @@ modes:
   - cauldronManager
   - targetManager
   - ballSaveManager
+  - springManager

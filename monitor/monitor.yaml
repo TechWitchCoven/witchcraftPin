@@ -1,4 +1,5 @@
 device_size: 0.02
+drop_target: {}
 light:
   bLowerInsert:
     x: 0.1648871181938911
@@ -175,6 +176,7 @@ light:
   webUpperInsert:
     x: 0.478630662535045
     y: 0.4209827357237716
+spinner: {}
 switch:
   sBall1:
     x: 0.8140285747898721
@@ -199,6 +201,21 @@ switch:
   sBallJam:
     x: 0.8235382544019032
     y: 0.8984375
+  sCauldronLeftSpinner:
+    x: 0.3375410563692854
+    y: 0.2782956058588548
+  sCauldronRightSpinner:
+    x: 0.5005710903979879
+    y: 0.28628495339547266
+  sCrystalCenterTarget:
+    x: 0.6796745080633229
+    y: 0.3794940079893475
+  sCrystalLeftTarget:
+    x: 0.6406391478029294
+    y: 0.3715046604527297
+  sCrystalRightTarget:
+    x: 0.7141174729989643
+    y: 0.3768308921438082
   sLeftFlipperButton:
     shape: CIRCLE
     size: 0.06

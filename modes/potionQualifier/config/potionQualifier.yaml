@@ -22,6 +22,6 @@ variable_player:
 
 event_player:
   sCauldronLeftSpinner_active:
-    - start-mode-potionSelection{current_player.leftFireLevel>=50 and current_player.rightFireLevel>=50}
+    - start-mode-potionSelection{current_player.leftFireLevel>=20 and current_player.rightFireLevel>=20}
   sCauldronRightSpinner_active:
-    - start-mode-potionSelection{current_player.leftFireLevel>=50 and current_player.rightFireLevel>=50}
+    - start-mode-potionSelection{current_player.leftFireLevel>=20 and current_player.rightFireLevel>=20}

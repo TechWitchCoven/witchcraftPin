@@ -1,5 +1,13 @@
 #config_version=6
 
+#This combines the configs for the different EXP board light configs into this file
 config:
   - lowerPlayfieldEXPConfig.yaml
   - upperPlayfieldEXPConfig.yaml
+
+#Definition of Start Button coil Driver to LED Mapping
+lights:
+  startLight:
+    number: cStartButtonLED
+    platform: drivers
+    type: r

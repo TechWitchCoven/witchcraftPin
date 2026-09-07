@@ -1,0 +1,79 @@
+#config_version=6
+
+mode:
+  start_events: start-mode-springManager
+  stop_events: stop-mode-springManager
+  priority: 175
+
+shots:
+  leftT1Crystal:
+    hit_events: drop_target_leftCrystal_down
+    profile: leftCrystalProfile
+    show_tokens:
+      lights: leftUpperCrystalInsert
+  centerT1Crystal:
+    hit_events: drop_target_centerCrystal_down
+    profile: centerCrystalProfile
+    show_tokens:
+      lights: centerUpperCrystalInsert
+  rightT1Crystal:
+    hit_events: drop_target_rightCrystal_down
+    profile: rightCrystalProfile
+    show_tokens:
+      lights: rightUpperCrystalInsert
+
+shot_profiles:
+  leftCrystalProfile:
+    states:
+      - name: dull
+        show: off
+      - name: surging
+        show: led_color
+        show_tokens:
+          color: 882222
+      - name: attuned
+        show: led_color
+        show_tokens:
+          color: DD4444
+  centerCrystalProfile:
+    states:
+      - name: dull
+        show: off
+      - name: surging
+        show: led_color
+        show_tokens:
+          color: 222288
+      - name: attuned
+        show: led_color
+        show_tokens:
+          color: 4444DD
+  rightCrystalProfile:
+    states:
+      - name: dull
+        show: off
+      - name: surging
+        show: led_color
+        show_tokens:
+          color: 888822
+      - name: attuned
+        show: led_color
+        show_tokens:
+          color: DDDD44
+
+variable_player:
+  drop_target_leftCrystal_down:
+    leftCrystalAttunement: 1
+    dropTargetHits: 1
+  drop_target_centerCrystal_down:
+    centerCrystalAttunement: 1
+    dropTargetHits: 1
+  drop_target_rightCrystal_down:
+    rightCrystalAttunement: 1
+    dropTargetHits: 1
+  drop_target_springEntry_down:
+    springEntryCrystalAttunement: 1
+    dropTargetHits: 1
+
+event_player:
+  drop_target_bank_crystalBank_down:
+    - request_crystalBank_reset{current_player.leftCrystalAttunement<2 or current_player.centerCrystalAttunement<2 or current_player.rightCrystalAttunement<2}

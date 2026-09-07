@@ -1,11 +1,26 @@
 #config_version=6
 
+# This is the mode definition for the flipper lanes mode. It is used
+# to manage the bind lanes and shuffling of them for binding rituals
+
+# The following is the mode config data
+# It contains the start event, based on the defined start event,
+# and corresponding stop event.  The priority is 150 for this mode
 mode:
   start_events: start-mode-flipperlanes-base
   stop_events: stop-mode-flipperlanes-base, ball_will_end
   priority: 150
 
+#The following are the definitions of the shots for the Flipper Lanes Mode
 shots:
+
+  # The shots are defined as such:
+  # Shot Name:
+  #   switch: Switch to trigger Shot
+  #   profile: Shot Profile to be applied to shot
+  #   show_tokens:
+  #     lights: Light or Tag to use in Profile Shows
+  #     color: Color to Use for Light in Profile Shows
   leftInnerLane:
     switch: sLeftInlane
     profile: bindLaneProfile
@@ -31,40 +46,54 @@ shots:
       lights: dInsert
       color: 888888
 
+# The Following Defines the Shot Groups for the Flipper Lanes Mode
 shot_groups:
+
+  # The Following is The Bind Lane Group Definition:
+  # In Order are the shots, named for the shot defined above, the rotation
+  # with the flipper button switch active event,and reset on group completion
   bindLaneGroup:
     shots: leftOuterLane, leftInnerLane, rightInnerLane, rightOuterLane
     rotate_left_events: sLeftFlipperButton_active
     rotate_right_events: sRightFlipperButton_active
-    reset_events: bindLaneGroup_hit_complete
+    reset_events: bindLaneGroup_lit_complete
 
+# The following defines shot profiles to be applied to shots
 shot_profiles:
+
+  # For this mode only one profile "bindLaneProfile" is named
   bindLaneProfile:
+
+    # States are defined as the following
+    # - name: State Name
+    #   show: Show to Play in State
+    #   loops: Should the Show Loop/How Many Times
+    #   speed: How Fast Should the Show Play
+    #   sync_ms: Delay to Sync Shows
     states:
-      - name:
+      - name: unlit
         show: flicker_color_off
         loops: -1
         speed: 3
         sync_ms: 0
-      - name: hit
+      - name: lit
         show: flicker_color_on
         loops: -1
         speed: 3
         sync_ms: 0
 
+# The following defines the player variable changes for this mode.
+# Currently the only events are scoring related for the lanes, which are
+# 5,000 for hitting an unlit switch, 100 for hitting a lit switch, and 
+# 10,000 for completing the group. Completing the group also increases the
+# bonus multiplier
 variable_player:
-  leftInnerLane_hit:
-    score: 1_000
-    switchesHit: 1
-  leftOuterLane_hit:
-    score: 1_000
-    switchesHit: 1
-  rightInnerLane_hit:
-    score: 1_000
-    switchesHit: 1
-  rightOuterLane_hit:
-    score: 1_000
-    switchesHit: 1
-  bindLaneGroup_hit_complete:
+
+  # shot_group _ profile state _ event Type 
+  bindLaneGroup_unlit_hit:
+    score: 5_000
+  bindLaneGroup_lit_hit:
+    score: 100
+  bindLaneGroup_lit_complete:
     score: 10_000
     bonus_multiplier: 1

@@ -13,6 +13,7 @@ config_version=5
 config/name="Witchcraft"
 run/main_scene="uid://ds4gduf8660uj"
 config/features=PackedStringArray("4.7", "GL Compatibility")
+boot_splash/image="uid://eanwc6x6jpv0"
 config/icon="res://icon.svg"
 
 [audio]
@@ -27,6 +28,7 @@ MPF="*uid://c05iybd1a77mc"
 
 window/size/viewport_width=1366
 window/size/viewport_height=768
+window/size/resizable=false
 
 [dotnet]
 

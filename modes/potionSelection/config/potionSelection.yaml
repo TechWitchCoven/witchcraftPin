@@ -1,6 +1,45 @@
 #config_version=6
 
+# This is the mode definition for the potionSelection mode. It is used
+# to determine which potion mode to start based on what shot is hit
+# after the cauldron file has been stoked
+
+# The following is the mode config data
+# It contains the start event, based on the defined start event,
+# and corresponding stop event.  The priority is 620 for this mode
 mode:
   start_events: start-mode-potionSelection
   stop_events: stop-mode-potionSelection
   priority: 620
+
+# The following contains the definitions for shows to be played in this mode
+show_player:
+
+  # Show cues are based on events being called, they are defined as such:
+  # Event to Call Show:
+  #   Name of Show To Play:
+  #     speed: Speed of Show Playback
+  #     color: Color to use for Show
+  #     tip, base, center: Specific tags for the shotArrowForward Show to use
+  #                        in order to call the different parts of the arrow 
+  #                        playfield insert
+  mode_potionSelection_started:
+    shotArrowForward:
+      speed: 2
+      show_tokens:
+        tip: potionSelectionTipInsert
+        center: potionSelectionCenterInsert
+        base: potionSelectionBaseInsert
+        color: 8000FF
+
+# The following Defines the events that will be called from this mode
+event_player:
+
+  # Events are defined as follows:
+  # Name of Event to Listen For:
+  #   - Name of Event to Call After Listened Event Occurs 
+#  sCauldronRightProx_hit:
+#  sCauldronLeftProx_hit:
+  sCauldronRightSpinner_active:
+    - start-mode-potionSpeedBrewing
+    - stop-mode-potionSelection
