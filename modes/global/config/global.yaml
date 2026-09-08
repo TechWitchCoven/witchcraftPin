@@ -44,7 +44,6 @@ show_player:
   #       lights: Lights to be Used for This Show
   mode_global_started:
     on_color:
-      speed: Speed of Show Playback
       show_tokens:
         color: FFFFFF
         lights: playfieldGI
