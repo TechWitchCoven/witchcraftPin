@@ -32,4 +32,20 @@ sound_player:
     NotAsItSeems:
       bus: music
 
+# The following contains the definitions for shows to be played in this mode
+show_player:
+
+  # Show cues are based on events being called, they are defined as such:
+  # Event to Call Show:
+  #   Name of Show To Play:
+  #     speed: Speed of Show Playback
+  #     show_tokens:
+  #       color: Color to use for Show
+  #       lights: Lights to be Used for This Show
+  mode_global_started:
+    on_color:
+      speed: Speed of Show Playback
+      show_tokens:
+        color: FFFFFF
+        lights: playfieldGI
 
