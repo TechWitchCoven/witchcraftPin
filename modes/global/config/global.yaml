@@ -43,7 +43,7 @@ show_player:
   #       color: Color to use for Show
   #       lights: Lights to be Used for This Show
   mode_global_started:
-    on_color:
+    led_color:
       show_tokens:
         color: FFFFFF
         lights: playfieldGI
