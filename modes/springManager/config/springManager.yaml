@@ -77,3 +77,20 @@ variable_player:
 event_player:
   drop_target_bank_crystalBank_down:
     - request_crystalBank_reset{current_player.leftCrystalAttunement<2 or current_player.centerCrystalAttunement<2 or current_player.rightCrystalAttunement<2}
+
+# The following defines what sounds will be played in this mode
+sound_player:
+
+  # Sounds will be called in the following way:
+  # Event to Call Music:
+  #   Song File Title:
+  #     bus: Godot Media Bus
+  drop_target_leftCrystal_down:
+    ice4:
+      bus: effects
+  drop_target_CenterCrystal_down:
+    ice4:
+      bus: effects
+  drop_target_rightCrystal_down:
+    ice4:
+      bus: effects

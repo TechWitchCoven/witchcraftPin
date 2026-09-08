@@ -75,3 +75,26 @@ variable_player:
   magicGroup_hit_complete:
     score: 10_000
     bonus_multiplier: 1
+
+# The following defines what sounds will be played in this mode
+sound_player:
+
+  # Sounds will be called in the following way:
+  # Event to Call Music:
+  #   Song File Title:
+  #     bus: Godot Media Bus
+  magicMShot_hit:
+    magicBurst:
+      bus: effects
+  magicAShot_hit:
+    magicBurst:
+      bus: effects
+  magicGShot_hit:
+    magicBurst:
+      bus: effects
+  magicIShot_hit:
+    magicBurst:
+      bus: effects
+  magicCShot_hit:
+    magicBurst:
+      bus: effects

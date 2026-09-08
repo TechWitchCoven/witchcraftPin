@@ -108,3 +108,6 @@ sound_player:
   bindLaneGroup_unlit_hit:
     electric1:
       bus: effects
+  bindLaneGroup_lit_complete:
+    electric5complete:
+      bus: effects
