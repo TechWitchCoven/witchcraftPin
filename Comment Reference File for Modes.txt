@@ -2,7 +2,7 @@ This file exists to track the most recent versions of my comments describing how
 MPF config files.  When looking at this file, I will always tag the commit with the version number update of this file so it can be referenced against the config file you are looking at.  As I refine this, there will theoretically be less discrepency over time
 
 
-Current Version: 0.1.0
+Current Version: 0.1.1
 
 
 Major Revision Description
@@ -54,10 +54,9 @@ show_player:
   # Event to Call Show:
   #   Name of Show To Play:
   #     speed: Speed of Show Playback
-  #     color: Color to use for Show
-  #     tip, base, center: Specific tags for the shotArrowForward Show to use
-  #                        in order to call the different parts of the arrow 
-  #                        playfield insert
+  #     show_tokens:
+  #       color: Color to use for Show
+  #       lights: Lights to be Used for This Show
 
 
 Timer Comments

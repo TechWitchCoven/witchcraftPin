@@ -59,12 +59,13 @@ show_player:
   # Event to Call Show:
   #   Name of Show To Play:
   #     speed: Speed of Show Playback
-  #     color: Color to use for Show
-  #     tip, base, center: Specific tags for the shotArrowForward Show to use
-  #                        in order to call the different parts of the arrow 
-  #                        playfield insert
+  #     show_tokens:
+  #       color: Color to use for Show
+  #       lights: Lights to be Used for This Show
   mode_attract_started:
     flash:
       speed: 2
       show_tokens:
         lights: startLight
+
+# Comment Version Tracking 0.1.1

@@ -40,10 +40,9 @@ show_player:
   # Event to Call Show:
   #   Name of Show To Play:
   #     speed: Speed of Show Playback
-  #     color: Color to use for Show
-  #     tip, base, center: Specific tags for the shotArrowForward Show to use
-  #                        in order to call the different parts of the arrow 
-  #                        playfield insert
+  #     show_tokens:
+  #       color: Color to use for Show
+  #       lights: Lights to be Used for This Show
   ball_save_default_timer_start:
     flash_color:
       speed: 2
@@ -74,3 +73,5 @@ show_player:
     off:
       show_tokens: 
         lights: ballSaveInsert
+
+# Comment Version Tracking 0.1.1
