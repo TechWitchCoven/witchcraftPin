@@ -29,7 +29,8 @@ virtual_platform_start_active_switches:
   - sBall2
 
 show_player:
-  led_color:
-    show_tokens:
-      color: BB0000
-      lights: transliteLight
+  init_phase_3:
+    led_color:
+      show_tokens:
+        lights: transliteLight
+        color: BB0000
