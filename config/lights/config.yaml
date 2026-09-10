@@ -11,3 +11,7 @@ lights:
     number: cStartButtonLED
     platform: drivers
     type: r
+
+  transliteLight:
+    number: neuron-3-1
+    type: rgb
