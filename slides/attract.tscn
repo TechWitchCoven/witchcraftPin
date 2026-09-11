@@ -72,3 +72,46 @@ script = ExtResource("4_f161n")
 variable_type = 2
 variable_name = "credits_string"
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="scores" type="Node2D" parent="MPFCarousel" unique_id=552421268]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="MPFCarousel/scores" unique_id=1224721556]
+propagate_maximum_size = true
+offset_right = 1366.0
+offset_bottom = 768.0
+color = Color(0.40392157, 0.20392157, 0.78431374, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MPFCarousel/scores" unique_id=1795485997]
+offset_right = 1364.0
+offset_bottom = 224.0
+
+[node name="score1_label" type="Label" parent="MPFCarousel/scores/VBoxContainer" unique_id=1759294524]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Score 1"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score1_label"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="HFlowContainer" type="HFlowContainer" parent="MPFCarousel/scores/VBoxContainer" unique_id=1801253879]
+layout_mode = 2
+
+[node name="score1_name" type="Label" parent="MPFCarousel/scores/VBoxContainer/HFlowContainer" unique_id=856120797]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Player A"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score1_name"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score1_value" type="Label" parent="MPFCarousel/scores/VBoxContainer/HFlowContainer" unique_id=802825808]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Score"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score1_value"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
