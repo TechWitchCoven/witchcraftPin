@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_2wi4k"]
 [ext_resource type="Script" uid="uid://dpe3dq8axt3g7" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_hhxni"]
+[ext_resource type="Texture2D" uid="uid://eanwc6x6jpv0" path="res://images/Witchcraft-4.png" id="3_f161n"]
 [ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_f161n"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hhxni"]
@@ -13,13 +14,6 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_2wi4k")
 metadata/_custom_type_script = "uid://dru3usokwlhd3"
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=668116999]
-propagate_maximum_size = true
-layout_mode = 0
-offset_right = 1366.0
-offset_bottom = 768.0
-color = Color(0.40392157, 0.20392157, 0.78431374, 1)
 
 [node name="MPFCarousel" type="Control" parent="." unique_id=1677325184]
 anchors_preset = 0
@@ -39,7 +33,19 @@ offset_bottom = 478.0
 theme_override_font_sizes/font_size = 80
 text = "Witchcraft"
 
+[node name="Sprite2D" type="Sprite2D" parent="MPFCarousel/title" unique_id=1999275060]
+scale = Vector2(0.17538887, 0.17538887)
+texture = ExtResource("3_f161n")
+centered = false
+
 [node name="mpflogo" type="Node2D" parent="MPFCarousel" unique_id=882214085]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="MPFCarousel/mpflogo" unique_id=2057912086]
+propagate_maximum_size = true
+offset_right = 1366.0
+offset_bottom = 768.0
+color = Color(0.40392157, 0.20392157, 0.78431374, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="MPFCarousel/mpflogo" unique_id=1585690947]
 position = Vector2(718, 448)
@@ -47,6 +53,13 @@ scale = Vector2(2, 2)
 texture = SubResource("CompressedTexture2D_hhxni")
 
 [node name="credits" type="Node2D" parent="MPFCarousel" unique_id=61502539]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="MPFCarousel/credits" unique_id=792642525]
+propagate_maximum_size = true
+offset_right = 1366.0
+offset_bottom = 768.0
+color = Color(0.40392157, 0.20392157, 0.78431374, 1)
 
 [node name="MPFVariable" type="Label" parent="MPFCarousel/credits" unique_id=361630050]
 offset_left = 454.0
