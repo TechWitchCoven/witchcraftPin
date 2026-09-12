@@ -98,3 +98,60 @@ sound_player:
   magicCShot_hit:
     magicBurst:
       bus: effects
+
+show_player:
+  magicMShot_hit:
+    rippleOn:
+      speed: 2
+      loops: 0
+      show_tokens:
+        color: 880088
+        target: magicMInsert
+        targetp1: magicAInsert
+        targetp2: magicGInsert
+        targetp3: magicIInsert
+        targetp4: magicCInsert
+  magicAShot_hit:
+    rippleOn:
+      speed: 2
+      loops: 0
+      show_tokens:
+        color: 880088
+        targetm1: magicMInsert
+        target: magicAInsert
+        targetp1: magicGInsert
+        targetp2: magicIInsert
+        targetp3: magicCInsert
+  magicGShot_hit:
+    rippleOn:
+      speed: 2
+      loops: 0
+      show_tokens:
+        color: 880088
+        targetm2: magicMInsert
+        targetm1: magicAInsert
+        target: magicGInsert
+        targetp1: magicIInsert
+        targetp2: magicCInsert
+  magicIShot_hit:
+    rippleOn:
+      speed: 2
+      loops: 0
+      show_tokens:
+        color: 880088
+        targetm3: magicMInsert
+        targetm2: magicAInsert
+        targetm1: magicGInsert
+        target: magicIInsert
+        targetp1: magicCInsert
+  magicCShot_hit:
+    rippleOn:
+      speed: 2
+      loops: 0
+      show_tokens:
+        color: 880088
+        targetm4: magicMInsert
+        targetm3: magicAInsert
+        targetm2: magicGInsert
+        targetm1: magicIInsert
+        target: magicCInsert

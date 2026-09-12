@@ -1,0 +1,84 @@
+#show_version=6
+- time: 0
+  lights:
+    (targetm4): (color)%00
+    (targetm3): (color)%00
+    (targetm2): (color)%00
+    (targetm1): (color)%00
+    (target): (color)%20
+    (targetp1): (color)%00
+    (targetp2): (color)%00
+    (targetp3): (color)%00
+    (targetp4): (color)%00
+- time: +200ms
+  lights:
+    (targetm4): (color)%00
+    (targetm3): (color)%00
+    (targetm2): (color)%00
+    (targetm1): (color)%00
+    (target): (color)
+    (targetp1): (color)%00
+    (targetp2): (color)%00
+    (targetp3): (color)%00
+    (targetp4): (color)%00
+- time: +200ms
+  lights:
+    (targetm4): (color)%00
+    (targetm3): (color)%00
+    (targetm2): (color)%00
+    (targetm1): (color)%20
+    (target): (color)%80
+    (targetp1): (color)%20
+    (targetp2): (color)%00
+    (targetp3): (color)%00
+    (targetp4): (color)%00
+- time: +200ms
+  lights:
+    (targetm4): (color)%00
+    (targetm3): (color)%00
+    (targetm2): (color)%20
+    (targetm1): (color)%40
+    (target): (color)%60
+    (targetp1): (color)%40
+    (targetp2): (color)%20
+    (targetp3): (color)%00
+    (targetp4): (color)%00
+- time: +200ms
+  lights:
+    (targetm4): (color)%00
+    (targetm3): (color)%20
+    (targetm2): (color)%40
+    (targetm1): (color)%20
+    (target): (color)%00
+    (targetp1): (color)%20
+    (targetp2): (color)%40
+    (targetp3): (color)%20
+    (targetp4): (color)%00
+- time: +200ms
+  lights:
+    (targetm4): (color)%20
+    (targetm3): (color)%40
+    (targetm2): (color)%20
+    (targetm1): (color)%00
+    (targetp1): (color)%00
+    (targetp2): (color)%20
+    (targetp3): (color)%40
+    (targetp4): (color)%20
+- time: +200ms
+  lights:
+    (targetm4): (color)%40
+    (targetm3): (color)%20
+    (targetm2): (color)%00
+    (targetp2): (color)%00
+    (targetp3): (color)%20
+    (targetp4): (color)%40
+- time: +200ms
+  lights:
+    (targetm4): (color)%20
+    (targetm3): (color)%00
+    (targetp3): (color)%00
+    (targetp4): (color)%20
+- time: +200ms
+  lights:
+    (targetm4): (color)%00
+    (targetp4): (color)%00
