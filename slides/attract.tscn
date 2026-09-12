@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://dpe3dq8axt3g7" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_hhxni"]
 [ext_resource type="Texture2D" uid="uid://eanwc6x6jpv0" path="res://images/Witchcraft-4.png" id="3_f161n"]
 [ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_f161n"]
+[ext_resource type="Theme" uid="uid://cqyi0c5yc2lxe" path="res://AttractSlideTheme.tres" id="4_twbla"]
+[ext_resource type="Theme" uid="uid://dbqf6lfoaxg23" path="res://MainSlideTitle.tres" id="5_cq3lo"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hhxni"]
 resource_local_to_scene = true
@@ -24,57 +26,28 @@ carousel_name = "attract"
 metadata/_custom_type_script = "uid://dpe3dq8axt3g7"
 
 [node name="title" type="Node2D" parent="MPFCarousel" unique_id=367382092]
-
-[node name="Label" type="Label" parent="MPFCarousel/title" unique_id=785683686]
-offset_left = 509.0
-offset_top = 368.0
-offset_right = 910.0
-offset_bottom = 478.0
-theme_override_font_sizes/font_size = 80
-text = "Witchcraft"
+visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="MPFCarousel/title" unique_id=1999275060]
 scale = Vector2(0.17538887, 0.17538887)
 texture = ExtResource("3_f161n")
 centered = false
 
-[node name="mpflogo" type="Node2D" parent="MPFCarousel" unique_id=882214085]
+[node name="machineCredits" type="Node2D" parent="MPFCarousel" unique_id=882214085]
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="MPFCarousel/mpflogo" unique_id=2057912086]
+[node name="ColorRect" type="ColorRect" parent="MPFCarousel/machineCredits" unique_id=2057912086]
 propagate_maximum_size = true
 offset_right = 1366.0
 offset_bottom = 768.0
 color = Color(0.40392157, 0.20392157, 0.78431374, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="MPFCarousel/mpflogo" unique_id=1585690947]
-position = Vector2(718, 448)
+[node name="Sprite2D" type="Sprite2D" parent="MPFCarousel/machineCredits" unique_id=1585690947]
+position = Vector2(316, 246)
 scale = Vector2(2, 2)
 texture = SubResource("CompressedTexture2D_hhxni")
 
-[node name="credits" type="Node2D" parent="MPFCarousel" unique_id=61502539]
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="MPFCarousel/credits" unique_id=792642525]
-propagate_maximum_size = true
-offset_right = 1366.0
-offset_bottom = 768.0
-color = Color(0.40392157, 0.20392157, 0.78431374, 1)
-
-[node name="MPFVariable" type="Label" parent="MPFCarousel/credits" unique_id=361630050]
-offset_left = 454.0
-offset_top = 374.0
-offset_right = 968.0
-offset_bottom = 484.0
-theme_override_font_sizes/font_size = 80
-text = "SAMPLE TEXT"
-script = ExtResource("4_f161n")
-variable_type = 2
-variable_name = "credits_string"
-metadata/_custom_type_script = "uid://bfvhmv2eirpua"
-
 [node name="scores" type="Node2D" parent="MPFCarousel" unique_id=552421268]
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="MPFCarousel/scores" unique_id=1224721556]
 propagate_maximum_size = true
@@ -82,11 +55,15 @@ offset_right = 1366.0
 offset_bottom = 768.0
 color = Color(0.40392157, 0.20392157, 0.78431374, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MPFCarousel/scores" unique_id=1795485997]
-offset_right = 1364.0
-offset_bottom = 224.0
+[node name="MarginContainer" type="MarginContainer" parent="MPFCarousel/scores" unique_id=1299821825]
+offset_right = 1366.0
+offset_bottom = 768.0
+theme = ExtResource("4_twbla")
 
-[node name="score1_label" type="Label" parent="MPFCarousel/scores/VBoxContainer" unique_id=1759294524]
+[node name="VBoxContainer" type="VBoxContainer" parent="MPFCarousel/scores/MarginContainer" unique_id=1795485997]
+layout_mode = 2
+
+[node name="score1_label" type="Label" parent="MPFCarousel/scores/MarginContainer/VBoxContainer" unique_id=1759294524]
 layout_mode = 2
 theme_override_font_sizes/font_size = 80
 text = "Score 1"
@@ -95,10 +72,10 @@ variable_type = 2
 variable_name = "score1_label"
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
 
-[node name="HFlowContainer" type="HFlowContainer" parent="MPFCarousel/scores/VBoxContainer" unique_id=1801253879]
+[node name="HFlowContainer" type="HFlowContainer" parent="MPFCarousel/scores/MarginContainer/VBoxContainer" unique_id=1801253879]
 layout_mode = 2
 
-[node name="score1_name" type="Label" parent="MPFCarousel/scores/VBoxContainer/HFlowContainer" unique_id=856120797]
+[node name="score1_name" type="Label" parent="MPFCarousel/scores/MarginContainer/VBoxContainer/HFlowContainer" unique_id=856120797]
 layout_mode = 2
 theme_override_font_sizes/font_size = 80
 text = "Player A"
@@ -107,11 +84,98 @@ variable_type = 2
 variable_name = "score1_name"
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
 
-[node name="score1_value" type="Label" parent="MPFCarousel/scores/VBoxContainer/HFlowContainer" unique_id=802825808]
+[node name="score1_value" type="Label" parent="MPFCarousel/scores/MarginContainer/VBoxContainer/HFlowContainer" unique_id=802825808]
 layout_mode = 2
 theme_override_font_sizes/font_size = 80
 text = "Score"
 script = ExtResource("4_f161n")
 variable_type = 2
 variable_name = "score1_value"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="lastGame" type="Node2D" parent="MPFCarousel" unique_id=1616116833]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="MPFCarousel/lastGame" unique_id=212080042]
+propagate_maximum_size = true
+offset_right = 1366.0
+offset_bottom = 768.0
+color = Color(0.40392157, 0.20392157, 0.78431374, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="MPFCarousel/lastGame" unique_id=488501334]
+offset_right = 1366.0
+offset_bottom = 768.0
+theme = ExtResource("4_twbla")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MPFCarousel/lastGame/MarginContainer" unique_id=926373891]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MPFCarousel/lastGame/MarginContainer/VBoxContainer" unique_id=23546960]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+text = "Last Game Scores"
+horizontal_alignment = 1
+
+[node name="HFlowContainer" type="HFlowContainer" parent="MPFCarousel/lastGame/MarginContainer/VBoxContainer" unique_id=1812082427]
+layout_mode = 2
+theme_override_constants/h_separation = 200
+
+[node name="player1LastScore" type="Label" parent="MPFCarousel/lastGame/MarginContainer/VBoxContainer/HFlowContainer" unique_id=2106147444]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 80
+text = "Player 1:               23,986,234,213"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "player1_score"
+comma_separate = true
+format_string = "Player 1:               %s"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="HFlowContainer2" type="HFlowContainer" parent="MPFCarousel/lastGame/MarginContainer/VBoxContainer" unique_id=217597220]
+layout_mode = 2
+theme_override_constants/h_separation = 200
+
+[node name="player2LastScore" type="Label" parent="MPFCarousel/lastGame/MarginContainer/VBoxContainer/HFlowContainer2" unique_id=1360949459]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 80
+text = "Player 2:               567,323,478"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "player2_score"
+comma_separate = true
+format_string = "Player 2:               %s"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="HFlowContainer3" type="HFlowContainer" parent="MPFCarousel/lastGame/MarginContainer/VBoxContainer" unique_id=183337917]
+layout_mode = 2
+theme_override_constants/h_separation = 200
+
+[node name="player3LastScore" type="Label" parent="MPFCarousel/lastGame/MarginContainer/VBoxContainer/HFlowContainer3" unique_id=790940062]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 80
+text = "Player 3:               694,695,494"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "player3_score"
+comma_separate = true
+format_string = "Player 3:               %s"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="HFlowContainer4" type="HFlowContainer" parent="MPFCarousel/lastGame/MarginContainer/VBoxContainer" unique_id=1884013061]
+layout_mode = 2
+theme_override_constants/h_separation = 200
+
+[node name="player4LastScore" type="Label" parent="MPFCarousel/lastGame/MarginContainer/VBoxContainer/HFlowContainer4" unique_id=463214850]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 80
+text = "Player 4:               38,239,839"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "player4_score"
+comma_separate = true
+format_string = "Player 4:               %s"
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"

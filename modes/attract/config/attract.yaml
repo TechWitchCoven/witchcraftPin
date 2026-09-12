@@ -6,9 +6,9 @@
 mode_settings:
   selectable_items:
     - title
-    - credits
-    - mpflogo
+#    - machineCredits
     - scores
+    - lastGame
   next_item_events: sRightFlipperButton_active, timer_attract_carousel_timer_complete
   previous_item_events: sLeftFlipperButton_active
 
