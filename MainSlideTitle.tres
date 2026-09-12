@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://dbqf6lfoaxg23"]
+
+[ext_resource type="FontFile" uid="uid://b126hv4a854m" path="res://fonts/TypographerRotunda.ttf" id="1_vc7ta"]
+
+[resource]
+default_font = ExtResource("1_vc7ta")
+default_font_size = 72
