@@ -77,7 +77,7 @@ shot_profiles:
         speed: 3
         sync_ms: 0
       - name: lit
-        show: led_on
+        show: led_color
 
 # The following defines the player variable changes for this mode.
 # Currently the only events are scoring related for the lanes, which are
