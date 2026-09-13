@@ -11,31 +11,31 @@ shots:
     profile: magicProfile
     show_tokens:
       lights: magicMInsert
-      color: 880088
+      color: MediumBlue
   magicAShot:
     switch: sATarget
     profile: magicProfile
     show_tokens:
       lights: magicAInsert
-      color: 880088
+      color: MediumBlue
   magicGShot:
     switch: sGTarget
     profile: magicProfile
     show_tokens:
       lights: magicGInsert
-      color: 880088
+      color: MediumBlue
   magicIShot:
     switch: sITarget
     profile: magicProfile
     show_tokens:
       lights: magicIInsert
-      color: 880088
+      color: MediumBlue
   magicCShot:
     switch: sCTarget
     profile: magicProfile
     show_tokens:
       lights: magicCInsert
-      color: 880088
+      color: MediumBlue
 
 shot_groups:
   magicGroup:
@@ -51,10 +51,7 @@ shot_profiles:
         speed: 3
         sync_ms: 0
       - name: hit
-        show: flicker_color_on
-        loops: -1
-        speed: 3
-        sync_ms: 0
+        show: led_color
 
 variable_player:
   magicMShot_hit:
@@ -105,7 +102,7 @@ show_player:
       speed: 2
       loops: 0
       show_tokens:
-        color: 880088
+        color: MediumBlue
         target: magicMInsert
         targetp1: magicAInsert
         targetp2: magicGInsert
@@ -116,7 +113,7 @@ show_player:
       speed: 2
       loops: 0
       show_tokens:
-        color: 880088
+        color: MediumBlue
         targetm1: magicMInsert
         target: magicAInsert
         targetp1: magicGInsert
@@ -127,7 +124,7 @@ show_player:
       speed: 2
       loops: 0
       show_tokens:
-        color: 880088
+        color: MediumBlue
         targetm2: magicMInsert
         targetm1: magicAInsert
         target: magicGInsert
@@ -138,7 +135,7 @@ show_player:
       speed: 2
       loops: 0
       show_tokens:
-        color: 880088
+        color: MediumBlue
         targetm3: magicMInsert
         targetm2: magicAInsert
         targetm1: magicGInsert
@@ -149,7 +146,7 @@ show_player:
       speed: 2
       loops: 0
       show_tokens:
-        color: 880088
+        color: MediumBlue
         targetm4: magicMInsert
         targetm3: magicAInsert
         targetm2: magicGInsert
