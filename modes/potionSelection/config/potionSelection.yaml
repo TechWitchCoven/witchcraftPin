@@ -30,7 +30,7 @@ show_player:
         tip: potionSelectionTipInsert
         center: potionSelectionCenterInsert
         base: potionSelectionBaseInsert
-        color: 8000FF
+        color: Aquamarine
 
 # The following Defines the events that will be called from this mode
 event_player:
@@ -44,10 +44,10 @@ event_player:
   sCauldronLeftProx_hit:
     - start-mode-potionRegenerationBrewing
     - stop-mode-potionSelection
-  sCauldronRightSpinner_active:
+  rightSpinnerQualifiedHit:
     - start-mode-potionSpeedBrewing
     - stop-mode-potionSelection
-  sCauldronLeftSpinner_active:
+  leftSpinnerQualifiedHit:
     - start-mode-potionStrengthBrewing
     - stop-mode-potionSelection
 
