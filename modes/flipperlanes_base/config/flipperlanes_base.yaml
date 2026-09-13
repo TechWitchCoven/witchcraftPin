@@ -26,25 +26,25 @@ shots:
     profile: bindLaneProfile
     show_tokens:
       lights: iInsert
-      color: RebeccaPurple
+      color: DarkViolet
   leftOuterLane:
     switch: sLeftOutlane
     profile: bindLaneProfile
     show_tokens:
       lights: bInsert
-      color: RebeccaPurple
+      color: DarkViolet
   rightInnerLane:
     switch: sRightInlane
     profile: bindLaneProfile
     show_tokens:
       lights: nInsert
-      color: RebeccaPurple
+      color: DarkViolet
   rightOuterLane:
     switch: sRightOutlane
     profile: bindLaneProfile
     show_tokens:
       lights: dInsert
-      color: RebeccaPurple
+      color: DarkViolet
 
 # The Following Defines the Shot Groups for the Flipper Lanes Mode
 shot_groups:
@@ -124,7 +124,7 @@ show_player:
       speed: 2
       loops: 0
       show_tokens:
-        color: RebeccaPurple
+        color: DarkViolet
         target: bInsert
         targetp1: iInsert
         targetp2: nInsert
@@ -134,7 +134,7 @@ show_player:
       speed: 2
       loops: 0
       show_tokens:
-        color: RebeccaPurple
+        color: DarkViolet
         targetm1: bInsert
         target: iInsert
         targetp1: nInsert
@@ -144,7 +144,7 @@ show_player:
       speed: 2
       loops: 0
       show_tokens:
-        color: RebeccaPurple
+        color: DarkViolet
         targetm2: bInsert
         targetm1: iInsert
         target: nInsert
@@ -154,7 +154,7 @@ show_player:
       speed: 2
       loops: 0
       show_tokens:
-        color: RebeccaPurple
+        color: DarkViolet
         targetm3: bInsert
         targetm2: iInsert
         targetm1: nInsert
