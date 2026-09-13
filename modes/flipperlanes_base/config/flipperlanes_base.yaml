@@ -139,7 +139,7 @@ show_player:
         target: iInsert
         targetp1: nInsert
         targetp2: dInsert
-  leftInnerLane_hit:
+  rightInnerLane_hit:
     rippleOn:
       speed: 2
       loops: 0
@@ -149,7 +149,7 @@ show_player:
         targetm1: iInsert
         target: nInsert
         targetp1: dInsert
-  leftInnerLane_hit:
+  rightOuterLane_hit:
     rippleOn:
       speed: 2
       loops: 0
