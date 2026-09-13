@@ -26,25 +26,25 @@ shots:
     profile: bindLaneProfile
     show_tokens:
       lights: iInsert
-      color: 888888
+      color: RebeccaPurple
   leftOuterLane:
     switch: sLeftOutlane
     profile: bindLaneProfile
     show_tokens:
       lights: bInsert
-      color: 888888
+      color: RebeccaPurple
   rightInnerLane:
     switch: sRightInlane
     profile: bindLaneProfile
     show_tokens:
       lights: nInsert
-      color: 888888
+      color: RebeccaPurple
   rightOuterLane:
     switch: sRightOutlane
     profile: bindLaneProfile
     show_tokens:
       lights: dInsert
-      color: 888888
+      color: RebeccaPurple
 
 # The Following Defines the Shot Groups for the Flipper Lanes Mode
 shot_groups:
@@ -77,10 +77,7 @@ shot_profiles:
         speed: 3
         sync_ms: 0
       - name: lit
-        show: flicker_color_on
-        loops: -1
-        speed: 3
-        sync_ms: 0
+        show: led_on
 
 # The following defines the player variable changes for this mode.
 # Currently the only events are scoring related for the lanes, which are
@@ -111,3 +108,56 @@ sound_player:
   bindLaneGroup_lit_complete:
     electric5complete:
       bus: effects
+
+# The following contains the definitions for shows to be played in this mode
+show_player:
+
+  # Show cues are based on events being called, they are defined as such:
+  # Event to Call Show:
+  #   Name of Show To Play:
+  #     speed: Speed of Show Playback
+  #     show_tokens:
+  #       color: Color to use for Show
+  #       lights: Lights to be Used for This Show
+  leftOuterLane_hit:
+    rippleOn:
+      speed: 2
+      loops: 0
+      show_tokens:
+        color: RebeccaPurple
+        target: bInsert
+        targetp1: iInsert
+        targetp2: nInsert
+        targetp3: dInsert
+  leftInnerLane_hit:
+    rippleOn:
+      speed: 2
+      loops: 0
+      show_tokens:
+        color: RebeccaPurple
+        targetm1: bInsert
+        target: iInsert
+        targetp1: nInsert
+        targetp2: dInsert
+  leftInnerLane_hit:
+    rippleOn:
+      speed: 2
+      loops: 0
+      show_tokens:
+        color: RebeccaPurple
+        targetm2: bInsert
+        targetm1: iInsert
+        target: nInsert
+        targetp1: dInsert
+  leftInnerLane_hit:
+    rippleOn:
+      speed: 2
+      loops: 0
+      show_tokens:
+        color: RebeccaPurple
+        targetm3: bInsert
+        targetm2: iInsert
+        targetm1: nInsert
+        target: dInsert
+
+#Comment Reference Current Version: 0.1.1
