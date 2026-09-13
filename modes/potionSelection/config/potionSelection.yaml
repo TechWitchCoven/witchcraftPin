@@ -51,8 +51,6 @@ event_player:
     - start-mode-potionStrengthBrewing
     - stop-mode-potionSelection
 
-Variable Player Comment
-----------------------------------------------------------------------------------------------
 # The following defines the player variable changes for this mode.
 variable_player:
 
