@@ -50,3 +50,29 @@ event_player:
   sCauldronLeftSpinner_active:
     - start-mode-potionStrengthBrewing
     - stop-mode-potionSelection
+
+Variable Player Comment
+----------------------------------------------------------------------------------------------
+# The following defines the player variable changes for this mode.
+variable_player:
+
+  # Player Variable Names are defined in this mode in two ways, as
+  # an increment via call
+  #
+  # Event Calling the Change in Variable:
+  #   Player Variable: Amount to Change By
+  #
+  # The other way it is changed is by an action as such:
+  #
+  # Event Calling the Change in Variable:
+  #   Player Variable:
+  #     Variable Type: Value for Action
+  #     action: Type of Action to be peformed
+  mode_potionSelection_started:
+    bPotionModeStarted:
+      int: 1
+      action: set
+  mode_potionSelection_stopped:
+    bPotionModeStarted:
+      int: 0
+      action: set

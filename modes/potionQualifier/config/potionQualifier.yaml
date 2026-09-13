@@ -25,10 +25,10 @@ variable_player:
   #   Player Variable:
   #     Variable Type: Value for Action
   #     action: Type of Action to be peformed
-  sCauldronLeftSpinner_active:
+  sCauldronLeftSpinner_hit:
     leftFireLevel: 1
     potionSpinners: 1
-  sCauldronRightSpinner_active:
+  sCauldronRightSpinner_hit:
     rightFireLevel: 1
     potionSpinners: 1
   mode_potionQualifier_started:
@@ -38,6 +38,23 @@ variable_player:
     rightFireLevel:
       int: 0
       action: set
+  logCyclePriorActiveLeft:
+    bCyclePriorActiveLeft:
+      int: 1
+      action: set
+  logCyclePriorInctiveLeft:
+    bCyclePriorActiveLeft:
+      int: 0
+      action: set
+  logCyclePriorActiveRight:
+    bCyclePriorActiveRight:
+      int: 1
+      action: set
+  logCyclePriorInctiveRight:
+    bCyclePriorActiveRight:
+      int: 0
+      action: set
+
 
 # The following Defines the events that will be called from this mode
 event_player:
@@ -45,7 +62,18 @@ event_player:
   # Events are defined as follows:
   # Name of Event to Listen For:
   #   - Name of Event to Call After Listened Event Occurs{Conditional Statement} 
+  sCauldronLeftSpinner_hit:
+    - start-mode-potionSelection{current_player.leftFireLevel>=20 and current_player.rightFireLevel>=20}
+    - leftSpinnerQualifiedHit{current_player.bCyclePriorActiveLeft=0}
+  sCauldronRightSpinner_hit:
+    - start-mode-potionSelection{current_player.leftFireLevel>=20 and current_player.rightFireLevel>=20}
+    - rightSpinnerQualifiedHit{current_player.bCyclePriorActiveLeft=0}
   sCauldronLeftSpinner_active:
-    - start-mode-potionSelection{current_player.leftFireLevel>=20 and current_player.rightFireLevel>=20}
+    - logCyclePriorActiveLeft{current_player.start-mode-potionSelection=0}
   sCauldronRightSpinner_active:
-    - start-mode-potionSelection{current_player.leftFireLevel>=20 and current_player.rightFireLevel>=20}
+    - logCyclePriorActiveRight{current_player.start-mode-potionSelection=0}
+  sCauldronLeftSpinner_idle:
+    - logCyclePriorInactiveLeft{current_player.start-mode-potionSelection=1}
+  sCauldronRightSpinner_idle:
+    - logCyclePriorInactiveRight{current_player.start-mode-potionSelection=1}
+
