@@ -68,5 +68,7 @@ show_player:
       speed: 2
       show_tokens:
         lights: startLight
+    attractScanningShow:
+      loops: -1
 
 # Comment Version Tracking 0.1.1

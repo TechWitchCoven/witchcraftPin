@@ -11,8 +11,10 @@ lights:
     tags: potionSelectionBaseInsert
   batwingTopInsert:
     number: upperpfexp-1-3
+    tags: potionWingInsert, potionInsert5
   batwingBottomInsert:
     number: upperpfexp-1-4
+    tags: potionWingInsert, potionInsert5
   rightRampArrowCenterInsert:
     number: upperpfexp-1-5
     tags: potionSelectionCenterInsert
@@ -61,8 +63,10 @@ lights:
     tags: potionSelectionBaseInsert
   webLowerInsert:
     number: upperpfexp-2-5
+    tags: potionWebInsert, potionInsert4
   webUpperInsert:
     number: upperpfexp-2-6
+    tags: potionWebInsert, potionInsert4
   cauldronArrowTipInsert:
     number: upperpfexp-2-7
   cauldronArrowCenterInsert:
@@ -71,12 +75,16 @@ lights:
     number: upperpfexp-2-9
   eyeUpperInsert:
     number: upperpfexp-2-10
+    tags: potionEyeInsert, potionInsert3
   eyeLowerInsert:
     number: upperpfexp-2-11
+    tags: potionEyeInsert, potionInsert3
   ravenLowerInsert:
     number: upperpfexp-2-12
+    tags: potionRavenInsert, potionInsert2
   ravenUpperInsert:
     number: upperpfexp-2-13
+    tags: potionRavenInsert, potionInsert2
   leftOrbitArrowBaseInsert:
     number: upperpfexp-2-14
     tags: potionSelectionBaseInsert
@@ -98,8 +106,10 @@ lights:
     tags: potionSelectionBaseInsert
   dragonScaleLowerInsert:
     number: upperpfexp-2-20
+    tags: potionScaleInsert, potionInsert1
   dragonScaleUpperInsert:
     number: upperpfexp-2-21
+    tags: potionScaleInsert, potionInsert1
   leftRampTipInsert:
     number: upperpfexp-2-22
     tags: potionSelectionTipInsert
