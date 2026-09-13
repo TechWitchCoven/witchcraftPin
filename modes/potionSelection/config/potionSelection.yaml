@@ -50,6 +50,10 @@ event_player:
   leftSpinnerQualifiedHit:
     - start-mode-potionStrengthBrewing
     - stop-mode-potionSelection
+  spinner_leftFireSpinner_hit:
+    - leftSpinnerQualifiedHit{current_player.bCyclePriorActiveLeft==0}
+  spinner_rightFireSpinner_hit:
+    - rightSpinnerQualifiedHit{current_player.bCyclePriorActiveRight==0}
 
 # The following defines the player variable changes for this mode.
 variable_player:

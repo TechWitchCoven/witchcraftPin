@@ -25,19 +25,7 @@ variable_player:
   #   Player Variable:
   #     Variable Type: Value for Action
   #     action: Type of Action to be peformed
-  spinner_leftFireSpinner_hit:
-    leftFireLevel: 1
-    potionSpinners: 1
-  spinner_rightFireSpinner_hit:
-    rightFireLevel: 1
-    potionSpinners: 1
   mode_potionQualifier_started:
-    leftFireLevel:
-      int: 0
-      action: set
-    rightFireLevel:
-      int: 0
-      action: set
     bCyclePriorActiveLeft:
       int: 0
       action: set
@@ -45,22 +33,6 @@ variable_player:
       int: 0
       action: set
     bPotionModeStarted:
-      int: 0
-      action: set
-  logCyclePriorActiveLeft:
-    bCyclePriorActiveLeft:
-      int: 1
-      action: set
-  logCyclePriorInactiveLeft:
-    bCyclePriorActiveLeft:
-      int: 0
-      action: set
-  logCyclePriorActiveRight:
-    bCyclePriorActiveRight:
-      int: 1
-      action: set
-  logCyclePriorInactiveRight:
-    bCyclePriorActiveRight:
       int: 0
       action: set
 
@@ -73,16 +45,8 @@ event_player:
   #   - Name of Event to Call After Listened Event Occurs{Conditional Statement} 
   spinner_leftFireSpinner_hit:
     - start-mode-potionSelection{current_player.leftFireLevel>=20 and current_player.rightFireLevel>=20 and current_player.bPotionModeStarted==0}
-    - leftSpinnerQualifiedHit{current_player.bCyclePriorActiveLeft==0}
   spinner_rightFireSpinner_hit:
     - start-mode-potionSelection{current_player.leftFireLevel>=20 and current_player.rightFireLevel>=20 and current_player.bPotionModeStarted==0}
-    - rightSpinnerQualifiedHit{current_player.bCyclePriorActiveRight==0}
-  spinner_leftFireSpinner_active:
-    - logCyclePriorActiveLeft{current_player.bPotionModeStarted==0}
-  spinner_rightFireSpinner_active:
-    - logCyclePriorActiveRight{current_player.bPotionModeStarted==0}
-  spinner_leftFireSpinner_inactive:
-    - logCyclePriorInactiveLeft
-  spinner_rightFireSpinner_inactive:
-    - logCyclePriorInactiveRight
 
+
+# Comment Reference Version 0.1.1

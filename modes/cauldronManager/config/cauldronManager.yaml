@@ -33,6 +33,11 @@ timers:
   #   control_events:
   #     - event: Name of Event to Call Timer Control Event
   #       action: Type of Control Event to be Peformed (stop/restart)
+
+  # The following timer acts as the primary clock related to motion events for the cauldron
+  # since motor devices have a time off for FAST EXP Boards. This primary clock will "tick"
+  # every 5 seconds and initiate an event to call another motion event as long as this
+  # mode is running.
   motionTick:
     end_value: 1
     tick_interval: 5s
@@ -46,14 +51,86 @@ event_player:
 
   # Events are defined as follows:
   # Name of Event to Listen For:
-  #   - Name of Event to Call After Listened Event Occurs 
+  #   - Name of Event to Call After Listened Event Occurs{Conditional Statement}
+
+  # The following event occurs on a primary motion clock tick, and resets the timer
+  # and also sets both axes one more tick of motion forward (or reverse)
   timer_motionTick_complete:
     - cauldronOneTickForward
     - bumperOneTickReverse
     - resetTickTimer
+
+  # The following event occurs at mode start and initates a motion tick on mode start
   mode_cauldronManager_started:
     - cauldronOneTickForward
     - bumperOneTickReverse
+
+  #The following calls the events to stop the cauldron Motors
   mode_cauldronManager_will_stop:
     - cauldronStop
     - bumperStop
+
+  #The following events set the spinner to active from last cycle (via an event) if the potion
+  # mode has not started, and resets it back via an event
+  spinner_leftFireSpinner_active:
+    - logCyclePriorActiveLeft{current_player.bPotionModeStarted==0}
+  spinner_rightFireSpinner_active:
+    - logCyclePriorActiveRight{current_player.bPotionModeStarted==0}
+  spinner_leftFireSpinner_inactive:
+    - logCyclePriorInactiveLeft
+  spinner_rightFireSpinner_inactive:
+    - logCyclePriorInactiveRight
+
+# The following defines the player variable changes for this mode.
+variable_player:
+
+  # Player Variable Names are defined in this mode in two ways, as
+  # an increment via call
+  #
+  # Event Calling the Change in Variable:
+  #   Player Variable: Amount to Change By
+  #
+  # The other way it is changed is by an action as such:
+  #
+  # Event Calling the Change in Variable:
+  #   Player Variable:
+  #     Variable Type: Value for Action
+  #     action: Type of Action to be peformed
+
+  # The following add fire level tokens for potion qualification, and potionSpinnerCounts for Bonus
+  spinner_leftFireSpinner_hit:
+    leftFireLevel: 1
+    potionSpinners: 1
+  spinner_rightFireSpinner_hit:
+    rightFireLevel: 1
+    potionSpinners: 1
+
+  # The following initializes the fire level values 
+  mode_cauldronManager_started:
+    leftFireLevel:
+      int: 0
+      action: set
+    rightFireLevel:
+      int: 0
+      action: set
+
+  # The following sets and resets the Cycle Prior Active Tags for the spinners to mark if the spinner
+  # is still running or not from when the potions were qualified, or if they are active after
+  logCyclePriorActiveLeft:
+    bCyclePriorActiveLeft:
+      int: 1
+      action: set
+  logCyclePriorInactiveLeft:
+    bCyclePriorActiveLeft:
+      int: 0
+      action: set
+  logCyclePriorActiveRight:
+    bCyclePriorActiveRight:
+      int: 1
+      action: set
+  logCyclePriorInactiveRight:
+    bCyclePriorActiveRight:
+      int: 0
+      action: set
+
+#Comment Reference Version 0.1.1
