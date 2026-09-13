@@ -64,16 +64,16 @@ event_player:
   #   - Name of Event to Call After Listened Event Occurs{Conditional Statement} 
   sCauldronLeftSpinner_hit:
     - start-mode-potionSelection{current_player.leftFireLevel>=20 and current_player.rightFireLevel>=20}
-    - leftSpinnerQualifiedHit{current_player.bCyclePriorActiveLeft=0}
+    - leftSpinnerQualifiedHit{current_player.bCyclePriorActiveLeft==0}
   sCauldronRightSpinner_hit:
     - start-mode-potionSelection{current_player.leftFireLevel>=20 and current_player.rightFireLevel>=20}
-    - rightSpinnerQualifiedHit{current_player.bCyclePriorActiveLeft=0}
+    - rightSpinnerQualifiedHit{current_player.bCyclePriorActiveLeft==0}
   sCauldronLeftSpinner_active:
-    - logCyclePriorActiveLeft{current_player.start-mode-potionSelection=0}
+    - logCyclePriorActiveLeft{current_player.start-mode-potionSelection==0}
   sCauldronRightSpinner_active:
-    - logCyclePriorActiveRight{current_player.start-mode-potionSelection=0}
+    - logCyclePriorActiveRight{current_player.start-mode-potionSelection==0}
   sCauldronLeftSpinner_idle:
-    - logCyclePriorInactiveLeft{current_player.start-mode-potionSelection=1}
+    - logCyclePriorInactiveLeft{current_player.start-mode-potionSelection==1}
   sCauldronRightSpinner_idle:
-    - logCyclePriorInactiveRight{current_player.start-mode-potionSelection=1}
+    - logCyclePriorInactiveRight{current_player.start-mode-potionSelection==1}
 
