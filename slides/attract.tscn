@@ -48,6 +48,7 @@ scale = Vector2(2, 2)
 texture = SubResource("CompressedTexture2D_hhxni")
 
 [node name="scores" type="Node2D" parent="MPFCarousel" unique_id=552421268]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="MPFCarousel/scores" unique_id=1224721556]
 propagate_maximum_size = true
@@ -94,7 +95,6 @@ variable_name = "score1_value"
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
 
 [node name="lastGame" type="Node2D" parent="MPFCarousel" unique_id=1616116833]
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="MPFCarousel/lastGame" unique_id=212080042]
 propagate_maximum_size = true
@@ -129,7 +129,7 @@ script = ExtResource("4_f161n")
 variable_type = 2
 variable_name = "player1_score"
 comma_separate = true
-format_string = "Player 1:               %s"
+template_string = "Player 1:               %s"
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
 
 [node name="HFlowContainer2" type="HFlowContainer" parent="MPFCarousel/lastGame/MarginContainer/VBoxContainer" unique_id=217597220]
@@ -145,7 +145,7 @@ script = ExtResource("4_f161n")
 variable_type = 2
 variable_name = "player2_score"
 comma_separate = true
-format_string = "Player 2:               %s"
+template_string = "Player 2:               %s"
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
 
 [node name="HFlowContainer3" type="HFlowContainer" parent="MPFCarousel/lastGame/MarginContainer/VBoxContainer" unique_id=183337917]
@@ -161,7 +161,7 @@ script = ExtResource("4_f161n")
 variable_type = 2
 variable_name = "player3_score"
 comma_separate = true
-format_string = "Player 3:               %s"
+template_string = "Player 3:               %s"
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
 
 [node name="HFlowContainer4" type="HFlowContainer" parent="MPFCarousel/lastGame/MarginContainer/VBoxContainer" unique_id=1884013061]
@@ -177,5 +177,5 @@ script = ExtResource("4_f161n")
 variable_type = 2
 variable_name = "player4_score"
 comma_separate = true
-format_string = "Player 4:               %s"
+template_string = "Player 4:               %s"
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
