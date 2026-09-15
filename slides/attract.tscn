@@ -66,7 +66,8 @@ layout_mode = 2
 
 [node name="score1_label" type="Label" parent="MPFCarousel/scores/MarginContainer/VBoxContainer" unique_id=1759294524]
 layout_mode = 2
-theme_override_font_sizes/font_size = 80
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 60
 text = "Score 1"
 script = ExtResource("4_f161n")
 variable_type = 2
@@ -75,10 +76,12 @@ metadata/_custom_type_script = "uid://bfvhmv2eirpua"
 
 [node name="HFlowContainer" type="HFlowContainer" parent="MPFCarousel/scores/MarginContainer/VBoxContainer" unique_id=1801253879]
 layout_mode = 2
+theme_override_constants/h_separation = 300
 
 [node name="score1_name" type="Label" parent="MPFCarousel/scores/MarginContainer/VBoxContainer/HFlowContainer" unique_id=856120797]
 layout_mode = 2
-theme_override_font_sizes/font_size = 80
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 40
 text = "Player A"
 script = ExtResource("4_f161n")
 variable_type = 2
@@ -87,11 +90,153 @@ metadata/_custom_type_script = "uid://bfvhmv2eirpua"
 
 [node name="score1_value" type="Label" parent="MPFCarousel/scores/MarginContainer/VBoxContainer/HFlowContainer" unique_id=802825808]
 layout_mode = 2
-theme_override_font_sizes/font_size = 80
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 40
 text = "Score"
 script = ExtResource("4_f161n")
 variable_type = 2
 variable_name = "score1_value"
+comma_separate = true
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score1_label2" type="Label" parent="MPFCarousel/scores/MarginContainer/VBoxContainer" unique_id=151893329]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 60
+text = "Score 2"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score2_label"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="HFlowContainer2" type="HFlowContainer" parent="MPFCarousel/scores/MarginContainer/VBoxContainer" unique_id=632348110]
+layout_mode = 2
+theme_override_constants/h_separation = 300
+
+[node name="score1_name" type="Label" parent="MPFCarousel/scores/MarginContainer/VBoxContainer/HFlowContainer2" unique_id=1240365630]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 40
+text = "Player B"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score2_name"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score1_value" type="Label" parent="MPFCarousel/scores/MarginContainer/VBoxContainer/HFlowContainer2" unique_id=968788674]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 40
+text = "Score"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score2_value"
+comma_separate = true
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score1_label3" type="Label" parent="MPFCarousel/scores/MarginContainer/VBoxContainer" unique_id=1725701821]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 60
+text = "Score 3"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score3_label"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="HFlowContainer3" type="HFlowContainer" parent="MPFCarousel/scores/MarginContainer/VBoxContainer" unique_id=1088984506]
+layout_mode = 2
+theme_override_constants/h_separation = 300
+
+[node name="score1_name" type="Label" parent="MPFCarousel/scores/MarginContainer/VBoxContainer/HFlowContainer3" unique_id=526930805]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 40
+text = "Player C"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score3_name"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score1_value" type="Label" parent="MPFCarousel/scores/MarginContainer/VBoxContainer/HFlowContainer3" unique_id=838929145]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 40
+text = "Score"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score3_value"
+comma_separate = true
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score1_label4" type="Label" parent="MPFCarousel/scores/MarginContainer/VBoxContainer" unique_id=660066575]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 60
+text = "Score 4"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score4_label"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="HFlowContainer4" type="HFlowContainer" parent="MPFCarousel/scores/MarginContainer/VBoxContainer" unique_id=2067423599]
+layout_mode = 2
+theme_override_constants/h_separation = 300
+
+[node name="score1_name" type="Label" parent="MPFCarousel/scores/MarginContainer/VBoxContainer/HFlowContainer4" unique_id=1992780565]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 40
+text = "Player D"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score4_name"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score1_value" type="Label" parent="MPFCarousel/scores/MarginContainer/VBoxContainer/HFlowContainer4" unique_id=2039276732]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 40
+text = "Score"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score3_value"
+comma_separate = true
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score1_label5" type="Label" parent="MPFCarousel/scores/MarginContainer/VBoxContainer" unique_id=563304050]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 60
+text = "Score 5"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score5_label"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="HFlowContainer5" type="HFlowContainer" parent="MPFCarousel/scores/MarginContainer/VBoxContainer" unique_id=1475678817]
+layout_mode = 2
+theme_override_constants/h_separation = 300
+
+[node name="score1_name" type="Label" parent="MPFCarousel/scores/MarginContainer/VBoxContainer/HFlowContainer5" unique_id=17435023]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 40
+text = "Player E"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score5_name"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score1_value" type="Label" parent="MPFCarousel/scores/MarginContainer/VBoxContainer/HFlowContainer5" unique_id=1195396543]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 40
+text = "Score"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score5_value"
+comma_separate = true
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
 
 [node name="lastGame" type="Node2D" parent="MPFCarousel" unique_id=1616116833]
@@ -123,7 +268,6 @@ theme_override_constants/h_separation = 200
 [node name="player1LastScore" type="Label" parent="MPFCarousel/lastGame/MarginContainer/VBoxContainer/HFlowContainer" unique_id=2106147444]
 layout_mode = 2
 theme = ExtResource("5_cq3lo")
-theme_override_font_sizes/font_size = 80
 text = "Player 1:               23,986,234,213"
 script = ExtResource("4_f161n")
 variable_type = 2
@@ -139,7 +283,6 @@ theme_override_constants/h_separation = 200
 [node name="player2LastScore" type="Label" parent="MPFCarousel/lastGame/MarginContainer/VBoxContainer/HFlowContainer2" unique_id=1360949459]
 layout_mode = 2
 theme = ExtResource("5_cq3lo")
-theme_override_font_sizes/font_size = 80
 text = "Player 2:               567,323,478"
 script = ExtResource("4_f161n")
 variable_type = 2
@@ -155,7 +298,6 @@ theme_override_constants/h_separation = 200
 [node name="player3LastScore" type="Label" parent="MPFCarousel/lastGame/MarginContainer/VBoxContainer/HFlowContainer3" unique_id=790940062]
 layout_mode = 2
 theme = ExtResource("5_cq3lo")
-theme_override_font_sizes/font_size = 80
 text = "Player 3:               694,695,494"
 script = ExtResource("4_f161n")
 variable_type = 2
@@ -171,7 +313,6 @@ theme_override_constants/h_separation = 200
 [node name="player4LastScore" type="Label" parent="MPFCarousel/lastGame/MarginContainer/VBoxContainer/HFlowContainer4" unique_id=463214850]
 layout_mode = 2
 theme = ExtResource("5_cq3lo")
-theme_override_font_sizes/font_size = 80
 text = "Player 4:               38,239,839"
 script = ExtResource("4_f161n")
 variable_type = 2
