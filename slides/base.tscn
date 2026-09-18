@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_b71wd"]
 [ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_06ewq"]
-[ext_resource type="Theme" uid="uid://csuihgabbajxo" path="res://body.tres" id="3_mixwp"]
+[ext_resource type="Texture2D" uid="uid://dly5mnqbj16yw" path="res://images/Texturelabs_Paper_127XL.jpg" id="2_myvl5"]
+[ext_resource type="Theme" uid="uid://dbqf6lfoaxg23" path="res://MainSlideTitle.tres" id="4_6vrr4"]
 
 [node name="Base" type="Control" unique_id=1614008481]
 layout_mode = 3
@@ -10,11 +11,11 @@ anchors_preset = 0
 script = ExtResource("1_b71wd")
 metadata/_custom_type_script = "uid://dru3usokwlhd3"
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=680797480]
-layout_mode = 0
-offset_right = 1366.0
-offset_bottom = 768.0
-color = Color(0.26147848, 0.04918897, 0.34420156, 1)
+[node name="paperTexture" type="Sprite2D" parent="." unique_id=227078312]
+position = Vector2(-50, -140)
+scale = Vector2(0.225, 0.225)
+texture = ExtResource("2_myvl5")
+centered = false
 
 [node name="Bottom Margin Container" type="MarginContainer" parent="." unique_id=1097148550]
 layout_mode = 1
@@ -38,7 +39,7 @@ alignment = 1
 
 [node name="Score Label" type="Label" parent="Bottom Margin Container/HFlowContainer" unique_id=777870229]
 layout_mode = 2
-theme = ExtResource("3_mixwp")
+theme = ExtResource("4_6vrr4")
 text = "999,999,999"
 horizontal_alignment = 1
 script = ExtResource("2_06ewq")
@@ -60,7 +61,7 @@ layout_mode = 2
 
 [node name="MPFVariable" type="Label" parent="Top Margin Container/HFlowContainer" unique_id=271519620]
 layout_mode = 2
-theme = ExtResource("3_mixwp")
+theme = ExtResource("4_6vrr4")
 text = "Player 2"
 script = ExtResource("2_06ewq")
 variable_name = "number"
@@ -70,9 +71,35 @@ metadata/_custom_type_script = "uid://bfvhmv2eirpua"
 
 [node name="Ball Number Label" type="Label" parent="Top Margin Container/HFlowContainer" unique_id=513562480]
 layout_mode = 2
-theme = ExtResource("3_mixwp")
+theme = ExtResource("4_6vrr4")
 text = "Ball 3"
 script = ExtResource("2_06ewq")
 variable_name = "ball"
 template_string = "Ball %s"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="MPFVariable" type="Label" parent="." unique_id=349575804]
+layout_mode = 0
+offset_left = 893.0
+offset_top = 30.0
+offset_right = 1351.0
+offset_bottom = 102.0
+theme = ExtResource("4_6vrr4")
+text = "Rim Orbits: XXXX"
+script = ExtResource("2_06ewq")
+variable_name = "rimOrbits"
+template_string = "Rim Orbits: %s"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="MPFVariable2" type="Label" parent="." unique_id=218250655]
+layout_mode = 0
+offset_left = 886.0
+offset_top = 118.0
+offset_right = 1362.0
+offset_bottom = 190.0
+theme = ExtResource("4_6vrr4")
+text = "Switch Hits: XXXX"
+script = ExtResource("2_06ewq")
+variable_name = "switchesHit"
+template_string = "Switch Hits: %s"
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
