@@ -115,6 +115,10 @@ switches:
     number: pio2-14
     type: NC
     debounce: quick
+  sCauldronOrbitProx:
+    number: pio2-15
+    type: NC
+    debounce: quick
   sMTarget:
     number: pio2-16
     debounce: quick
