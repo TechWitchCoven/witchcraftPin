@@ -69,4 +69,4 @@ drop_target_banks:
   springBank:
     drop_targets: springEntry
     reset_coils: cSpring1Reset
-    reset_events: machine_reset_phase_3, ball_starting
+    reset_events: machine_reset_phase_3, ball_starting, request_springBank_reset
