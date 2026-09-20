@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dpe3dq8axt3g7" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_hhxni"]
 [ext_resource type="Texture2D" uid="uid://m8ocn8vj6381" path="res://images/Witchcraft-backdrop.jpg" id="3_nlvwg"]
 [ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_f161n"]
-[ext_resource type="Texture2D" uid="uid://dly5mnqbj16yw" path="res://images/Texturelabs_Paper_127XL.jpg" id="4_hhnfk"]
+[ext_resource type="Texture2D" uid="uid://ddmaghve32jrs" path="res://images/paperBackdrop.jpg" id="4_h0ope"]
 [ext_resource type="Theme" uid="uid://cqyi0c5yc2lxe" path="res://AttractSlideTheme.tres" id="4_twbla"]
 [ext_resource type="Theme" uid="uid://dbqf6lfoaxg23" path="res://MainSlideTitle.tres" id="5_cq3lo"]
 
@@ -27,6 +27,7 @@ carousel_name = "attract"
 metadata/_custom_type_script = "uid://dpe3dq8axt3g7"
 
 [node name="title" type="Node2D" parent="MPFCarousel" unique_id=367382092]
+visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="MPFCarousel/title" unique_id=1999275060]
 position = Vector2(-26, -31)
@@ -52,9 +53,7 @@ texture = SubResource("CompressedTexture2D_hhxni")
 visible = false
 
 [node name="paperTexture" type="Sprite2D" parent="MPFCarousel/scores" unique_id=345256344]
-position = Vector2(-50, -140)
-scale = Vector2(0.225, 0.225)
-texture = ExtResource("4_hhnfk")
+texture = ExtResource("4_h0ope")
 centered = false
 
 [node name="MarginContainer" type="MarginContainer" parent="MPFCarousel/scores" unique_id=1299821825]
@@ -241,12 +240,9 @@ comma_separate = true
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
 
 [node name="lastGame" type="Node2D" parent="MPFCarousel" unique_id=1616116833]
-visible = false
 
-[node name="paperTexture" type="Sprite2D" parent="MPFCarousel/lastGame" unique_id=1226452670]
-position = Vector2(-50, -140)
-scale = Vector2(0.225, 0.225)
-texture = ExtResource("4_hhnfk")
+[node name="paperTexture" type="Sprite2D" parent="MPFCarousel/lastGame" unique_id=643271973]
+texture = ExtResource("4_h0ope")
 centered = false
 
 [node name="MarginContainer" type="MarginContainer" parent="MPFCarousel/lastGame" unique_id=488501334]

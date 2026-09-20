@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_b71wd"]
 [ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_06ewq"]
-[ext_resource type="Texture2D" uid="uid://dly5mnqbj16yw" path="res://images/Texturelabs_Paper_127XL.jpg" id="2_myvl5"]
+[ext_resource type="Texture2D" uid="uid://ddmaghve32jrs" path="res://images/paperBackdrop.jpg" id="2_myvl5"]
 [ext_resource type="Theme" uid="uid://dbqf6lfoaxg23" path="res://MainSlideTitle.tres" id="4_6vrr4"]
 
 [node name="Base" type="Control" unique_id=1614008481]
@@ -11,9 +11,7 @@ anchors_preset = 0
 script = ExtResource("1_b71wd")
 metadata/_custom_type_script = "uid://dru3usokwlhd3"
 
-[node name="paperTexture" type="Sprite2D" parent="." unique_id=227078312]
-position = Vector2(-50, -140)
-scale = Vector2(0.225, 0.225)
+[node name="paperTexture" type="Sprite2D" parent="." unique_id=797301358]
 texture = ExtResource("2_myvl5")
 centered = false
 
