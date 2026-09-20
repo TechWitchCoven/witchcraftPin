@@ -46,10 +46,10 @@ autofire_coils:
 spinners:
   leftFireSpinner:
     switch: sCauldronLeftSpinner
-    active_ms: 500
+    active_ms: 1000
   rightFireSpinner:
     switch: sCauldronRightSpinner
-    active_ms: 500
+    active_ms: 1000
 
 drop_targets:
   leftCrystal:
