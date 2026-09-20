@@ -33,7 +33,7 @@ var current_text: String = ""
 
 @export_group("Text Formatting")
 ## Color to highlight the selected text
-@export var highlight_color := Color(1, 0, 1):
+@export var highlight_color := Color("#440069ff"):
 	set(value):
 		highlight_color = value
 		for c in self.get_children():

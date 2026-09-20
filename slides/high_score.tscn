@@ -1,48 +1,54 @@
 [gd_scene format=3 uid="uid://lqeoxevsy0ex"]
 
 [ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_adeqt"]
+[ext_resource type="Texture2D" uid="uid://ddmaghve32jrs" path="res://images/paperBackdrop.jpg" id="2_5lg8l"]
 [ext_resource type="Script" uid="uid://btfn6s6a0a7rg" path="res://addons/mpf-gmc/classes/mpf_text_input.gd" id="2_6uslk"]
 [ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_hewrl"]
+[ext_resource type="Theme" uid="uid://dbqf6lfoaxg23" path="res://MainSlideTitle.tres" id="3_i5kur"]
+[ext_resource type="FontFile" uid="uid://b126hv4a854m" path="res://fonts/TypographerRotunda.ttf" id="5_sudqw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qjsot"]
+font = ExtResource("5_sudqw")
+font_size = 20
+font_color = Color(0.078431375, 0.05882353, 0.023529412, 1)
+shadow_size = 0
 
 [node name="HighScore" type="Control" unique_id=1636255316]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_adeqt")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1646441287]
-layout_mode = 0
-offset_right = 1366.0
-offset_bottom = 768.0
-color = Color(0.26147848, 0.04918897, 0.34420156, 1)
-
-[node name="Label" type="Label" parent="." unique_id=917730184]
-layout_mode = 0
-offset_left = 691.0
-offset_top = 104.0
-offset_right = 1356.0
-offset_bottom = 246.0
+[node name="ColorRect" type="Sprite2D" parent="." unique_id=506851910]
+texture = ExtResource("2_5lg8l")
+centered = false
 
 [node name="MPFTextInput" type="HFlowContainer" parent="." unique_id=827672171 node_paths=PackedStringArray("display_node")]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 337.0
-offset_right = 363.0
-offset_bottom = 441.0
+offset_left = 25.0
+offset_top = 367.0
+offset_right = 351.5
+offset_bottom = 461.0
 scale = Vector2(4, 4)
+theme = ExtResource("3_i5kur")
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = -2
 script = ExtResource("2_6uslk")
 grid_width = 30
 display_node = NodePath("../RichTextLabel")
+highlight_color = Color(0.26649985, 0, 0.41, 1)
+character_appearance = SubResource("LabelSettings_qjsot")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1740869448]
 layout_mode = 0
-offset_left = 519.0
-offset_top = 97.0
-offset_right = 747.2857
-offset_bottom = 164.71428
+offset_left = 433.00006
+offset_top = 97.00001
+offset_right = 691.8572
+offset_bottom = 170.14285
 scale = Vector2(3.5, 3.5)
+theme = ExtResource("3_i5kur")
 theme_override_font_sizes/normal_font_size = 60
 bbcode_enabled = true
-text = "[pulse freq=3.0 color=#ff00ffff ease=-1.0]A[/pulse]"
+text = "[pulse freq=3.0 color=#440069 ease=-1.0]A[/pulse]"
 
 [node name="event_award" type="Label" parent="." unique_id=52309208]
 layout_mode = 0
@@ -50,6 +56,7 @@ offset_left = 47.0
 offset_top = 7.0
 offset_right = 1335.0
 offset_bottom = 177.0
+theme = ExtResource("3_i5kur")
 theme_override_font_sizes/font_size = 100
 text = "Award Name"
 horizontal_alignment = 1
@@ -63,6 +70,7 @@ offset_left = 15.0
 offset_top = 141.0
 offset_right = 458.0
 offset_bottom = 287.0
+theme = ExtResource("3_i5kur")
 theme_override_font_sizes/font_size = 100
 text = "Player N:"
 script = ExtResource("3_hewrl")
