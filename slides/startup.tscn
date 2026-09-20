@@ -1,10 +1,7 @@
 [gd_scene format=3 uid="uid://belkug6sa4arr"]
 
 [ext_resource type="Script" uid="uid://ujpd25534tqk" path="res://addons/mpf-gmc/slides/startup.gd" id="1_cfjlx"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j16ou"]
-resource_local_to_scene = true
-load_path = "res://.godot/imported/Witchcraft-4.png-ad7b2f3964380d24fc7b912183d84423.ctex"
+[ext_resource type="Texture2D" uid="uid://m8ocn8vj6381" path="res://images/Witchcraft-backdrop.jpg" id="2_3m1ne"]
 
 [node name="MPFSlide" type="Control" unique_id=24850095]
 layout_mode = 3
@@ -24,9 +21,9 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="CenterContainer2" unique_id=999889249]
-position = Vector2(680, 387.99997)
-scale = Vector2(0.18, 0.18)
-texture = SubResource("CompressedTexture2D_j16ou")
+position = Vector2(674, 388)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("2_3m1ne")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=691752862]
 layout_mode = 1
