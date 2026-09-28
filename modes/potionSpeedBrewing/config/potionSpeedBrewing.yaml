@@ -45,4 +45,41 @@ event_player:
   # Events are defined as follows:
   # Name of Event to Listen For:
   #   - Name of Event to Call After Listened Event Occurs 
-  
+  speedPotionBrewComplete:
+    - stop-mode-potionSpeedBrewing
+    - start-mode-potionQualifier
+
+# The following defines the shots in the speed potion
+shots:
+
+  # shots are defined as follows
+  # shotName:
+  #   switch: Switch to triggers shot
+  #   profile: Shot Profile to be applied
+  #     show_tokens:
+  #       lights: lights/tag associated with shot
+  #       color: Color for light shows (tag from show) 
+  dragonScaleIngredient:
+    switch: sCauldronLeftProx
+#    profile: magicProfile
+#    show_tokens:
+#      lights: magicMInsert
+#      color: MediumBlue
+  batWingIngredient:
+    switch: sCauldronRightProx
+#    profile: magicProfile
+#    show_tokens:
+#      lights: magicMInsert
+#      color: MediumBlue
+#  batWingIngredient:
+#    switch: sCauldronLeftSpinner
+#    profile: magicProfile
+#    show_tokens:
+#      lights: magicMInsert
+#      color: MediumBlue
+#  batWingIngredient:
+#    switch: sCauldronRightSpinner
+#    profile: magicProfile
+#    show_tokens:
+#      lights: magicMInsert
+#      color: MediumBlue
