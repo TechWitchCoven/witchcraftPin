@@ -2,13 +2,14 @@ This file exists to track the most recent versions of my comments describing how
 MPF config files.  When looking at this file, I will always tag the commit with the version number update of this file so it can be referenced against the config file you are looking at.  As I refine this, there will theoretically be less discrepency over time
 
 
-Current Version: 0.1.1
+Current Version: 0.1.2
 
 
 Major Revision Description
 ----------------------------------------------------------------------------------------------
 
 - 0.1.0 - Creation of Comment Tracking File, sub versions will track the merging of all files.
+- 0.1.2 - Added Shot Profiles
 
 Mode Comments
 ----------------------------------------------------------------------------------------------
@@ -119,3 +120,18 @@ ball_saves:
   #   early_ball_save_events: Events that will trigger an early ball save
   #   auto_launch: Will the saved ball be auto launched to the playfield
   #   balls_to_save: How Many Balls will be Saved on this Ball Save
+
+Shot Profiles
+----------------------------------------------------------------------------------------------
+  # The following defines shot profiles to be applied to shots
+shot_profiles:
+
+  # For this mode only one profile "bindLaneProfile" is named
+  NAME OF SHOT PROFILE:
+
+    # States are defined as the following
+    # - name: State Name
+    #   show: Show to Play in State
+    #   loops: Should the Show Loop/How Many Times
+    #   speed: How Fast Should the Show Play
+    #   sync_ms: Delay to Sync Shows
