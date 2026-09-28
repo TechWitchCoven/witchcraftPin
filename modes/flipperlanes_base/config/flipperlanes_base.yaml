@@ -89,8 +89,10 @@ variable_player:
   # shot_group _ profile state _ event Type 
   bindLaneGroup_unlit_hit:
     score: 5_000
+    switchesHit: 1
   bindLaneGroup_lit_hit:
     score: 100
+    switchesHit: 1
   bindLaneGroup_lit_complete:
     score: 10_000
     bonus_multiplier: 1
