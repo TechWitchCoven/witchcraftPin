@@ -1,0 +1,10 @@
+[gd_resource type="Theme" format=3 uid="uid://halgp5eliigq"]
+
+[ext_resource type="FontFile" uid="uid://b126hv4a854m" path="res://fonts/TypographerRotunda.ttf" id="1_ddlbm"]
+
+[resource]
+default_font = ExtResource("1_ddlbm")
+default_font_size = 60
+Label/colors/font_color = Color(0.5411765, 0.41568628, 0, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0.65882355)
+Label/font_sizes/font_size = 40
