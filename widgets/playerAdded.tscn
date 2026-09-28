@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://deys4jniyihmr"]
+
+[ext_resource type="Script" uid="uid://d4ky3s4bg1ouq" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_64gdf"]
+[ext_resource type="Texture2D" uid="uid://bpwmbfcj1xotq" path="res://images/paperWidget.png" id="2_fu73m"]
+[ext_resource type="Theme" uid="uid://dbqf6lfoaxg23" path="res://MainSlideTitle.tres" id="3_fb2du"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_byfvo"]
+
+[node name="MPFWidget" type="Control" unique_id=20501229]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_64gdf")
+metadata/_custom_type_script = "uid://d4ky3s4bg1ouq"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1106211092]
+position = Vector2(683, 384)
+texture = ExtResource("2_fu73m")
+
+[node name="MPFVariable" type="Label" parent="." unique_id=1470224393]
+layout_mode = 0
+offset_left = 479.0
+offset_top = 357.0
+offset_right = 866.0
+offset_bottom = 429.0
+theme = ExtResource("3_fb2du")
+text = "Player X Added"
+script = ExtResource("4_byfvo")
+variable_type = 1
+variable_name = "num"
+template_string = "Player %d Added"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"

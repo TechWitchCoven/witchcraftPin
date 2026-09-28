@@ -39,4 +39,19 @@ event_player:
     - stop-mode-ballSaveManager
     - start-mode-springManager
 
-# Comment Version Tracking 0.1.1
+variable_player:
+  mode_base_started:
+    switchesHit:
+      int: 0
+      action: set
+    rimOrbits:
+      int: 0
+      action: set
+
+widget_player:
+  player_added: 
+    playerAdded:
+      expire: 1000ms
+  
+
+# Comment Version Tracking 0.1.2
