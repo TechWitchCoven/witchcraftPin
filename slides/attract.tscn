@@ -50,7 +50,6 @@ scale = Vector2(2, 2)
 texture = SubResource("CompressedTexture2D_hhxni")
 
 [node name="scores" type="Node2D" parent="MPFCarousel" unique_id=552421268]
-visible = false
 
 [node name="paperTexture" type="Sprite2D" parent="MPFCarousel/scores" unique_id=345256344]
 texture = ExtResource("4_h0ope")
@@ -239,7 +238,197 @@ variable_name = "score5_value"
 comma_separate = true
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
 
+[node name="scores2" type="Node2D" parent="MPFCarousel" unique_id=886978753]
+
+[node name="paperTexture" type="Sprite2D" parent="MPFCarousel/scores2" unique_id=106467584]
+texture = ExtResource("4_h0ope")
+centered = false
+
+[node name="MarginContainer" type="MarginContainer" parent="MPFCarousel/scores2" unique_id=797984346]
+offset_right = 1366.0
+offset_bottom = 768.0
+theme = ExtResource("4_twbla")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MPFCarousel/scores2/MarginContainer" unique_id=945393106]
+layout_mode = 2
+
+[node name="score1_label" type="Label" parent="MPFCarousel/scores2/MarginContainer/VBoxContainer" unique_id=426223409]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 60
+text = "Score 1"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score6_label"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="HFlowContainer" type="HFlowContainer" parent="MPFCarousel/scores2/MarginContainer/VBoxContainer" unique_id=1211964287]
+layout_mode = 2
+theme_override_constants/h_separation = 300
+
+[node name="score1_name" type="Label" parent="MPFCarousel/scores2/MarginContainer/VBoxContainer/HFlowContainer" unique_id=1259335429]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 40
+text = "Player A"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score6_name"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score1_value" type="Label" parent="MPFCarousel/scores2/MarginContainer/VBoxContainer/HFlowContainer" unique_id=1147650872]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 40
+text = "Score"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score6_value"
+comma_separate = true
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score1_label2" type="Label" parent="MPFCarousel/scores2/MarginContainer/VBoxContainer" unique_id=235804930]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 60
+text = "Score 2"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score7_label"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="HFlowContainer2" type="HFlowContainer" parent="MPFCarousel/scores2/MarginContainer/VBoxContainer" unique_id=1979517670]
+layout_mode = 2
+theme_override_constants/h_separation = 300
+
+[node name="score1_name" type="Label" parent="MPFCarousel/scores2/MarginContainer/VBoxContainer/HFlowContainer2" unique_id=400676227]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 40
+text = "Player B"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score7_name"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score1_value" type="Label" parent="MPFCarousel/scores2/MarginContainer/VBoxContainer/HFlowContainer2" unique_id=877799117]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 40
+text = "Score"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score7_value"
+comma_separate = true
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score1_label3" type="Label" parent="MPFCarousel/scores2/MarginContainer/VBoxContainer" unique_id=1237569811]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 60
+text = "Score 3"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score8_label"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="HFlowContainer3" type="HFlowContainer" parent="MPFCarousel/scores2/MarginContainer/VBoxContainer" unique_id=1582891666]
+layout_mode = 2
+theme_override_constants/h_separation = 300
+
+[node name="score1_name" type="Label" parent="MPFCarousel/scores2/MarginContainer/VBoxContainer/HFlowContainer3" unique_id=382904864]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 40
+text = "Player C"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score8_name"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score1_value" type="Label" parent="MPFCarousel/scores2/MarginContainer/VBoxContainer/HFlowContainer3" unique_id=1709515813]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 40
+text = "Score"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score8_value"
+comma_separate = true
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score1_label4" type="Label" parent="MPFCarousel/scores2/MarginContainer/VBoxContainer" unique_id=254192024]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 60
+text = "Score 4"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score9_label"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="HFlowContainer4" type="HFlowContainer" parent="MPFCarousel/scores2/MarginContainer/VBoxContainer" unique_id=2120698909]
+layout_mode = 2
+theme_override_constants/h_separation = 300
+
+[node name="score1_name" type="Label" parent="MPFCarousel/scores2/MarginContainer/VBoxContainer/HFlowContainer4" unique_id=1875687737]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 40
+text = "Player D"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score9_name"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score1_value" type="Label" parent="MPFCarousel/scores2/MarginContainer/VBoxContainer/HFlowContainer4" unique_id=1354357684]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 40
+text = "Score"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score9_value"
+comma_separate = true
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score1_label5" type="Label" parent="MPFCarousel/scores2/MarginContainer/VBoxContainer" unique_id=1650216646]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 60
+text = "Score 5"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score10_label"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="HFlowContainer5" type="HFlowContainer" parent="MPFCarousel/scores2/MarginContainer/VBoxContainer" unique_id=1125547597]
+layout_mode = 2
+theme_override_constants/h_separation = 300
+
+[node name="score1_name" type="Label" parent="MPFCarousel/scores2/MarginContainer/VBoxContainer/HFlowContainer5" unique_id=1559971221]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 40
+text = "Player E"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score10_name"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score1_value" type="Label" parent="MPFCarousel/scores2/MarginContainer/VBoxContainer/HFlowContainer5" unique_id=644427128]
+layout_mode = 2
+theme = ExtResource("5_cq3lo")
+theme_override_font_sizes/font_size = 40
+text = "Score"
+script = ExtResource("4_f161n")
+variable_type = 2
+variable_name = "score10_value"
+comma_separate = true
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
 [node name="lastGame" type="Node2D" parent="MPFCarousel" unique_id=1616116833]
+visible = false
 
 [node name="paperTexture" type="Sprite2D" parent="MPFCarousel/lastGame" unique_id=643271973]
 texture = ExtResource("4_h0ope")
