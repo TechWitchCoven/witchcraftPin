@@ -189,7 +189,7 @@ timers:
   #   control_events:
   #     - event: Name of Event to Call Timer Control Event
   #       action: Type of Control Event to be Peformed (stop/restart)
-  potionBrewingTimer:
+  speedPotionBrewingTimer:
     end_value: 120
     tick_interval: 500ms
     start_running: true
@@ -207,7 +207,7 @@ event_player:
     - start-mode-potionQualifier
     - activateLegendarySpeedPotion
     - speedPotionBrewComplete
-  timer_potionBrewingTimer_complete:
+  timer_speedPotionBrewingTimer_complete:
     - stop-mode-potionSpeedBrewing
     - start-mode-potionQualifier
     - activateBasicSpeedPotion{current_player.iSpeedPotionMaxStep==1}
@@ -273,14 +273,6 @@ variable_player:
     iSpeedPotionMaxStep:
       int: 4
       action: set
-
-shots:
-  dragonScaleIngredientAdd:
-    switch: sCauldronLeftProx
-  webIngredientAdd:
-    hit_events: spinner_rightFireSpinner_hit
-  batWingIngredientAdd:
-    switch: sCauldronRightProx
 
 sequences:
   speedPotionBrewSequence:
