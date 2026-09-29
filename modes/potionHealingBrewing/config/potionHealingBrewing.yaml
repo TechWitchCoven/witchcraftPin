@@ -1,0 +1,285 @@
+#config_version=6
+
+# This is the mode definition for the Speed Potion Brewing mode. It is used
+# to manage the brewing and show related to brewing a speed potion.
+
+# The following is the mode config data
+# It contains the start event, based on the defined start event,
+# and corresponding stop event.  The priority is 700 for this mode
+mode:
+  start_events: start-mode-potionHealingBrewing
+  stop_events: stop-mode-potionHealingBrewing
+  priority: 710
+
+# The following contains the definitions for shows to be played in this mode
+show_player:
+
+  # Show cues are based on events being called, they are defined as such:
+  # Event to Call Show:
+  #   Name of Show To Play:
+  #     speed: Speed of Show Playback
+  #     color: Color to use for Show
+  #     tip, base, center: Specific tags for the shotArrowForward Show to use
+  #                        in order to call the different parts of the arrow 
+  #                        playfield insert
+  mode_potionHealingBrewing_started:
+    shotArrowForward:
+      speed: 2
+      show_tokens:
+        tip: dragonScaleTipInsert
+        center: dragonScaleCenterInsert
+        base: dragonScaleBaseInsert
+        color: Crimson
+  logicblock_healingPotionBrewSequence_updated{value==1}:
+    shotArrowForward:
+      speed: 2
+      show_tokens:
+        tip: webTipInsert
+        center: webCenterInsert
+        base: webBaseInsert
+        color: Crimson
+    off:
+      show_tokens: 
+        lights: dragonScaleTipInsert,dragonScaleCenterInsert,dragonScaleBaseInsert
+  logicblock_healingPotionBrewSequence_updated{value==2}:
+    shotArrowForward:
+      speed: 2
+      show_tokens:
+        tip: batWingTipInsert
+        center: batWingCenterInsert
+        base: batWingBaseInsert
+        color: Crimson
+    off:
+      show_tokens: 
+        lights: webTipInsert,webCenterInsert,webBaseInsert
+  logicblock_healingPotionBrewSequence_updated{value==3}:
+    shotArrowForward:
+      speed: 2
+      show_tokens:
+        tip: dragonScaleTipInsert
+        center: dragonScaleCenterInsert
+        base: dragonScaleBaseInsert
+        color: Crimson
+    off:
+      show_tokens: 
+        lights: batWingTipInsert,batWingCenterInsert,batWingBaseInsert
+        
+  logicblock_healingPotionBrewSequence_updated{value==0}:
+    shotArrowForward:
+      speed: 2
+      show_tokens:
+        tip: dragonScaleTipInsert
+        center: dragonScaleCenterInsert
+        base: dragonScaleBaseInsert
+        color: Crimson
+    off:
+      show_tokens: 
+        lights: batWingTipInsert,batWingCenterInsert,batWingBaseInsert,webTipInsert,webCenterInsert,webBaseInsert
+
+  player_iHealingPotionCurrentStep{value==0}:
+    off:
+      show_tokens:
+        lights: potionInsert1u,potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+  player_iHealingPotionCurrentStep{value==0 and current_player.iHealingPotionMaxStep==1}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert1l
+        offLights: potionInsert1u,potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+        color: Crimson
+  player_iHealingPotionCurrentStep{value==0 and current_player.iHealingPotionMaxStep==2}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert2l, potionInsert1l
+        offLights: potionInsert1u,potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+        color: Crimson
+  player_iHealingPotionCurrentStep{value==0 and current_player.iHealingPotionMaxStep==3}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert3l, potionInsert2l, potionInsert1l
+        offLights: potionInsert1u,potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+        color: Crimson
+  player_iHealingPotionCurrentStep{value==0 and current_player.iHealingPotionMaxStep==4}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert4l, potionInsert3l, potionInsert2l, potionInsert1l
+        offLights: potionInsert1u,potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+        color: Crimson
+  player_iHealingPotionCurrentStep{value==1 and current_player.iHealingPotionMaxStep==1}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert1
+        offLights: potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+        color: Crimson
+  player_iHealingPotionCurrentStep{value==1 and current_player.iHealingPotionMaxStep==2}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert1,potionInsert2l
+        offLights: potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+        color: Crimson
+  player_iHealingPotionCurrentStep{value==1 and current_player.iHealingPotionMaxStep==3}:
+   brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert1,potionInsert2l,potionInsert3l
+        offLights: potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+        color: Crimson
+  player_iHealingPotionCurrentStep{value==1 and current_player.iHealingPotionMaxStep==4}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert1,potionInsert2l,potionInsert3l,potionInsert4l
+        offLights: potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+        color: Crimson
+  player_iHealingPotionCurrentStep{value==2 and current_player.iHealingPotionMaxStep==2}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert1,potionInsert2
+        offLights: potionInsert3u,potionInsert4u,potionInsert5u
+        color: Crimson
+  player_iHealingPotionCurrentStep{value==2 and current_player.iHealingPotionMaxStep==3}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert1,potionInsert2,potionInsert3l
+        offLights: potionInsert3u,potionInsert4u,potionInsert5u
+        color: Crimson
+  player_iHealingPotionCurrentStep{value==2 and current_player.iHealingPotionMaxStep==4}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert1,potionInsert2,potionInsert3l,potionInsert4l
+        offLights: potionInsert3u,potionInsert4u,potionInsert5u
+        color: Crimson
+  player_iHealingPotionCurrentStep{value==3 and current_player.iHealingPotionMaxStep==3}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert1,potionInsert2,potionInsert3
+        offLights: potionInsert4u,potionInsert5u
+        color: Crimson
+  player_iHealingPotionCurrentStep{value==3 and current_player.iHealingPotionMaxStep==4}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert1,potionInsert2,potionInsert3,potionInsert4l
+        offLights: potionInsert4u,potionInsert5u
+        color: Crimson
+  player_iHealingPotionCurrentStep{value==4}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert4, potionInsert3, potionInsert2, potionInsert1
+        color: Crimson
+  
+  logicblock_healingPotionBrewSequence_complete:
+    rippleOn:
+      loops: 3
+      speed: 4
+      show_tokens:
+        color: Crimson
+        target: potionInsert3
+        targetm1: potionInsert2
+        targetm2: potionInsert1
+        targetp1: potionInsert4
+        targetp2: potionInsert5    
+
+      
+  
+# The following defines the timers in this mode
+timers:
+
+  # Timers are named and defined as such:
+  # Name of Timer:
+  #   end_value: Final Value in Timer
+  #   tick_interval: Length of Tick
+  #   start_running: Should the timer be running immediately/when enabled
+  #   control_events:
+  #     - event: Name of Event to Call Timer Control Event
+  #       action: Type of Control Event to be Peformed (stop/restart)
+  healingPotionBrewingTimer:
+    end_value: 120
+    tick_interval: 500ms
+    start_running: true
+
+# The following Defines the events that will be called from this mode
+event_player:
+
+  # Events are defined as follows:
+  # Name of Event to Listen For:
+  #   - Name of Event to Call After Listened Event Occurs 
+  mode_potionHealingBrewing_started:
+    - speedPotionAttempt
+  logicblock_healingPotionBrewSequence_complete:
+    - stop-mode-potionHealingBrewing
+    - start-mode-potionQualifier
+    - activateLegendarySpeedPotion
+    - speedPotionBrewComplete
+  timer_healingPotionBrewingTimer_complete:
+    - stop-mode-potionHealingBrewing
+    - start-mode-potionQualifier
+    - activateBasicSpeedPotion{current_player.iHealingPotionMaxStep==1}
+    - activateRareSpeedPotion{current_player.iHealingPotionMaxStep==3}
+    - speedPotionBrewComplete
+  dragonScaleIngredientAdd_hit{current_player.iHealingPotionCurrentStep==1 or current_player.iHealingPotionCurrentStep==2}:
+    - resetPotionSequencer
+  batWingIngredientAdd_hit{current_player.iHealingPotionCurrentStep==1 or current_player.iHealingPotionCurrentStep==3 or current_player.iHealingPotionCurrentStep==4}:
+    - resetPotionSequencer
+
+variable_player:
+  mode_potionSelection_will_stop:
+    bPotionModeStarted:
+      int: 0
+      action: set
+  mode_potionHealingBrewing_started:
+    iHealingPotionCurrentStep:
+      int: 0
+      action: set
+    iHealingPotionMaxStep:
+      int: 0
+      action: set
+  logicblock_healingPotionBrewSequence_complete:
+    iHealingPotionCurrentStep:
+      int: 5
+      action: set
+    iHealingPotionMaxStep:
+      int: 5
+      action: set
+  logicblock_healingPotionBrewSequence_updated{value==0}:
+    iHealingPotionCurrentStep:
+      int: 0
+      action: set
+  logicblock_healingPotionBrewSequence_updated{value==1}:
+    iHealingPotionCurrentStep:
+      int: 1
+      action: set
+  logicblock_healingPotionBrewSequence_updated{value==1 and current_player.iHealingPotionMaxStep<1}:
+    iHealingPotionMaxStep:
+      int: 1
+      action: set
+  logicblock_healingPotionBrewSequence_updated{value==2}:
+    iHealingPotionCurrentStep:
+      int: 2
+      action: set
+  logicblock_healingPotionBrewSequence_updated{value==2 and current_player.iHealingPotionMaxStep<2}:
+    iHealingPotionMaxStep:
+      int: 2
+      action: set
+  logicblock_healingPotionBrewSequence_updated{value==3}:
+    iHealingPotionCurrentStep:
+      int: 3
+      action: set
+  logicblock_healingPotionBrewSequence_updated{value==3 and current_player.iHealingPotionMaxStep<3}:
+    iHealingPotionMaxStep:
+      int: 3
+      action: set
+  logicblock_healingPotionBrewSequence_updated{value==4}:
+    iHealingPotionCurrentStep:
+      int: 4
+      action: set
+  logicblock_healingPotionBrewSequence_updated{value==4 and current_player.iHealingPotionMaxStep<4}:
+    iHealingPotionMaxStep:
+      int: 4
+      action: set
+
+sequences:
+  healingPotionBrewSequence:
+    events:
+      - dragonScaleIngredientAdd_hit #dragonscale
+      - webIngredientAdd_hit #webOrbit
+      - batWingIngredientAdd_hit #batWing
+      - dragonScaleIngredientAdd_hit #dragonscale
+      - dragonScaleIngredientAdd_hit #dragonscale
+    reset_events: resetPotionSequencer
