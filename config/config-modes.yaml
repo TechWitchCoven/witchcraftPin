@@ -14,3 +14,4 @@ modes:
   - ballSaveManager
   - springManager
   - potionSpeedBrewing
+  - potionHealingBrewing
