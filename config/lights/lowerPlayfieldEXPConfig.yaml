@@ -1,10 +1,16 @@
 #config_version=6
 
 lights:
+
+  #Port 5 Light Configuration
   rightGuideLowerGI:
     number: lowerpfexp-5-1
+    tags: playfieldLight, playfieldGI
+    type: grb
   rightGuideUpperGI:
     number: lowerpfexp-5-2
+    tags: playfieldLight, playfieldGI
+    type: grb
   dLowerInsert:
     number: lowerpfexp-5-3
     tags: dInsert
@@ -23,20 +29,36 @@ lights:
     type: rgb
   rightSlingUpperGI:
     number: lowerpfexp-5-7
+    tags: playfieldLight, playfieldGI
+    type: grb
   rightSlingLowerGI:
     number: lowerpfexp-5-8
+    tags: playfieldLight, playfieldGI
+    type: grb
   ballSaveUpperInsert:
     number: lowerpfexp-5-9
+    tags: ballSaveInsert
+    type: rgb
   ballSaveLowerInsert:
     number: lowerpfexp-5-10
+    tags: ballSaveInsert
+    type: rgb
   leftGuideLowerGI:
     number: lowerpfexp-5-11
+    tags: playfieldLight, playfieldGI
+    type: grb
   leftGuideUpperGI:
     number: lowerpfexp-5-12
+    tags: playfieldLight, playfieldGI
+    type: grb
   leftSlingLowerGI:
     number: lowerpfexp-5-13
+    tags: playfieldLight, playfieldGI
+    type: grb
   leftSlingUpperGI:
     number: lowerpfexp-5-14
+    tags: playfieldLight, playfieldGI
+    type: grb
   iLowerInsert:
     number: lowerpfexp-5-15
     tags: iInsert

@@ -1,0 +1,320 @@
+#config_version=6
+
+# This is the mode definition for the Speed Potion Brewing mode. It is used
+# to manage the brewing and show related to brewing a speed potion.
+
+# The following is the mode config data
+# It contains the start event, based on the defined start event,
+# and corresponding stop event.  The priority is 700 for this mode
+mode:
+  start_events: start-mode-potionSpeedBrewing
+  stop_events: stop-mode-potionSpeedBrewing
+  priority: 700
+
+# The following contains the definitions for shows to be played in this mode
+show_player:
+
+  # Show cues are based on events being called, they are defined as such:
+  # Event to Call Show:
+  #   Name of Show To Play:
+  #     speed: Speed of Show Playback
+  #     color: Color to use for Show
+  #     tip, base, center: Specific tags for the shotArrowForward Show to use
+  #                        in order to call the different parts of the arrow 
+  #                        playfield insert
+  mode_potionSpeedBrewing_started:
+    shotArrowForward:
+      speed: 2
+      show_tokens:
+        tip: dragonScaleTipInsert
+        center: dragonScaleCenterInsert
+        base: dragonScaleBaseInsert
+        color: Aquamarine
+  logicblock_speedPotionBrewSequence_updated{value==1}:
+    shotArrowForward:
+      speed: 2
+      show_tokens:
+        tip: webTipInsert
+        center: webCenterInsert
+        base: webBaseInsert
+        color: Aquamarine
+    off:
+      show_tokens: 
+        lights: dragonScaleTipInsert,dragonScaleCenterInsert,dragonScaleBaseInsert
+  logicblock_speedPotionBrewSequence_updated{value==2}:
+    shotArrowForward:
+      speed: 2
+      show_tokens:
+        tip: batWingTipInsert
+        center: batWingCenterInsert
+        base: batWingBaseInsert
+        color: Aquamarine
+    off:
+      show_tokens: 
+        lights: webTipInsert,webCenterInsert,webBaseInsert
+  logicblock_speedPotionBrewSequence_updated{value==3}:
+    shotArrowForward:
+      speed: 2
+      show_tokens:
+        tip: dragonScaleTipInsert
+        center: dragonScaleCenterInsert
+        base: dragonScaleBaseInsert
+        color: Aquamarine
+    off:
+      show_tokens: 
+        lights: batWingTipInsert,batWingCenterInsert,batWingBaseInsert
+#  logicblock_speedPotionBrewSequence_complete:
+
+  logicblock_speedPotionBrewSequence_updated{value==0}:
+    shotArrowForward:
+      speed: 2
+      show_tokens:
+        tip: dragonScaleTipInsert
+        center: dragonScaleCenterInsert
+        base: dragonScaleBaseInsert
+        color: Aquamarine
+    off:
+      show_tokens: 
+        lights: batWingTipInsert,batWingCenterInsert,batWingBaseInsert,webTipInsert,webCenterInsert,webBaseInsert
+
+  player_iSpeedPotionCurrentStep{value==0}:
+    off:
+      show_tokens:
+        lights: potionInsert1u,potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+  player_iSpeedPotionCurrentStep{value==0 and current_player.iSpeedPotionMaxStep==1}:
+    off:
+      show_tokens:
+        lights: potionInsert1u,potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+    led_color:
+      show_tokens:
+        lights: potionInsert1l
+        color: Aquamarine
+  player_iSpeedPotionCurrentStep{value==0 and current_player.iSpeedPotionMaxStep==2}:
+    off:
+      show_tokens:
+        lights: potionInsert1u,potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+    led_color:
+      show_tokens:
+        lights: potionInsert2l, potionInsert1l
+        color: Aquamarine
+  player_iSpeedPotionCurrentStep{value==0 and current_player.iSpeedPotionMaxStep==3}:
+    off:
+      show_tokens:
+        lights: potionInsert1u,potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+    led_color:
+      show_tokens:
+        lights: potionInsert3l, potionInsert2l, potionInsert1l
+        color: Aquamarine
+  player_iSpeedPotionCurrentStep{value==0 and current_player.iSpeedPotionMaxStep==4}:
+    off:
+      show_tokens:
+        lights: potionInsert1u,potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+    led_color:
+      show_tokens:
+        lights: potionInsert4l, potionInsert3l, potionInsert2l, potionInsert1l
+        color: Aquamarine
+  player_iSpeedPotionCurrentStep{value==1 and current_player.iSpeedPotionMaxStep==1}:
+    off:
+      show_tokens:
+        lights: potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+    led_color:
+      show_tokens:
+        lights: potionInsert1
+        color: Aquamarine
+  player_iSpeedPotionCurrentStep{value==1 and current_player.iSpeedPotionMaxStep==2}:
+    off:
+      show_tokens:
+        lights: potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+    led_color:
+      show_tokens:
+        lights: potionInsert1,potionInsert2l
+        color: Aquamarine
+  player_iSpeedPotionCurrentStep{value==1 and current_player.iSpeedPotionMaxStep==3}:
+    off:
+      show_tokens:
+        lights: potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+    led_color:
+      show_tokens:
+        lights: potionInsert1,potionInsert2l,potionInsert3l
+        color: Aquamarine
+  player_iSpeedPotionCurrentStep{value==1 and current_player.iSpeedPotionMaxStep==4}:
+    off:
+      show_tokens:
+        lights: potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+    led_color:
+      show_tokens:
+        lights: potionInsert1,potionInsert2l,potionInsert3l,potionInsert4l
+        color: Aquamarine
+  player_iSpeedPotionCurrentStep{value==2 and current_player.iSpeedPotionMaxStep==2}:
+    off:
+      show_tokens:
+        lights: potionInsert3u,potionInsert4u,potionInsert5u
+    led_color:
+      show_tokens:
+        lights: potionInsert1,potionInsert2
+        color: Aquamarine
+  player_iSpeedPotionCurrentStep{value==2 and current_player.iSpeedPotionMaxStep==3}:
+    off:
+      show_tokens:
+        lights: potionInsert3u,potionInsert4u,potionInsert5u
+    led_color:
+      show_tokens:
+        lights: potionInsert1,potionInsert2,potionInsert3l
+        color: Aquamarine
+  player_iSpeedPotionCurrentStep{value==2 and current_player.iSpeedPotionMaxStep==4}:
+    off:
+      show_tokens:
+        lights: potionInsert3u,potionInsert4u,potionInsert5u
+    led_color:
+      show_tokens:
+        lights: potionInsert1,potionInsert2,potionInsert3l,potionInsert4l
+        color: Aquamarine
+  player_iSpeedPotionCurrentStep{value==3 and current_player.iSpeedPotionMaxStep==3}:
+    off:
+      show_tokens:
+        lights: potionInsert4u,potionInsert5u
+    led_color:
+      show_tokens:
+        lights: potionInsert1,potionInsert2,potionInsert3
+        color: Aquamarine
+  player_iSpeedPotionCurrentStep{value==3 and current_player.iSpeedPotionMaxStep==4}:
+    off:
+      show_tokens:
+        lights: potionInsert4u,potionInsert5u
+    led_color:
+      show_tokens:
+        lights: potionInsert1,potionInsert2,potionInsert3,potionInsert4l
+        color: Aquamarine
+  player_iSpeedPotionCurrentStep{value==4}:
+    led_color:
+      show_tokens:
+        lights: potionInsert4, potionInsert3, potionInsert2, potionInsert1
+        color: Aquamarine
+  
+  logicblock_speedPotionBrewSequence_complete:
+    rippleOn:
+      loops: 3
+      speed: 4
+      show_tokens:
+        color: Aquamarine
+        target: potionInsert3
+        targetm1: potionInsert2
+        targetm2: potionInsert1
+        targetp1: potionInsert4
+        targetp2: potionInsert5    
+
+      
+  
+# The following defines the timers in this mode
+timers:
+
+  # Timers are named and defined as such:
+  # Name of Timer:
+  #   end_value: Final Value in Timer
+  #   tick_interval: Length of Tick
+  #   start_running: Should the timer be running immediately/when enabled
+  #   control_events:
+  #     - event: Name of Event to Call Timer Control Event
+  #       action: Type of Control Event to be Peformed (stop/restart)
+  potionBrewingTimer:
+    end_value: 120
+    tick_interval: 500ms
+    start_running: true
+
+# The following Defines the events that will be called from this mode
+event_player:
+
+  # Events are defined as follows:
+  # Name of Event to Listen For:
+  #   - Name of Event to Call After Listened Event Occurs 
+  mode_potionSpeedBrewing_started:
+    - speedPotionAttempt
+  logicblock_speedPotionBrewSequence_complete:
+    - stop-mode-potionSpeedBrewing
+    - start-mode-potionQualifier
+    - activateLegendarySpeedPotion
+    - speedPotionBrewComplete
+  timer_potionBrewingTimer_complete:
+    - stop-mode-potionSpeedBrewing
+    - start-mode-potionQualifier
+    - activateBasicSpeedPotion{current_player.iSpeedPotionMaxStep==1}
+    - activateRareSpeedPotion{current_player.iSpeedPotionMaxStep==3}
+    - speedPotionBrewComplete
+  dragonScaleIngredientAdd_hit{current_player.iSpeedPotionCurrentStep==1 or current_player.iSpeedPotionCurrentStep==2}:
+    - resetPotionSequencer
+  batWingIngredientAdd_hit{current_player.iSpeedPotionCurrentStep==1 or current_player.iSpeedPotionCurrentStep==3 or current_player.iSpeedPotionCurrentStep==4}:
+    - resetPotionSequencer
+
+variable_player:
+  mode_potionSelection_will_stop:
+    bPotionModeStarted:
+      int: 0
+      action: set
+  mode_potionSpeedBrewing_started:
+    iSpeedPotionCurrentStep:
+      int: 0
+      action: set
+    iSpeedPotionMaxStep:
+      int: 0
+      action: set
+  logicblock_speedPotionBrewSequence_complete:
+    iSpeedPotionCurrentStep:
+      int: 5
+      action: set
+    iSpeedPotionMaxStep:
+      int: 5
+      action: set
+  logicblock_speedPotionBrewSequence_updated{value==0}:
+    iSpeedPotionCurrentStep:
+      int: 0
+      action: set
+  logicblock_speedPotionBrewSequence_updated{value==1}:
+    iSpeedPotionCurrentStep:
+      int: 1
+      action: set
+  logicblock_speedPotionBrewSequence_updated{value==1 and current_player.iSpeedPotionMaxStep<1}:
+    iSpeedPotionMaxStep:
+      int: 1
+      action: set
+  logicblock_speedPotionBrewSequence_updated{value==2}:
+    iSpeedPotionCurrentStep:
+      int: 2
+      action: set
+  logicblock_speedPotionBrewSequence_updated{value==2 and current_player.iSpeedPotionMaxStep<2}:
+    iSpeedPotionMaxStep:
+      int: 2
+      action: set
+  logicblock_speedPotionBrewSequence_updated{value==3}:
+    iSpeedPotionCurrentStep:
+      int: 3
+      action: set
+  logicblock_speedPotionBrewSequence_updated{value==3 and current_player.iSpeedPotionMaxStep<3}:
+    iSpeedPotionMaxStep:
+      int: 3
+      action: set
+  logicblock_speedPotionBrewSequence_updated{value==4}:
+    iSpeedPotionCurrentStep:
+      int: 4
+      action: set
+  logicblock_speedPotionBrewSequence_updated{value==4 and current_player.iSpeedPotionMaxStep<4}:
+    iSpeedPotionMaxStep:
+      int: 4
+      action: set
+
+shots:
+  dragonScaleIngredientAdd:
+    switch: sCauldronLeftProx
+  webIngredientAdd:
+    hit_events: spinner_rightFireSpinner_hit
+  batWingIngredientAdd:
+    switch: sCauldronRightProx
+
+sequences:
+  speedPotionBrewSequence:
+    events:
+      - dragonScaleIngredientAdd_hit #dragonscale
+      - webIngredientAdd_hit #webOrbit
+      - batWingIngredientAdd_hit #batWing
+      - dragonScaleIngredientAdd_hit #dragonscale
+      - dragonScaleIngredientAdd_hit #dragonscale
+    reset_events: resetPotionSequencer

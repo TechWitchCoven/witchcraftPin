@@ -8,23 +8,147 @@ mode:
 shots:
   magicMShot:
     switch: sMTarget
+    profile: magicProfile
+    show_tokens:
+      lights: magicMInsert
+      color: MediumBlue
   magicAShot:
     switch: sATarget
+    profile: magicProfile
+    show_tokens:
+      lights: magicAInsert
+      color: MediumBlue
   magicGShot:
     switch: sGTarget
+    profile: magicProfile
+    show_tokens:
+      lights: magicGInsert
+      color: MediumBlue
   magicIShot:
     switch: sITarget
+    profile: magicProfile
+    show_tokens:
+      lights: magicIInsert
+      color: MediumBlue
   magicCShot:
     switch: sCTarget
+    profile: magicProfile
+    show_tokens:
+      lights: magicCInsert
+      color: MediumBlue
+
+shot_groups:
+  magicGroup:
+    shots: magicMShot, magicAShot, magicGShot, magicIShot, magicCShot
+    reset_events: magicGroup_hit_complete
+
+shot_profiles:
+  magicProfile:
+    states:
+      - name:
+        show: flicker_color_off
+        loops: -1
+        speed: 3
+        sync_ms: 0
+      - name: hit
+        show: led_color
 
 variable_player:
   magicMShot_hit:
     score: 1_000
+    switchesHit: 1
   magicAShot_hit:
     score: 1_000
+    switchesHit: 1
   magicGShot_hit:
     score: 1_000
+    switchesHit: 1
   magicIShot_hit:
     score: 1_000
+    switchesHit: 1
   magicCShot_hit:
     score: 1_000
+    switchesHit: 1
+  magicGroup_hit_complete:
+    score: 10_000
+    bonus_multiplier: 1
+
+# The following defines what sounds will be played in this mode
+sound_player:
+
+  # Sounds will be called in the following way:
+  # Event to Call Music:
+  #   Song File Title:
+  #     bus: Godot Media Bus
+  magicMShot_hit:
+    magicBurst:
+      bus: effects
+  magicAShot_hit:
+    magicBurst:
+      bus: effects
+  magicGShot_hit:
+    magicBurst:
+      bus: effects
+  magicIShot_hit:
+    magicBurst:
+      bus: effects
+  magicCShot_hit:
+    magicBurst:
+      bus: effects
+
+show_player:
+  magicMShot_hit:
+    rippleOn:
+      speed: 2
+      loops: 0
+      show_tokens:
+        color: MediumBlue
+        target: magicMInsert
+        targetp1: magicAInsert
+        targetp2: magicGInsert
+        targetp3: magicIInsert
+        targetp4: magicCInsert
+  magicAShot_hit:
+    rippleOn:
+      speed: 2
+      loops: 0
+      show_tokens:
+        color: MediumBlue
+        targetm1: magicMInsert
+        target: magicAInsert
+        targetp1: magicGInsert
+        targetp2: magicIInsert
+        targetp3: magicCInsert
+  magicGShot_hit:
+    rippleOn:
+      speed: 2
+      loops: 0
+      show_tokens:
+        color: MediumBlue
+        targetm2: magicMInsert
+        targetm1: magicAInsert
+        target: magicGInsert
+        targetp1: magicIInsert
+        targetp2: magicCInsert
+  magicIShot_hit:
+    rippleOn:
+      speed: 2
+      loops: 0
+      show_tokens:
+        color: MediumBlue
+        targetm3: magicMInsert
+        targetm2: magicAInsert
+        targetm1: magicGInsert
+        target: magicIInsert
+        targetp1: magicCInsert
+  magicCShot_hit:
+    rippleOn:
+      speed: 2
+      loops: 0
+      show_tokens:
+        color: MediumBlue
+        targetm4: magicMInsert
+        targetm3: magicAInsert
+        targetm2: magicGInsert
+        targetm1: magicIInsert
+        target: magicCInsert

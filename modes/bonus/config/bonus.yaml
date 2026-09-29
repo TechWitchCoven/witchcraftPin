@@ -1,0 +1,34 @@
+#config_version=6
+
+mode_settings:
+  display_delay_ms: 1s
+  hurry_up_delay_ms: 0
+  bonus_entries:
+    - entry: bonus_switches
+      player_score_entry: switchesHit
+      score: 100
+      text: "Switches"
+      reset_player_score_entry: True
+    - entry: bonus_spinners
+      player_score_entry: potionSpinners
+      text: "Spinners"
+      score: 1_000
+      reset_player_score_entry: True
+    - entry: bonus_drops
+      player_score_entry: dropTargetsHit
+      text: "Drop Targets Hit"
+      score: 1_000
+      reset_player_score_entry: True
+
+slide_player:
+  mode_bonus_started: bonus
+
+  bonus_start:
+    bonus:
+      action: update
+      tokens:
+          entry: initial
+
+  bonus_entry:
+    bonus:
+      action: update

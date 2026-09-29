@@ -1,0 +1,85 @@
+#show_version=6
+
+- time: 0
+  lights:
+    (light1): (color)%100
+- time: +20ms
+  lights:
+    (light1): (color)%100
+    (light2): (color)%25
+- time: +20ms
+  lights:
+    (light1): (color)%100
+    (light2): (color)%50
+- time: +20ms
+  lights:
+    (light1): (color)%75
+    (light2): (color)%75
+- time: +20ms
+  lights:
+    (light1): (color)%25
+    (light2): (color)%100
+- time: +20ms
+  lights:
+    (light1): (color)%00
+    (light2): (color)%100
+- time: +40ms
+  lights:
+    (light2): (color)%100
+    (light3): (color)%25
+- time: +20ms
+  lights:
+    (light2): (color)%100
+    (light3): (color)%50
+- time: +20ms
+  lights:
+    (light2): (color)%75
+    (light3): (color)%75
+- time: +20ms
+  lights:
+    (light2): (color)%25
+    (light3): (color)%100
+- time: +20ms
+  lights:
+    (light2): (color)%00
+    (light3): (color)%100
+- time: +40ms
+  lights:
+    (light3): (color)%100
+    (light4): (color)%25
+- time: +20ms
+  lights:
+    (light3): (color)%100
+    (light4): (color)%50
+- time: +20ms
+  lights:
+    (light3): (color)%75
+    (light4): (color)%75
+- time: +20ms
+  lights:
+    (light3): (color)%25
+    (light4): (color)%100
+- time: +20ms
+  lights:
+    (light3): (color)%00
+    (light4): (color)%100
+- time: +40ms
+  lights:
+    (light4): (color)%100
+    (light5): (color)%25
+- time: +20ms
+  lights:
+    (light4): (color)%100
+    (light5): (color)%50
+- time: +20ms
+  lights:
+    (light4): (color)%75
+    (light5): (color)%75
+- time: +20ms
+  lights:
+    (light4): (color)%25
+    (light5): (color)%100
+- time: +20ms
+  lights:
+    (light4): (color)%00
+    (light5): (color)%100

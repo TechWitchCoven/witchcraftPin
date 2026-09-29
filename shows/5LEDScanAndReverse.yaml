@@ -1,0 +1,26 @@
+#show_version=6
+
+- time: 0
+  shows:
+    5LEDScan:
+      loops: 0
+      speed: 1
+      show_tokens:
+        light1: (light1)
+        light2: (light2)
+        light3: (light3)
+        light4: (light4)
+        light5: (light5)
+        color: (color)
+- time: +440ms
+  shows:
+    5LEDScan:
+      loops: 0
+      speed: 1
+      show_tokens:
+        light1: (light5)
+        light2: (light4)
+        light3: (light3)
+        light4: (light2)
+        light5: (light1)
+        color: (color)

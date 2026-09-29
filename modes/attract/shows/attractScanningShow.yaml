@@ -1,0 +1,38 @@
+#show_version=6
+
+- time: 0
+  shows:
+    5LEDScanAndReverse:
+      loops: 0
+      speed: 1
+      show_tokens:
+        light1: magicMInsert, potionInsert1, bInsert
+        light2: magicAInsert, potionInsert2, iInsert
+        light3: magicGInsert, potionInsert3, ballSaveInsert
+        light4: magicIInsert, potionInsert4, nInsert
+        light5: magicCInsert, potionInsert5, dInsert
+        color: Blue
+- time: +880ms
+  shows:
+    5LEDScanAndReverse:
+      loops: 0
+      speed: 1
+      show_tokens:
+        light1: magicMInsert, potionInsert1, bInsert
+        light2: magicAInsert, potionInsert2, iInsert
+        light3: magicGInsert, potionInsert3, ballSaveInsert
+        light4: magicIInsert, potionInsert4, nInsert
+        light5: magicCInsert, potionInsert5, dInsert
+        color: Green
+- time: +880ms
+  shows:
+    5LEDScanAndReverse:
+      loops: 0
+      speed: 1
+      show_tokens:
+        light1: magicMInsert, potionInsert1, bInsert
+        light2: magicAInsert, potionInsert2, iInsert
+        light3: magicGInsert, potionInsert3, ballSaveInsert
+        light4: magicIInsert, potionInsert4, nInsert
+        light5: magicCInsert, potionInsert5, dInsert
+        color: Red

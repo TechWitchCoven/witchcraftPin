@@ -2,7 +2,14 @@
 
 [ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_b71wd"]
 [ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_06ewq"]
-[ext_resource type="Theme" uid="uid://csuihgabbajxo" path="res://body.tres" id="3_mixwp"]
+[ext_resource type="Texture2D" uid="uid://ddmaghve32jrs" path="res://images/paperBackdrop.jpg" id="2_myvl5"]
+[ext_resource type="Texture2D" uid="uid://b1hdqbeg7wiv" path="res://images/player1ScoreMarker.png" id="3_r8cgk"]
+[ext_resource type="Theme" uid="uid://dbqf6lfoaxg23" path="res://MainSlideTitle.tres" id="4_6vrr4"]
+[ext_resource type="Theme" uid="uid://halgp5eliigq" path="res://ScoreTheme.tres" id="4_smx5b"]
+[ext_resource type="Script" uid="uid://808knhb8e2nn" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="6_20xw8"]
+[ext_resource type="Texture2D" uid="uid://cw7nyrr7wgjfb" path="res://images/player2ScoreMarker.png" id="7_du778"]
+[ext_resource type="Texture2D" uid="uid://cjpfyk6vtlrg5" path="res://images/player3ScoreMarker.png" id="8_du778"]
+[ext_resource type="Texture2D" uid="uid://do6c73m6imqeo" path="res://images/player4ScoreMarker.png" id="9_f5kbb"]
 
 [node name="Base" type="Control" unique_id=1614008481]
 layout_mode = 3
@@ -10,38 +17,114 @@ anchors_preset = 0
 script = ExtResource("1_b71wd")
 metadata/_custom_type_script = "uid://dru3usokwlhd3"
 
-[node name="Generic Background" type="ColorRect" parent="." unique_id=982646326]
+[node name="paperTexture" type="Sprite2D" parent="." unique_id=797301358]
+position = Vector2(0, -73)
+texture = ExtResource("2_myvl5")
+centered = false
+
+[node name="Player1ScoreMarker" type="Sprite2D" parent="." unique_id=434423106]
+position = Vector2(172, 813.2)
+scale = Vector2(0.8, 0.806)
+texture = ExtResource("3_r8cgk")
+
+[node name="Score Label" type="Label" parent="." unique_id=777870229]
 layout_mode = 0
-offset_right = 1364.0
-offset_bottom = 770.0
-color = Color(0.1552, 0.16, 0.15991999, 1)
-
-[node name="Bottom Margin Container" type="MarginContainer" parent="." unique_id=1097148550]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1.0
-offset_top = 614.0
-offset_right = 1360.0
-offset_bottom = 764.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 40
-
-[node name="HFlowContainer" type="HFlowContainer" parent="Bottom Margin Container" unique_id=460145083]
-layout_mode = 2
-alignment = 1
-
-[node name="Score Label" type="Label" parent="Bottom Margin Container/HFlowContainer" unique_id=777870229]
-layout_mode = 2
-theme = ExtResource("3_mixwp")
+offset_left = 34.0
+offset_top = 683.0
+offset_right = 315.0
+offset_bottom = 755.0
+theme = ExtResource("4_smx5b")
 text = "999,999,999"
 horizontal_alignment = 1
 script = ExtResource("2_06ewq")
+variable_type = 4
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="MPFConditionalChildren" type="Control" parent="." unique_id=314357271]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_20xw8")
+min_players = 2
+metadata/_custom_type_script = "uid://808knhb8e2nn"
+
+[node name="Player1ScoreMarker" type="Sprite2D" parent="MPFConditionalChildren" unique_id=1740837609]
+position = Vector2(509, 812.2)
+scale = Vector2(0.8, 0.806)
+texture = ExtResource("7_du778")
+
+[node name="Score Label" type="Label" parent="MPFConditionalChildren" unique_id=1410963025]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 682.0
+offset_right = 652.0
+offset_bottom = 754.0
+theme = ExtResource("4_smx5b")
+text = "999,999,999"
+horizontal_alignment = 1
+script = ExtResource("2_06ewq")
+variable_type = 5
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="MPFConditionalChildren2" type="Control" parent="." unique_id=2088703836]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_20xw8")
+min_players = 3
+metadata/_custom_type_script = "uid://808knhb8e2nn"
+
+[node name="Player1ScoreMarker" type="Sprite2D" parent="MPFConditionalChildren2" unique_id=1400788556]
+position = Vector2(847, 810.2)
+scale = Vector2(0.8, 0.806)
+texture = ExtResource("8_du778")
+
+[node name="Score Label" type="Label" parent="MPFConditionalChildren2" unique_id=692571077]
+layout_mode = 0
+offset_left = 709.0
+offset_top = 680.0
+offset_right = 990.0
+offset_bottom = 752.0
+theme = ExtResource("4_smx5b")
+text = "999,999,999"
+horizontal_alignment = 1
+script = ExtResource("2_06ewq")
+variable_type = 6
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="MPFConditionalChildren3" type="Control" parent="." unique_id=2004437326]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_20xw8")
+min_players = 4
+metadata/_custom_type_script = "uid://808knhb8e2nn"
+
+[node name="Player1ScoreMarker" type="Sprite2D" parent="MPFConditionalChildren3" unique_id=1215613087]
+position = Vector2(1186, 811.2)
+scale = Vector2(0.8, 0.806)
+texture = ExtResource("9_f5kbb")
+
+[node name="Score Label" type="Label" parent="MPFConditionalChildren3" unique_id=1875656276]
+layout_mode = 0
+offset_left = 1048.0
+offset_top = 681.0
+offset_right = 1329.0
+offset_bottom = 753.0
+theme = ExtResource("4_smx5b")
+text = "999,999,999"
+horizontal_alignment = 1
+script = ExtResource("2_06ewq")
+variable_type = 7
 variable_name = "score"
 comma_separate = true
 min_digits = 2
@@ -57,10 +140,11 @@ theme_override_constants/margin_right = 20
 
 [node name="HFlowContainer" type="HFlowContainer" parent="Top Margin Container" unique_id=1163148308]
 layout_mode = 2
+theme_override_constants/h_separation = 50
 
 [node name="MPFVariable" type="Label" parent="Top Margin Container/HFlowContainer" unique_id=271519620]
 layout_mode = 2
-theme = ExtResource("3_mixwp")
+theme = ExtResource("4_6vrr4")
 text = "Player 2"
 script = ExtResource("2_06ewq")
 variable_name = "number"
@@ -70,9 +154,35 @@ metadata/_custom_type_script = "uid://bfvhmv2eirpua"
 
 [node name="Ball Number Label" type="Label" parent="Top Margin Container/HFlowContainer" unique_id=513562480]
 layout_mode = 2
-theme = ExtResource("3_mixwp")
+theme = ExtResource("4_6vrr4")
 text = "Ball 3"
 script = ExtResource("2_06ewq")
 variable_name = "ball"
 template_string = "Ball %s"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="MPFVariable" type="Label" parent="." unique_id=349575804]
+layout_mode = 0
+offset_left = 893.0
+offset_top = 30.0
+offset_right = 1351.0
+offset_bottom = 102.0
+theme = ExtResource("4_6vrr4")
+text = "Rim Orbits: XXXX"
+script = ExtResource("2_06ewq")
+variable_name = "rimOrbits"
+template_string = "Rim Orbits: %s"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="MPFVariable2" type="Label" parent="." unique_id=218250655]
+layout_mode = 0
+offset_left = 886.0
+offset_top = 118.0
+offset_right = 1362.0
+offset_bottom = 190.0
+theme = ExtResource("4_6vrr4")
+text = "Switch Hits: XXXX"
+script = ExtResource("2_06ewq")
+variable_name = "switchesHit"
+template_string = "Switch Hits: %s"
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"

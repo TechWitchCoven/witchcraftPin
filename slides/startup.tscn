@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://belkug6sa4arr"]
+
+[ext_resource type="Script" uid="uid://ujpd25534tqk" path="res://addons/mpf-gmc/slides/startup.gd" id="1_cfjlx"]
+[ext_resource type="Texture2D" uid="uid://m8ocn8vj6381" path="res://images/Witchcraft-backdrop.jpg" id="2_3m1ne"]
+
+[node name="MPFSlide" type="Control" unique_id=24850095]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cfjlx")
+
+[node name="CenterContainer2" type="CenterContainer" parent="." unique_id=855851925]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer2" unique_id=999889249]
+position = Vector2(674, 388)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("2_3m1ne")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=691752862]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -118.0
+offset_top = -189.0
+offset_right = 86.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1520432922]
+layout_mode = 2
+
+[node name="status_main" type="Label" parent="CenterContainer/VBoxContainer" unique_id=579098832]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+text = "Loading Stuff"
+horizontal_alignment = 1
+
+[node name="status_sub" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1942174176]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "Loading Stuff"
+horizontal_alignment = 1
+
+[node name="error_main" type="Label" parent="CenterContainer/VBoxContainer" unique_id=993269880]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+text = "Loading Stuff"
+horizontal_alignment = 1
+
+[node name="error_sub" type="Label" parent="CenterContainer/VBoxContainer" unique_id=442652538]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "Loading Stuff"
+horizontal_alignment = 1
+
+[node name="version" type="Label" parent="CenterContainer/VBoxContainer" unique_id=837537172]
+custom_minimum_size = Vector2(2.08165e-12, 100)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 2
