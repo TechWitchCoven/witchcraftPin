@@ -63,8 +63,7 @@ show_player:
     off:
       show_tokens: 
         lights: batWingTipInsert,batWingCenterInsert,batWingBaseInsert
-#  logicblock_speedPotionBrewSequence_complete:
-
+        
   logicblock_speedPotionBrewSequence_updated{value==0}:
     shotArrowForward:
       speed: 2
@@ -82,113 +81,87 @@ show_player:
       show_tokens:
         lights: potionInsert1u,potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
   player_iSpeedPotionCurrentStep{value==0 and current_player.iSpeedPotionMaxStep==1}:
-    off:
+    brewTrackerShow:
       show_tokens:
-        lights: potionInsert1u,potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
-    led_color:
-      show_tokens:
-        lights: potionInsert1l
+        onLights: potionInsert1l
+        offLights: potionInsert1u,potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
         color: Aquamarine
   player_iSpeedPotionCurrentStep{value==0 and current_player.iSpeedPotionMaxStep==2}:
-    off:
+    brewTrackerShow:
       show_tokens:
-        lights: potionInsert1u,potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
-    led_color:
-      show_tokens:
-        lights: potionInsert2l, potionInsert1l
+        onLights: potionInsert2l, potionInsert1l
+        offLights: potionInsert1u,potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
         color: Aquamarine
   player_iSpeedPotionCurrentStep{value==0 and current_player.iSpeedPotionMaxStep==3}:
-    off:
+    brewTrackerShow:
       show_tokens:
-        lights: potionInsert1u,potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
-    led_color:
-      show_tokens:
-        lights: potionInsert3l, potionInsert2l, potionInsert1l
+        onLights: potionInsert3l, potionInsert2l, potionInsert1l
+        offLights: potionInsert1u,potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
         color: Aquamarine
   player_iSpeedPotionCurrentStep{value==0 and current_player.iSpeedPotionMaxStep==4}:
-    off:
+    brewTrackerShow:
       show_tokens:
-        lights: potionInsert1u,potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
-    led_color:
-      show_tokens:
-        lights: potionInsert4l, potionInsert3l, potionInsert2l, potionInsert1l
+        onLights: potionInsert4l, potionInsert3l, potionInsert2l, potionInsert1l
+        offLights: potionInsert1u,potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
         color: Aquamarine
   player_iSpeedPotionCurrentStep{value==1 and current_player.iSpeedPotionMaxStep==1}:
-    off:
+    brewTrackerShow:
       show_tokens:
-        lights: potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
-    led_color:
-      show_tokens:
-        lights: potionInsert1
+        onLights: potionInsert1
+        offLights: potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
         color: Aquamarine
   player_iSpeedPotionCurrentStep{value==1 and current_player.iSpeedPotionMaxStep==2}:
-    off:
+    brewTrackerShow:
       show_tokens:
-        lights: potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
-    led_color:
-      show_tokens:
-        lights: potionInsert1,potionInsert2l
+        onLights: potionInsert1,potionInsert2l
+        offLights: potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
         color: Aquamarine
   player_iSpeedPotionCurrentStep{value==1 and current_player.iSpeedPotionMaxStep==3}:
-    off:
+   brewTrackerShow:
       show_tokens:
-        lights: potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
-    led_color:
-      show_tokens:
-        lights: potionInsert1,potionInsert2l,potionInsert3l
+        onLights: potionInsert1,potionInsert2l,potionInsert3l
+        offLights: potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
         color: Aquamarine
   player_iSpeedPotionCurrentStep{value==1 and current_player.iSpeedPotionMaxStep==4}:
-    off:
+    brewTrackerShow:
       show_tokens:
-        lights: potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
-    led_color:
-      show_tokens:
-        lights: potionInsert1,potionInsert2l,potionInsert3l,potionInsert4l
+        onLights: potionInsert1,potionInsert2l,potionInsert3l,potionInsert4l
+        offLights: potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
         color: Aquamarine
   player_iSpeedPotionCurrentStep{value==2 and current_player.iSpeedPotionMaxStep==2}:
-    off:
+    brewTrackerShow:
       show_tokens:
-        lights: potionInsert3u,potionInsert4u,potionInsert5u
-    led_color:
-      show_tokens:
-        lights: potionInsert1,potionInsert2
+        onLights: potionInsert1,potionInsert2
+        offLights: potionInsert3u,potionInsert4u,potionInsert5u
         color: Aquamarine
   player_iSpeedPotionCurrentStep{value==2 and current_player.iSpeedPotionMaxStep==3}:
-    off:
+    brewTrackerShow:
       show_tokens:
-        lights: potionInsert3u,potionInsert4u,potionInsert5u
-    led_color:
-      show_tokens:
-        lights: potionInsert1,potionInsert2,potionInsert3l
+        onLights: potionInsert1,potionInsert2,potionInsert3l
+        offLights: potionInsert3u,potionInsert4u,potionInsert5u
         color: Aquamarine
   player_iSpeedPotionCurrentStep{value==2 and current_player.iSpeedPotionMaxStep==4}:
-    off:
+    brewTrackerShow:
       show_tokens:
-        lights: potionInsert3u,potionInsert4u,potionInsert5u
-    led_color:
-      show_tokens:
-        lights: potionInsert1,potionInsert2,potionInsert3l,potionInsert4l
+        onLights: potionInsert1,potionInsert2,potionInsert3l,potionInsert4l
+        offLights: potionInsert3u,potionInsert4u,potionInsert5u
         color: Aquamarine
   player_iSpeedPotionCurrentStep{value==3 and current_player.iSpeedPotionMaxStep==3}:
-    off:
+    brewTrackerShow:
       show_tokens:
-        lights: potionInsert4u,potionInsert5u
-    led_color:
-      show_tokens:
-        lights: potionInsert1,potionInsert2,potionInsert3
+        onLights: potionInsert1,potionInsert2,potionInsert3
+        offLights: potionInsert4u,potionInsert5u
         color: Aquamarine
   player_iSpeedPotionCurrentStep{value==3 and current_player.iSpeedPotionMaxStep==4}:
-    off:
+    brewTrackerShow:
       show_tokens:
-        lights: potionInsert4u,potionInsert5u
-    led_color:
-      show_tokens:
-        lights: potionInsert1,potionInsert2,potionInsert3,potionInsert4l
+        onLights: potionInsert1,potionInsert2,potionInsert3,potionInsert4l
+        offLights: potionInsert4u,potionInsert5u
         color: Aquamarine
   player_iSpeedPotionCurrentStep{value==4}:
-    led_color:
+    brewTrackerShow:
       show_tokens:
-        lights: potionInsert4, potionInsert3, potionInsert2, potionInsert1
+        onLights: potionInsert4, potionInsert3, potionInsert2, potionInsert1
         color: Aquamarine
   
   logicblock_speedPotionBrewSequence_complete:
