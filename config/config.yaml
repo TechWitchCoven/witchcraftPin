@@ -28,6 +28,10 @@ settings:
 virtual_platform_start_active_switches:
   - sBall1
   - sBall2
+  - sBall3
+  - sBall4
+  - sBall5
+  - sBall6
 
 show_player:
   init_phase_3:

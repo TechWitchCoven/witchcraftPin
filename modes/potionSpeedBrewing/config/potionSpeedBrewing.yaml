@@ -175,7 +175,7 @@ shots:
   dragonScaleIngredientAdd:
     switch: sCauldronLeftProx
   webIngredientAdd:
-    hit_events: spinner_rightFireSpinner_active
+    hit_events: spinner_rightFireSpinner_hit
   batWingIngredientAdd:
     switch: sCauldronRightProx
 
