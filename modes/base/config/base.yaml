@@ -52,6 +52,11 @@ widget_player:
   player_added: 
     playerAdded:
       expire: 1000ms
+
+achievements:
+  speedPotionAchievement:
+    complete_events: speedPotionBrewComplete
+    events_when_started: speedPotionAttempt
   
 
 # Comment Version Tracking 0.1.2
