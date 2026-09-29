@@ -13,3 +13,4 @@ modes:
   - targetManager
   - ballSaveManager
   - springManager
+  - potionSpeedBrewing

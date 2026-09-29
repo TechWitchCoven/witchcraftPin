@@ -2,20 +2,20 @@
 
 [ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_524xj"]
 [ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_6rn1m"]
+[ext_resource type="Texture2D" uid="uid://ddmaghve32jrs" path="res://images/paperBackdrop.jpg" id="2_ktofo"]
 [ext_resource type="Script" uid="uid://808knhb8e2nn" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="3_ted12"]
+[ext_resource type="Theme" uid="uid://dbqf6lfoaxg23" path="res://MainSlideTitle.tres" id="5_vubgl"]
 
 [node name="Bonus" type="Control" unique_id=1099632545]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1920.0
-offset_bottom = 720.0
-script = ExtResource("1_524xj")
-
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=319846129]
-layout_mode = 0
 offset_right = 1366.0
 offset_bottom = 768.0
-color = Color(0.26147848, 0.04918897, 0.34420156, 1)
+script = ExtResource("1_524xj")
+
+[node name="ColorRect2" type="Sprite2D" parent="." unique_id=718187259]
+texture = ExtResource("2_ktofo")
+centered = false
 
 [node name="MPFConditionalChildren" type="Control" parent="." unique_id=10002068]
 anchors_preset = 0
@@ -46,8 +46,9 @@ anchors_preset = 0
 [node name="bonus_entry_name" type="Label" parent="MPFConditionalChildren/__default__" unique_id=147434267]
 layout_mode = 0
 offset_top = 133.0
-offset_right = 1920.0
+offset_right = 1366.0
 offset_bottom = 310.0
+theme = ExtResource("5_vubgl")
 theme_override_font_sizes/font_size = 100
 text = "Bonus Name"
 horizontal_alignment = 1
@@ -59,8 +60,9 @@ variable_name = "text"
 [node name="bonus_entry_score" type="Label" parent="MPFConditionalChildren/__default__" unique_id=1762880800]
 layout_mode = 0
 offset_top = 351.0
-offset_right = 1920.0
+offset_right = 1366.0
 offset_bottom = 528.0
+theme = ExtResource("5_vubgl")
 theme_override_font_sizes/font_size = 100
 text = "Bonus Name"
 horizontal_alignment = 1
@@ -77,8 +79,9 @@ anchors_preset = 0
 [node name="Label" type="Label" parent="MPFConditionalChildren/subtotal" unique_id=1558381672]
 layout_mode = 0
 offset_top = 133.0
-offset_right = 1920.0
+offset_right = 1366.0
 offset_bottom = 310.0
+theme = ExtResource("5_vubgl")
 theme_override_font_sizes/font_size = 100
 text = "Bonus Subtotal"
 horizontal_alignment = 1
@@ -87,8 +90,9 @@ vertical_alignment = 1
 [node name="bonus_entry_score" type="Label" parent="MPFConditionalChildren/subtotal" unique_id=1346631804]
 layout_mode = 0
 offset_top = 351.0
-offset_right = 1920.0
+offset_right = 1366.0
 offset_bottom = 528.0
+theme = ExtResource("5_vubgl")
 theme_override_font_sizes/font_size = 100
 text = "Bonus Name"
 horizontal_alignment = 1
@@ -105,8 +109,9 @@ anchors_preset = 0
 [node name="Label" type="Label" parent="MPFConditionalChildren/multiplier" unique_id=1518521091]
 layout_mode = 0
 offset_top = 133.0
-offset_right = 1920.0
+offset_right = 1366.0
 offset_bottom = 310.0
+theme = ExtResource("5_vubgl")
 theme_override_font_sizes/font_size = 100
 text = "Bonus Multiplier"
 horizontal_alignment = 1
@@ -115,8 +120,9 @@ vertical_alignment = 1
 [node name="bonus_entry_score" type="Label" parent="MPFConditionalChildren/multiplier" unique_id=1086950529]
 layout_mode = 0
 offset_top = 351.0
-offset_right = 1920.0
+offset_right = 1366.0
 offset_bottom = 528.0
+theme = ExtResource("5_vubgl")
 theme_override_font_sizes/font_size = 100
 text = "Bonus Name"
 horizontal_alignment = 1
@@ -127,14 +133,14 @@ variable_name = "score"
 template_string = "%sX"
 
 [node name="total" type="Control" parent="MPFConditionalChildren" unique_id=1241566864]
-visible = false
 anchors_preset = 0
 
 [node name="Label" type="Label" parent="MPFConditionalChildren/total" unique_id=860603319]
 layout_mode = 0
 offset_top = 133.0
-offset_right = 1920.0
+offset_right = 1366.0
 offset_bottom = 310.0
+theme = ExtResource("5_vubgl")
 theme_override_font_sizes/font_size = 100
 text = "Total Bonus"
 horizontal_alignment = 1
@@ -143,8 +149,9 @@ vertical_alignment = 1
 [node name="bonus_entry_score" type="Label" parent="MPFConditionalChildren/total" unique_id=583873193]
 layout_mode = 0
 offset_top = 351.0
-offset_right = 1920.0
+offset_right = 1366.0
 offset_bottom = 528.0
+theme = ExtResource("5_vubgl")
 theme_override_font_sizes/font_size = 100
 text = "Bonus Name"
 horizontal_alignment = 1

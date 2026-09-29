@@ -46,10 +46,10 @@ autofire_coils:
 spinners:
   leftFireSpinner:
     switch: sCauldronLeftSpinner
-    active_ms: 500
+    active_ms: 1000
   rightFireSpinner:
     switch: sCauldronRightSpinner
-    active_ms: 500
+    active_ms: 1000
 
 drop_targets:
   leftCrystal:
@@ -69,4 +69,4 @@ drop_target_banks:
   springBank:
     drop_targets: springEntry
     reset_coils: cSpring1Reset
-    reset_events: machine_reset_phase_3, ball_starting
+    reset_events: machine_reset_phase_3, ball_starting, request_springBank_reset

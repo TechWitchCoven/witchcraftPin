@@ -1,0 +1,21 @@
+#config_version=6
+
+multiballs:
+  basicSpeedPotion:
+    ball_count: 2
+    shoot_again: 30s
+    hurry_up_time: 10s
+    grace_period: 5s
+    start_events: activateBasicSpeedPotion
+  rareSpeedPotion:
+    ball_count: 2
+    shoot_again: 45s
+    hurry_up_time: 10s
+    grace_period: 5s
+    start_events: activateRareSpeedPotion
+  legendarySpeedPotion:
+    ball_count: 6
+    shoot_again: 60s
+    hurry_up_time: 15s
+    grace_period: 5s
+    start_events: activateLegendarySpeedPotion
