@@ -22,6 +22,62 @@ show_player:
   #     tip, base, center: Specific tags for the shotArrowForward Show to use
   #                        in order to call the different parts of the arrow 
   #                        playfield insert
+  mode_potionSpeedBrewing_started:
+    shotArrowForward:
+      speed: 2
+      show_tokens:
+        tip: dragonScaleTipInsert
+        center: dragonScaleCenterInsert
+        base: dragonScaleBaseInsert
+        color: Aquamarine
+  logicblock_speedPotionBrewSequence_updated{value==1}:
+    shotArrowForward:
+      speed: 2
+      show_tokens:
+        tip: webTipInsert
+        center: webCenterInsert
+        base: webBaseInsert
+        color: Aquamarine
+    off:
+      show_tokens: 
+        lights: dragonScaleTipInsert,dragonScaleCenterInsert,dragonScaleBaseInsert
+  logicblock_speedPotionBrewSequence_updated{value==2}:
+    shotArrowForward:
+      speed: 2
+      show_tokens:
+        tip: batWingTipInsert
+        center: batWingCenterInsert
+        base: batWingBaseInsert
+        color: Aquamarine
+    off:
+      show_tokens: 
+        lights: webTipInsert,webCenterInsert,webBaseInsert
+  logicblock_speedPotionBrewSequence_updated{value==3}:
+    shotArrowForward:
+      speed: 2
+      show_tokens:
+        tip: dragonScaleTipInsert
+        center: dragonScaleCenterInsert
+        base: dragonScaleBaseInsert
+        color: Aquamarine
+    off:
+      show_tokens: 
+        lights: batWingTipInsert,batWingCenterInsert,batWingBaseInsert
+#  logicblock_speedPotionBrewSequence_complete:
+
+  logicblock_speedPotionBrewSequence_updated{value==0}:
+    shotArrowForward:
+      speed: 2
+      show_tokens:
+        tip: dragonScaleTipInsert
+        center: dragonScaleCenterInsert
+        base: dragonScaleBaseInsert
+        color: Aquamarine
+    off:
+      show_tokens: 
+        lights: batWingTipInsert,batWingCenterInsert,batWingBaseInsert,webTipInsert,webCenterInsert,webBaseInsert
+
+      
   
 # The following defines the timers in this mode
 timers:
@@ -35,7 +91,7 @@ timers:
   #     - event: Name of Event to Call Timer Control Event
   #       action: Type of Control Event to be Peformed (stop/restart)
   potionBrewingTimer:
-    end_value: 60
+    end_value: 120
     tick_interval: 500ms
     start_running: true
 
@@ -45,41 +101,90 @@ event_player:
   # Events are defined as follows:
   # Name of Event to Listen For:
   #   - Name of Event to Call After Listened Event Occurs 
-  speedPotionBrewComplete:
+  logicblock_speedPotionBrewSequence_complete:
     - stop-mode-potionSpeedBrewing
     - start-mode-potionQualifier
+    - activateLegendarySpeedPotion
+  timer_potionBrewingTimer_complete:
+    - stop-mode-potionSpeedBrewing
+    - start-mode-potionQualifier
+    - activateBasicSpeedPotion{current_player.iSpeedPotionMaxStep==1}
+    - activateRareSpeedPotion{current_player.iSpeedPotionMaxStep==3}
+  dragonScaleIngredientAdd_hit{current_player.iSpeedPotionCurrentStep==1 or current_player.iSpeedPotionCurrentStep==2}:
+    - resetPotionSequencer
+  batWingIngredientAdd_hit{current_player.iSpeedPotionCurrentStep==1 or current_player.iSpeedPotionCurrentStep==3 or current_player.iSpeedPotionCurrentStep==4}:
+    - resetPotionSequencer
 
-# The following defines the shots in the speed potion
+variable_player:
+  mode_potionSelection_will_stop:
+    bPotionModeStarted:
+      int: 0
+      action: set
+  mode_potionSpeedBrewing_started:
+    iSpeedPotionCurrentStep:
+      int: 0
+      action: set
+    iSpeedPotionMaxStep:
+      int: 0
+      action: set
+  logicblock_speedPotionBrewSequence_complete:
+    iSpeedPotionCurrentStep:
+      int: 5
+      action: set
+    iSpeedPotionMaxStep:
+      int: 5
+      action: set
+  logicblock_speedPotionBrewSequence_updated{value==0}:
+    iSpeedPotionCurrentStep:
+      int: 0
+      action: set
+  logicblock_speedPotionBrewSequence_updated{value==1}:
+    iSpeedPotionCurrentStep:
+      int: 1
+      action: set
+  logicblock_speedPotionBrewSequence_updated{value==1 and current_player.iSpeedPotionMaxStep<1}:
+    iSpeedPotionMaxStep:
+      int: 1
+      action: set
+  logicblock_speedPotionBrewSequence_updated{value==2}:
+    iSpeedPotionCurrentStep:
+      int: 2
+      action: set
+  logicblock_speedPotionBrewSequence_updated{value==2 and current_player.iSpeedPotionMaxStep<2}:
+    iSpeedPotionMaxStep:
+      int: 2
+      action: set
+  logicblock_speedPotionBrewSequence_updated{value==3}:
+    iSpeedPotionCurrentStep:
+      int: 3
+      action: set
+  logicblock_speedPotionBrewSequence_updated{value==3 and current_player.iSpeedPotionMaxStep<3}:
+    iSpeedPotionMaxStep:
+      int: 3
+      action: set
+  logicblock_speedPotionBrewSequence_updated{value==4}:
+    iSpeedPotionCurrentStep:
+      int: 4
+      action: set
+  logicblock_speedPotionBrewSequence_updated{value==4 and current_player.iSpeedPotionMaxStep<4}:
+    iSpeedPotionMaxStep:
+      int: 4
+      action: set
+
 shots:
-
-  # shots are defined as follows
-  # shotName:
-  #   switch: Switch to triggers shot
-  #   profile: Shot Profile to be applied
-  #     show_tokens:
-  #       lights: lights/tag associated with shot
-  #       color: Color for light shows (tag from show) 
-  dragonScaleIngredient:
+  dragonScaleIngredientAdd:
     switch: sCauldronLeftProx
-#    profile: magicProfile
-#    show_tokens:
-#      lights: magicMInsert
-#      color: MediumBlue
-  batWingIngredient:
+  webIngredientAdd:
+    hit_events: spinner_rightFireSpinner_active
+  batWingIngredientAdd:
     switch: sCauldronRightProx
-#    profile: magicProfile
-#    show_tokens:
-#      lights: magicMInsert
-#      color: MediumBlue
-#  batWingIngredient:
-#    switch: sCauldronLeftSpinner
-#    profile: magicProfile
-#    show_tokens:
-#      lights: magicMInsert
-#      color: MediumBlue
-#  batWingIngredient:
-#    switch: sCauldronRightSpinner
-#    profile: magicProfile
-#    show_tokens:
-#      lights: magicMInsert
-#      color: MediumBlue
+
+sequences:
+  speedPotionBrewSequence:
+    events:
+      - dragonScaleIngredientAdd_hit #dragonscale
+      - webIngredientAdd_hit #webOrbit
+      - batWingIngredientAdd_hit #batWing
+      - dragonScaleIngredientAdd_hit #dragonscale
+      - dragonScaleIngredientAdd_hit #dragonscale
+    reset_events: resetPotionSequencer

@@ -44,9 +44,9 @@ event_player:
   # Name of Event to Listen For:
   #   - Name of Event to Call After Listened Event Occurs{Conditional Statement} 
   spinner_leftFireSpinner_hit:
-    - start-mode-potionSelection{current_player.leftFireLevel>=20 and current_player.rightFireLevel>=20 and current_player.bPotionModeStarted==0}
+    - start-mode-potionSelection{current_player.leftFireLevel>=4 and current_player.rightFireLevel>=5 and current_player.bPotionModeStarted==0}
   spinner_rightFireSpinner_hit:
-    - start-mode-potionSelection{current_player.leftFireLevel>=20 and current_player.rightFireLevel>=20 and current_player.bPotionModeStarted==0}
+    - start-mode-potionSelection{current_player.leftFireLevel>=5 and current_player.rightFireLevel>=4 and current_player.bPotionModeStarted==0}
 
 
 # Comment Reference Version 0.1.1
