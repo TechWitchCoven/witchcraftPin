@@ -54,32 +54,32 @@ variable_player:
     iTempPlayfieldMultiplier:
       int: 1
       action: set
-    bMagicMBoundTarget:
-      int: 0
+    iMagicMBoundTarget:
+      int: 1
       action: set
-    bMagicABoundTarget:
-      int: 0
+    iMagicABoundTarget:
+      int: 1
       action: set
-    bMagicGBoundTarget:
-      int: 0
+    iMagicGBoundTarget:
+      int: 1
       action: set
-    bMagicIBoundTarget:
-      int: 0
+    iMagicIBoundTarget:
+      int: 1
       action: set
-    bMagicCBoundTarget:
-      int: 0
+    iMagicCBoundTarget:
+      int: 1
       action: set
-    bBindBBoundTarget:
-      int: 0
+    iBindBBoundTarget:
+      int: 1
       action: set
-    bBindIBoundTarget:
-      int: 0
+    iBindIBoundTarget:
+      int: 1
       action: set
-    bBindNBoundTarget:
-      int: 0
+    iBindNBoundTarget:
+      int: 1
       action: set
-    bBindDBoundTarget:
-      int: 0
+    iBindDBoundTarget:
+      int: 1
       action: set
 
 widget_player:

@@ -39,3 +39,9 @@ show_player:
       show_tokens:
         lights: transliteLight
         color: BB0000
+
+timed_switches:
+  game_cancel:
+    switch_tags: start
+    time: 5s
+    events_when_active: end_game
