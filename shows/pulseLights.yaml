@@ -1,0 +1,19 @@
+#show_version=6
+- time: 0
+  lights:
+    (pulseLight): (color)%20
+- time: +100ms
+  lights:
+    (pulseLight): (color)%60
+- time: +100ms
+  lights:
+    (pulseLight): (color)%100
+- time: +300ms
+  lights:
+    (pulseLight): (color)%60
+- time: +100ms
+  lights:
+    (pulseLight): (color)%20
+- time: +100ms
+  lights:
+    (pulseLight): (color)%00

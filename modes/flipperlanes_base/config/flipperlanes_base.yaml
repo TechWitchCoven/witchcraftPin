@@ -162,4 +162,12 @@ show_player:
         targetm1: nInsert
         target: dInsert
 
+event_player:
+  bindLaneGroup_lit_complete:
+    - startBindingSequence
+  mode_flipperlanes_base_started:
+    - start-mode-bindingRitualManager
+  mode_flipperlanes_base_will_stop:
+    - stop-mode-bindingRitualManager
+
 #Comment Reference Current Version: 0.1.1

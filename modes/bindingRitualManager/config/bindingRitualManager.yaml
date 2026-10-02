@@ -1,0 +1,211 @@
+#config_version=6
+
+mode:
+  start_events: start-mode-bindingRitualManager
+  stop_events: stop-mode-bindingRitualManager
+  priority: 2000
+
+variable_player:
+  mode_bindingRitualManager_started:
+    bBindingSequenceActive:
+      int: 0
+      action: set
+  startBindingSequence:
+    bBindingSequenceActive:
+      int: 1
+      action: set
+  endBindingSequence:
+    bBindingSequenceActive:
+      int: 0
+      action: set
+  sMTarget_active{current_player.iMagicMBoundTarget<2 and current_player.bBindingSequenceActive==1}:
+    iMagicMBoundTarget:
+      int: 2
+      action: set
+  sATarget_active{current_player.iMagicABoundTarget<2 and current_player.bBindingSequenceActive==1}:
+    iMagicABoundTarget:
+      int: 2
+      action: set
+  sGTarget_active{current_player.iMagicGBoundTarget<2 and current_player.bBindingSequenceActive==1}:
+    iMagicGBoundTarget:
+      int: 2
+      action: set
+  sITarget_active{current_player.iMagicIBoundTarget<2 and current_player.bBindingSequenceActive==1}:
+    iMagicIBoundTarget:
+      int: 2
+      action: set
+  sCTarget_active{current_player.iMagicCBoundTarget<2 and current_player.bBindingSequenceActive==1}:
+    iMagicCBoundTarget:
+      int: 2
+      action: set
+  sLeftOutlane_active{current_player.iBindBBoundTarget<2 and current_player.bBindingSequenceActive==1}:
+    iBindBBoundTarget:
+      int: 2
+      action: set
+  sLeftInlane_active{current_player.iBindIBoundTarget<2 and current_player.bBindingSequenceActive==1}:
+    iBindIBoundTarget:
+      int: 2
+      action: set
+  sRightInlane_active{current_player.iBindNBoundTarget<2 and current_player.bBindingSequenceActive==1}:
+    iBindNBoundTarget:
+      int: 2
+      action: set
+  sRightOutlane_active{current_player.iBindDBoundTarget<2 and current_player.bBindingSequenceActive==1}:
+    iBindDBoundTarget:
+      int: 2
+      action: set
+
+event_player:
+
+  # Events are defined as follows:
+  # Name of Event to Listen For:
+  #   - Name of Event to Call After Listened Event Occurs{Conditional Statement}
+
+  # The following event occurs on a primary motion clock tick, and resets the timer
+  # and also sets both axes one more tick of motion forward (or reverse)
+  timer_bindingReminderTimer_complete:
+    - restartBindingReminder
+    - trigger_pulseBoundLights
+  player_iMagicMBoundTarget{value==2}:
+    - endBindingSequence
+    - trigger_pulseBoundLights
+  player_iMagicABoundTarget{value==2}:
+    - endBindingSequence
+    - trigger_pulseBoundLights
+  player_iMagicGBoundTarget{value==2}:
+    - endBindingSequence
+    - trigger_pulseBoundLights
+  player_iMagicIBoundTarget{value==2}:
+    - endBindingSequence
+    - trigger_pulseBoundLights
+  player_iMagicCBoundTarget{value==2}:
+    - endBindingSequence
+    - trigger_pulseBoundLights
+  player_iBindBBoundTarget{value==2}:
+    - endBindingSequence
+    - trigger_pulseBoundLights
+  player_iBindIBoundTarget{value==2}:
+    - endBindingSequence
+    - trigger_pulseBoundLights
+  player_iBindNBoundTarget{value==2}:
+    - endBindingSequence
+    - trigger_pulseBoundLights
+  player_iBindDBoundTarget{value==2}:
+    - endBindingSequence
+    - trigger_pulseBoundLights
+
+# The following defines the timers in this mode
+timers:
+
+  # Timers are named and defined as such:
+  # Name of Timer:
+  #   end_value: Final Value in Timer
+  #   tick_interval: Length of Tick
+  #   start_running: Should the timer be running immediately/when enabled
+  #   control_events:
+  #     - event: Name of Event to Call Timer Control Event
+  #       action: Type of Control Event to be Peformed (stop/restart)
+
+  # The following timer acts as the primary clock related to motion events for the cauldron
+  # since motor devices have a time off for FAST EXP Boards. This primary clock will "tick"
+  # every 5 seconds and initiate an event to call another motion event as long as this
+  # mode is running.
+  bindingReminderTimer:
+    end_value: 1
+    tick_interval: 5s
+    start_running: true
+    control_events:
+      - event: restartBindingReminder
+        action: restart
+
+  pulseEndTimer:
+    end_value: 1
+    tick_interval: 700ms
+    start_running: false
+    control_events:
+      - event: trigger_pulseBoundLights
+        action: restart
+
+achievements:
+  magicMBoundAchievement:
+    show_tokens:
+      pulseLight: magicMInsert
+      color: DarkViolet
+    show_when_selected: pulseLights
+    select_events: trigger_pulseBoundLights
+    unselect_events: timer_pulseEndTimer_complete
+    enable_on_next_ball_when_enabled: true
+    enable_events: player_iMagicMBoundTarget{value==2}
+  magicABoundAchievement:
+    show_tokens:
+      pulseLight: magicAInsert
+      color: DarkViolet
+    show_when_selected: pulseLights
+    select_events: trigger_pulseBoundLights
+    unselect_events: timer_pulseEndTimer_complete
+    enable_on_next_ball_when_enabled: true
+    enable_events: player_iMagicABoundTarget{value==2}
+  magicGBoundAchievement:
+    show_tokens:
+      pulseLight: magicGInsert
+      color: DarkViolet
+    show_when_selected: pulseLights
+    select_events: trigger_pulseBoundLights
+    unselect_events: timer_pulseEndTimer_complete
+    enable_on_next_ball_when_enabled: true
+    enable_events: player_iMagicGBoundTarget{value==2}
+  magicIBoundAchievement:
+    show_tokens:
+      pulseLight: magicIInsert
+      color: DarkViolet
+    show_when_selected: pulseLights
+    select_events: trigger_pulseBoundLights
+    unselect_events: timer_pulseEndTimer_complete
+    enable_on_next_ball_when_enabled: true
+    enable_events: player_iMagicIBoundTarget{value==2}
+  magicCBoundAchievement:
+    show_tokens:
+      pulseLight: magicCInsert
+      color: DarkViolet
+    show_when_selected: pulseLights
+    select_events: trigger_pulseBoundLights
+    unselect_events: timer_pulseEndTimer_complete
+    enable_on_next_ball_when_enabled: true
+    enable_events: player_iMagicCBoundTarget{value==2}
+  bindBBoundAchievement:
+    show_tokens:
+      pulseLight: bInsert
+      color: DarkViolet
+    show_when_selected: pulseLights
+    select_events: trigger_pulseBoundLights
+    unselect_events: timer_pulseEndTimer_complete
+    enable_on_next_ball_when_enabled: true
+    enable_events: player_iBindBBoundTarget{value==2}
+  bindIBoundAchievement:
+    show_tokens:
+      pulseLight: iInsert
+      color: DarkViolet
+    show_when_selected: pulseLights
+    select_events: trigger_pulseBoundLights
+    unselect_events: timer_pulseEndTimer_complete
+    enable_on_next_ball_when_enabled: true
+    enable_events: player_iBindIBoundTarget{value==2}
+  bindNBoundAchievement:
+    show_tokens:
+      pulseLight: nInsert
+      color: DarkViolet
+    show_when_selected: pulseLights
+    select_events: trigger_pulseBoundLights
+    unselect_events: timer_pulseEndTimer_complete
+    enable_on_next_ball_when_enabled: true
+    enable_events: player_iBindNBoundTarget{value==2}
+  bindDBoundAchievement:
+    show_tokens:
+      pulseLight: dInsert
+      color: DarkViolet
+    show_when_selected: pulseLights
+    select_events: trigger_pulseBoundLights
+    unselect_events: timer_pulseEndTimer_complete
+    enable_on_next_ball_when_enabled: true
+    enable_events: player_iBindDBoundTarget{value==2}
+
