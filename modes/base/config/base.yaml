@@ -47,6 +47,40 @@ variable_player:
     rimOrbits:
       int: 0
       action: set
+  mode_base_started{current_player.ball==1}:
+    iOverallPlayfieldMultiplier:
+      int: 1
+      action: set
+    iTempPlayfieldMultiplier:
+      int: 1
+      action: set
+    iMagicMBoundTarget:
+      int: 1
+      action: set
+    iMagicABoundTarget:
+      int: 1
+      action: set
+    iMagicGBoundTarget:
+      int: 1
+      action: set
+    iMagicIBoundTarget:
+      int: 1
+      action: set
+    iMagicCBoundTarget:
+      int: 1
+      action: set
+    iBindBBoundTarget:
+      int: 1
+      action: set
+    iBindIBoundTarget:
+      int: 1
+      action: set
+    iBindNBoundTarget:
+      int: 1
+      action: set
+    iBindDBoundTarget:
+      int: 1
+      action: set
 
 widget_player:
   player_added: 
