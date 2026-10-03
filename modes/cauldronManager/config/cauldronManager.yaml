@@ -137,10 +137,10 @@ shots:
   dragonScaleIngredientAdd:
     switch: sCauldronLeftProx
   webIngredientAdd:
-    hit_events: spinner_rightFireSpinner_hit
+    hit_events: spinner_rightFireSpinner_active
   batWingIngredientAdd:
     switch: sCauldronRightProx
   ravenFeatherIngredientAdd:
-    hit_events: spinner_leftFireSpinner_hit
+    hit_events: spinner_leftFireSpinner_active
 
 #Comment Reference Version 0.1.1
