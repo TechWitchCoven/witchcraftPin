@@ -86,6 +86,10 @@ variable_player:
     iBindDBoundTarget:
       int: 1
       action: set
+  activateBasicRegenPotion:
+    score: 10_000_000
+  activateLegendaryRegenPotion:
+    score: 50_000_000
 
 widget_player:
   player_added: 
@@ -99,10 +103,13 @@ achievements:
   healingPotionAchievement:
     complete_events: healingPotionBrewComplete
     enable_events: healingPotionAttempt
+  regenPotionAchievement:
+    complete_events: regenPotionBrewComplete
+    enable_events: regenPotionAttempt
 
 extra_balls:
   tier2StrengthExtraBall:
-    award_events: activateTier2StrengthPotion
+    award_events: activateRareRegenPotion,activateLegendaryRegenPotion
   fiftyMillionExtraBall:
     award_events: scoreGreaterFiftyMillion
   

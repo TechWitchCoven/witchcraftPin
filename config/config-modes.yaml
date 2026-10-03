@@ -16,3 +16,4 @@ modes:
   - potionSpeedBrewing
   - potionHealingBrewing
   - bindingRitualManager
+  - potionRegenBrewing

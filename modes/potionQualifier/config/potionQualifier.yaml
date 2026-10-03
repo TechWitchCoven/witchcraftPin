@@ -35,8 +35,17 @@ variable_player:
     bPotionModeStarted:
       int: 0
       action: set
-
-
+  resetPotionQualifer:
+    leftFireLevel:
+      int: 0
+      action: set
+    rightFireLevel:
+      int: 0
+      action: set
+    bPotionModeStarted:
+      int: 0
+      action: set
+  
 # The following Defines the events that will be called from this mode
 event_player:
 

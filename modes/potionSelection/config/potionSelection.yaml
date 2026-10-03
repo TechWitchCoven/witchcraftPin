@@ -41,8 +41,8 @@ event_player:
   dragonScaleIngredientAdd_hit:
     - start-mode-potionHealingBrewing
     - stop-mode-potionSelection
-  batWingIngredientAdd:
-    - start-mode-potionRegenerationBrewing
+  batWingIngredientAdd_hit:
+    - start-mode-potionRegenBrewing
     - stop-mode-potionSelection
   rightSpinnerQualifiedHit:
     - start-mode-potionSpeedBrewing
