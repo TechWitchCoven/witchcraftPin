@@ -4,7 +4,8 @@ light_stripes:
   rightRailLights:
     count: 64
     number_template: playfieldexp-1-{}
-    tags: railLight
+    light_template:
+      tags: railLight
     number_start: 1
 
   
