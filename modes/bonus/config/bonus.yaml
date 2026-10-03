@@ -19,6 +19,11 @@ mode_settings:
       text: "Drop Targets Hit"
       score: 1_000
       reset_player_score_entry: True
+    - entry: bonus_boundTargets
+      player_score_entry: iboundTargets
+      text: "Bound Targets"
+      score: 10_0000
+      reset_player_score_entry: False
 
 slide_player:
   mode_bonus_started: bonus

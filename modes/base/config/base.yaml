@@ -38,6 +38,8 @@ event_player:
     - stop-mode-cauldronManager
     - stop-mode-ballSaveManager
     - start-mode-springManager
+  player_score{value>=50_000_000}:
+    - scoreGreaterFiftyMillion
 
 variable_player:
   mode_base_started:
@@ -46,6 +48,43 @@ variable_player:
       action: set
     rimOrbits:
       int: 0
+      action: set
+  mode_base_started{current_player.ball==1}:
+    iboundTargets:
+      int: 0
+      action: set
+    iOverallPlayfieldMultiplier:
+      int: 1
+      action: set
+    iTempPlayfieldMultiplier:
+      int: 1
+      action: set
+    iMagicMBoundTarget:
+      int: 1
+      action: set
+    iMagicABoundTarget:
+      int: 1
+      action: set
+    iMagicGBoundTarget:
+      int: 1
+      action: set
+    iMagicIBoundTarget:
+      int: 1
+      action: set
+    iMagicCBoundTarget:
+      int: 1
+      action: set
+    iBindBBoundTarget:
+      int: 1
+      action: set
+    iBindIBoundTarget:
+      int: 1
+      action: set
+    iBindNBoundTarget:
+      int: 1
+      action: set
+    iBindDBoundTarget:
+      int: 1
       action: set
 
 widget_player:
@@ -56,7 +95,16 @@ widget_player:
 achievements:
   speedPotionAchievement:
     complete_events: speedPotionBrewComplete
-    events_when_started: speedPotionAttempt
+    enable_events: speedPotionAttempt
+  healingPotionAchievement:
+    complete_events: healingPotionBrewComplete
+    enable_events: healingPotionAttempt
+
+extra_balls:
+  tier2StrengthExtraBall:
+    award_events: activateTier2StrengthPotion
+  fiftyMillionExtraBall:
+    award_events: scoreGreaterFiftyMillion
   
 
 # Comment Version Tracking 0.1.2

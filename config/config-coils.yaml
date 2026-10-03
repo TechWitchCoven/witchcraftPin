@@ -41,3 +41,12 @@ coils:
   cStartButtonLED:
     number: cabio-2
     allow_enable: true
+  cActionButtonBlueLED:
+    number: cabio-3
+    allow_enable: true
+  cActionButtonGreenLED:
+    number: cabio-4
+    allow_enable: true
+  cActionButtonRedLED:
+    number: cabio-5
+    allow_enable: true
