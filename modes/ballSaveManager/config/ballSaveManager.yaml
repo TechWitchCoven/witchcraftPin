@@ -33,16 +33,25 @@ ball_saves:
     auto_launch: true
     balls_to_save: -1
   basicPotionOfHealing:
+    active_time: 60s
+    hurry_up_time: 5s
+    grace_period: 5s
     balls_to_save: 1
     enable_events: activateBasicHealingPotion
     auto_launch: true
     early_ball_save_events: sLeftOutlane_hit, sRightOutlane_hit
   rarePotionOfHealing:
+    active_time: 180s
+    hurry_up_time: 5s
+    grace_period: 5s
     balls_to_save: 3
     enable_events: activateRareHealingPotion
     auto_launch: true
     early_ball_save_events: sLeftOutlane_hit, sRightOutlane_hit
   legendaryPotionOfHealing:
+    active_time: 300s
+    hurry_up_time: 5s
+    grace_period: 5s
     balls_to_save: 5
     enable_events: activateLegendaryHealingPotion
     auto_launch: true
