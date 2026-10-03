@@ -71,6 +71,8 @@ switches:
   sStartButton:
     number: cabio-9
     tags: start, text_input_select
+  sActionButton:
+    number: cabio-10
   sRightFlipperButton:
     number: cabio-16
     debounce: quick
