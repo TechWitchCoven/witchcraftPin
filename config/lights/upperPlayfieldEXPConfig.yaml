@@ -87,13 +87,13 @@ lights:
     tags: potionRavenInsert, potionInsert2, potionInsert2u
   leftOrbitArrowBaseInsert:
     number: upperpfexp-2-14
-    tags: potionSelectionBaseInsert
+    tags: potionSelectionBaseInsert,ravenFeatherBaseInsert
   leftOrbitArrowTipInsert:
     number: upperpfexp-2-15
-    tags: potionSelectionTipInsert
+    tags: potionSelectionTipInsert,ravenFeatherTipInsert
   leftOrbitArrowCenterInsert:
     number: upperpfexp-2-16
-    tags: potionSelectionCenterInsert
+    tags: potionSelectionCenterInsert,ravenFeatherCenterInsert
   magicAInsert:
     number: upperpfexp-2-17
     tags: magicAInsert
