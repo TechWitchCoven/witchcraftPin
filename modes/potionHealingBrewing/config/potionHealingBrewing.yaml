@@ -201,18 +201,18 @@ event_player:
   # Name of Event to Listen For:
   #   - Name of Event to Call After Listened Event Occurs 
   mode_potionHealingBrewing_started:
-    - speedPotionAttempt
+    - healingPotionAttempt
   logicblock_healingPotionBrewSequence_complete:
     - stop-mode-potionHealingBrewing
     - start-mode-potionQualifier
-    - activateLegendarySpeedPotion
-    - speedPotionBrewComplete
+    - activateLegendaryHealingPotion
+    - healingPotionBrewComplete
   timer_healingPotionBrewingTimer_complete:
     - stop-mode-potionHealingBrewing
     - start-mode-potionQualifier
-    - activateBasicSpeedPotion{current_player.iHealingPotionMaxStep==1}
-    - activateRareSpeedPotion{current_player.iHealingPotionMaxStep==3}
-    - speedPotionBrewComplete
+    - activateBasicHealingPotion{current_player.iHealingPotionMaxStep==1}
+    - activateRareHealingPotion{current_player.iHealingPotionMaxStep==3}
+    - healingPotionBrewComplete
   dragonScaleIngredientAdd_hit{current_player.iHealingPotionCurrentStep==1 or current_player.iHealingPotionCurrentStep==2}:
     - resetPotionSequencer
   batWingIngredientAdd_hit{current_player.iHealingPotionCurrentStep==1 or current_player.iHealingPotionCurrentStep==3 or current_player.iHealingPotionCurrentStep==4}:
