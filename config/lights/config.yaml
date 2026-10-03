@@ -27,7 +27,7 @@ lights:
     type: r
     tags: actionButtonLight
   actionButtonGreenLED:
-    number: cActionButtonBlueLED
+    number: cActionButtonGreenLED
     platform: drivers
     type: g
     tags: actionButtonLight
