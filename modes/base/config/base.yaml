@@ -48,6 +48,9 @@ variable_player:
       int: 0
       action: set
   mode_base_started{current_player.ball==1}:
+    iboundTargets:
+      int: 0
+      action: set
     iOverallPlayfieldMultiplier:
       int: 1
       action: set
