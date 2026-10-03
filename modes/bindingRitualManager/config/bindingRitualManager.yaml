@@ -22,6 +22,9 @@ variable_player:
     iMagicMBoundTarget:
       int: 2
       action: set
+    iBoundTarget:
+      int: 1
+      action: add
   sATarget_active{current_player.iMagicABoundTarget<2 and current_player.bBindingSequenceActive==1}:
     iMagicABoundTarget:
       int: 2

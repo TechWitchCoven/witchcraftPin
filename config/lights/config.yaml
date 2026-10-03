@@ -4,6 +4,7 @@
 config:
   - lowerPlayfieldEXPConfig.yaml
   - upperPlayfieldEXPConfig.yaml
+  - playfieldExternalEXPConfig.yaml
 
 #Definition of Start Button coil Driver to LED Mapping
 lights:
@@ -15,3 +16,19 @@ lights:
   transliteLight:
     number: neuron-3-1
     type: rgb
+
+  actionButtonBlueLED:
+    number: cActionButtonBlueLED
+    platform: drivers
+    type: b
+    tags: actionButtonLight
+  actionButtonRedLED:
+    number: cActionButtonRedLED
+    platform: drivers
+    type: r
+    tags: actionButtonLight
+  actionButtonGreenLED:
+    number: cActionButtonGreenLED
+    platform: drivers
+    type: g
+    tags: actionButtonLight

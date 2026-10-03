@@ -1,0 +1,11 @@
+#config_version=6
+
+light_stripes:
+  rightRailLights:
+    count: 64
+    number_template: playfieldexp-1-{}
+    light_template:
+      tags: railLight
+    number_start: 1
+
+  
