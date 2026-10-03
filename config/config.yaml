@@ -37,8 +37,8 @@ show_player:
   init_phase_3:
     led_color:
       show_tokens:
-        lights: transliteLight
-        color: BB0000
+        lights: transliteLight,railLight
+        color: BBBBBB
 
 timed_switches:
   game_cancel:
