@@ -36,7 +36,13 @@ fast:
             playfieldexp:
                 model: FP-EXP-0081
                 address: 85
-                led_fade_time: 10ms
+                led_fade_time: 10ms 
+                led_ports:
+                    - port: 1
+                      type: sk6812
+                      count: 64
+                    - port: 2
+                      count: 0
         baud: 921600
     exp_int:
         port: /dev/ttyAMA3

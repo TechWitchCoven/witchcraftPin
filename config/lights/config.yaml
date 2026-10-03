@@ -4,6 +4,7 @@
 config:
   - lowerPlayfieldEXPConfig.yaml
   - upperPlayfieldEXPConfig.yaml
+  - playfieldExternalEXPConfig.yaml
 
 #Definition of Start Button coil Driver to LED Mapping
 lights:
