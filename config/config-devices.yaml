@@ -6,12 +6,14 @@ flippers:
     hold_coil: cLeftFlipperHold
     activation_switch: sLeftFlipperButton
     eos_switch: sLeftFlipperEOS
+    repulse_on_eos_open: true
     use_eos: true
   rightFlipper:
     main_coil: cRightFlipperPower
     hold_coil: cRightFlipperHold
     activation_switch: sRightFlipperButton
     eos_switch: sRightFlipperEOS
+    repulse_on_eos_open: true
     use_eos: true
 
 ball_devices:
