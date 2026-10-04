@@ -1,0 +1,285 @@
+#config_version=6
+
+# This is the mode definition for the Speed Potion Brewing mode. It is used
+# to manage the brewing and show related to brewing a speed potion.
+
+# The following is the mode config data
+# It contains the start event, based on the defined start event,
+# and corresponding stop event.  The priority is 700 for this mode
+mode:
+  start_events: start-mode-potionStrengthBrewing
+  stop_events: stop-mode-potionStrengthBrewing
+  priority: 730
+
+# The following contains the definitions for shows to be played in this mode
+show_player:
+
+  # Show cues are based on events being called, they are defined as such:
+  # Event to Call Show:
+  #   Name of Show To Play:
+  #     speed: Speed of Show Playback
+  #     color: Color to use for Show
+  #     tip, base, center: Specific tags for the shotArrowForward Show to use
+  #                        in order to call the different parts of the arrow 
+  #                        playfield insert
+  mode_potionStrengthBrewing_started:
+    shotArrowForward:
+      speed: 2
+      show_tokens:
+        tip: dragonScaleTipInsert
+        center: dragonScaleCenterInsert
+        base: dragonScaleBaseInsert
+        color: LawnGreen
+  logicblock_strengthPotionBrewSequence_updated{value==1}:
+    shotArrowForward:
+      speed: 2
+      show_tokens:
+        tip: batWingTipInsert
+        center: batWingCenterInsert
+        base: batWingBaseInsert
+        color: LawnGreen
+    off:
+      show_tokens: 
+        lights: dragonScaleBaseInsert,dragonScaleCenterInsert,dragonScaleTipInsert
+  
+      
+  #Fourth Ingredient
+  logicblock_strengthPotionBrewSequence_updated{value==3}:
+    shotArrowForward:
+      speed: 2
+      show_tokens:
+        tip: dragonScaleTipInsert
+        center: dragonScaleCenterInsert
+        base: dragonScaleBaseInsert
+        color: LawnGreen
+    off:
+      show_tokens: 
+        lights: batWingBaseInsert,batWingCenterInsert,batWingTipInsert
+  
+  #Fifth Ingredient
+  logicblock_strengthPotionBrewSequence_updated{value==4}:
+    shotArrowForward:
+      speed: 2
+      show_tokens:
+        tip: ravenFeatherTipInsert
+        center: ravenFeatherCenterInsert
+        base: ravenFeatherBaseInsert
+        color: LawnGreen
+    off:
+      show_tokens: 
+        lights: dragonScaleBaseInsert,dragonScaleCenterInsert,dragonScaleTipInsert
+  logicblock_strengthPotionBrewSequence_updated{value==0}:
+    shotArrowForward:
+      speed: 2
+      show_tokens:
+        tip: dragonScaleTipInsert
+        center: dragonScaleCenterInsert
+        base: dragonScaleBaseInsert
+        color: LawnGreen
+    off:
+      show_tokens: 
+        lights: batWingTipInsert,batWingCenterInsert,batWingBaseInsert,ravenFeatherBaseInsert,ravenFeatherCenterInsert,ravenFeatherTipInsert,webBaseInsert,webCenterInsert,webTipInsert
+
+  player_iStrengthPotionCurrentStep{value==0}:
+    off:
+      show_tokens:
+        lights: potionInsert1u,potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+  player_iStrengthPotionCurrentStep{value==0 and current_player.iStrengthPotionMaxStep==1}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert1l
+        offLights: potionInsert1u,potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+        color: LawnGreen
+  player_iStrengthPotionCurrentStep{value==0 and current_player.iStrengthPotionMaxStep==2}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert2l, potionInsert1l
+        offLights: potionInsert1u,potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+        color: LawnGreen
+  player_iStrengthPotionCurrentStep{value==0 and current_player.iStrengthPotionMaxStep==3}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert3l, potionInsert2l, potionInsert1l
+        offLights: potionInsert1u,potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+        color: LawnGreen
+  player_iStrengthPotionCurrentStep{value==0 and current_player.iStrengthPotionMaxStep==4}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert4l, potionInsert3l, potionInsert2l, potionInsert1l
+        offLights: potionInsert1u,potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+        color: LawnGreen
+  player_iStrengthPotionCurrentStep{value==1 and current_player.iStrengthPotionMaxStep==1}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert1
+        offLights: potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+        color: LawnGreen
+  player_iStrengthPotionCurrentStep{value==1 and current_player.iStrengthPotionMaxStep==2}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert1,potionInsert2l
+        offLights: potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+        color: LawnGreen
+  player_iStrengthPotionCurrentStep{value==1 and current_player.iStrengthPotionMaxStep==3}:
+   brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert1,potionInsert2l,potionInsert3l
+        offLights: potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+        color: LawnGreen
+  player_iStrengthPotionCurrentStep{value==1 and current_player.iStrengthPotionMaxStep==4}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert1,potionInsert2l,potionInsert3l,potionInsert4l
+        offLights: potionInsert2u,potionInsert3u,potionInsert4u,potionInsert5u
+        color: LawnGreen
+  player_iStrengthPotionCurrentStep{value==2 and current_player.iStrengthPotionMaxStep==2}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert1,potionInsert2
+        offLights: potionInsert3u,potionInsert4u,potionInsert5u
+        color: LawnGreen
+  player_iStrengthPotionCurrentStep{value==2 and current_player.iStrengthPotionMaxStep==3}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert1,potionInsert2,potionInsert3l
+        offLights: potionInsert3u,potionInsert4u,potionInsert5u
+        color: LawnGreen
+  player_iStrengthPotionCurrentStep{value==2 and current_player.iStrengthPotionMaxStep==4}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert1,potionInsert2,potionInsert3l,potionInsert4l
+        offLights: potionInsert3u,potionInsert4u,potionInsert5u
+        color: LawnGreen
+  player_iStrengthPotionCurrentStep{value==3 and current_player.iStrengthPotionMaxStep==3}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert1,potionInsert2,potionInsert3
+        offLights: potionInsert4u,potionInsert5u
+        color: LawnGreen
+  player_iStrengthPotionCurrentStep{value==3 and current_player.iStrengthPotionMaxStep==4}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert1,potionInsert2,potionInsert3,potionInsert4l
+        offLights: potionInsert4u,potionInsert5u
+        color: LawnGreen
+  player_iStrengthPotionCurrentStep{value==4}:
+    brewTrackerShow:
+      show_tokens:
+        onLights: potionInsert4, potionInsert3, potionInsert2, potionInsert1
+        color: LawnGreen
+  
+  logicblock_strengthPotionBrewSequence_complete:
+    rippleOn:
+      loops: 3
+      speed: 4
+      show_tokens:
+        color: LawnGreen
+        target: potionInsert3
+        targetm1: potionInsert2
+        targetm2: potionInsert1
+        targetp1: potionInsert4
+        targetp2: potionInsert5    
+
+      
+  
+# The following defines the timers in this mode
+timers:
+
+  # Timers are named and defined as such:
+  # Name of Timer:
+  #   end_value: Final Value in Timer
+  #   tick_interval: Length of Tick
+  #   start_running: Should the timer be running immediately/when enabled
+  #   control_events:
+  #     - event: Name of Event to Call Timer Control Event
+  #       action: Type of Control Event to be Peformed (stop/restart)
+  strengthPotionBrewingTimer:
+    end_value: 120
+    tick_interval: 500ms
+    start_running: true
+
+# The following Defines the events that will be called from this mode
+event_player:
+
+  # Events are defined as follows:
+  # Name of Event to Listen For:
+  #   - Name of Event to Call After Listened Event Occurs 
+  mode_potionStrengthBrewing_started:
+    - strengthPotionAttempt
+  logicblock_strengthPotionBrewSequence_complete:
+    - stop-mode-potionStrengthBrewing
+    - resetPotionQualifer
+    - activateLegendaryStrengthPotion
+    - regenPotionBrewComplete
+  timer_strengthPotionBrewingTimer_complete:
+    - stop-mode-potionStrengthBrewing
+    - resetPotionQualifer
+    - activateBasicStrengthPotion{current_player.iStrengthPotionMaxStep==1}
+    - activateRareStrengthPotion{current_player.iStrengthPotionMaxStep==3}
+    - strengthPotionBrewComplete
+  dragonScaleIngredientAdd_hit{current_player.iStrengthPotionCurrentStep!=0 and current_player.iStrengthPotionCurrentStep!=3}:
+    - resetPotionSequencer
+  batWingIngredientAdd_hit{current_player.iStrengthPotionCurrentStep!=1 and current_player.iStrengthPotionCurrentStep!=2}:
+    - resetPotionSequencer
+
+variable_player:
+  mode_potionStrengthBrewing_started:
+    iStrengthPotionCurrentStep:
+      int: 0
+      action: set
+    iStrengthPotionMaxStep:
+      int: 0
+      action: set
+  logicblock_strengthPotionBrewSequence_complete:
+    iStrengthPotionCurrentStep:
+      int: 5
+      action: set
+    iStrengthPotionMaxStep:
+      int: 5
+      action: set
+  logicblock_strengthPotionBrewSequence_updated{value==0}:
+    iStrengthPotionCurrentStep:
+      int: 0
+      action: set
+  logicblock_strengthPotionBrewSequence_updated{value==1}:
+    iStrengthPotionCurrentStep:
+      int: 1
+      action: set
+  logicblock_strengthPotionBrewSequence_updated{value==1 and current_player.iStrengthPotionMaxStep<1}:
+    iStrengthPotionMaxStep:
+      int: 1
+      action: set
+  logicblock_strengthPotionBrewSequence_updated{value==2}:
+    iStrengthPotionCurrentStep:
+      int: 2
+      action: set
+  logicblock_strengthPotionBrewSequence_updated{value==2 and current_player.iStrengthPotionMaxStep<2}:
+    iStrengthPotionMaxStep:
+      int: 2
+      action: set
+  logicblock_strengthPotionBrewSequence_updated{value==3}:
+    iStrengthPotionCurrentStep:
+      int: 3
+      action: set
+  logicblock_strengthPotionBrewSequence_updated{value==3 and current_player.iStrengthPotionMaxStep<3}:
+    iStrengthPotionMaxStep:
+      int: 3
+      action: set
+  logicblock_strengthPotionBrewSequence_updated{value==4}:
+    iStrengthPotionCurrentStep:
+      int: 4
+      action: set
+  logicblock_strengthPotionBrewSequence_updated{value==4 and current_player.iStrengthPotionMaxStep<4}:
+    iStrengthPotionMaxStep:
+      int: 4
+      action: set
+
+sequences:
+  strengthPotionBrewSequence:
+    events:
+      - dragonScaleIngredientAdd_hit #dragonscale
+      - batWingIngredientAdd_hit #batWing
+      - batWingIngredientAdd_hit #batWing
+      - dragonScaleIngredientAdd_hit #dragonscale
+      - ravenFeatherIngredientAdd_hit #ravenfeatherOrbit
+    reset_events: resetPotionSequencer

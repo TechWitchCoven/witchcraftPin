@@ -49,7 +49,6 @@ variable_player:
     rimOrbits:
       int: 0
       action: set
-  mode_base_started{current_player.ball==1}:
     iboundTargets:
       int: 0
       action: set
@@ -90,6 +89,22 @@ variable_player:
     score: 10_000_000
   activateLegendaryRegenPotion:
     score: 50_000_000
+  activateBasicStrengthPotion:
+    iTempPlayfieldMultiplier:
+      int: 2
+      action: set
+  activateRareStrengthPotion:
+    iOverallPlayfieldMultiplier:
+      int: 2
+      action: set
+  activateRareLegendaryPotion:
+    iOverallPlayfieldMultiplier:
+      int: 4
+      action: set
+  player_turn_starting:
+    iTempPlayfieldMultiplier:
+      int: 1
+      action: set
 
 widget_player:
   player_added: 
@@ -106,6 +121,9 @@ achievements:
   regenPotionAchievement:
     complete_events: regenPotionBrewComplete
     enable_events: regenPotionAttempt
+  strengthPotionAchievement:
+    complete_events: strengthPotionBrewComplete
+    enable_events: strengthPotionAttempt
 
 extra_balls:
   tier2StrengthExtraBall:
