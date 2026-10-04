@@ -204,12 +204,12 @@ event_player:
     - speedPotionAttempt
   logicblock_speedPotionBrewSequence_complete:
     - stop-mode-potionSpeedBrewing
-    - start-mode-potionQualifier
+    - resetPotionQualifer
     - activateLegendarySpeedPotion
     - speedPotionBrewComplete
   timer_speedPotionBrewingTimer_complete:
     - stop-mode-potionSpeedBrewing
-    - start-mode-potionQualifier
+    - resetPotionQualifer
     - activateBasicSpeedPotion{current_player.iSpeedPotionMaxStep==1}
     - activateRareSpeedPotion{current_player.iSpeedPotionMaxStep==3}
     - speedPotionBrewComplete
@@ -219,10 +219,6 @@ event_player:
     - resetPotionSequencer
 
 variable_player:
-  mode_potionSelection_will_stop:
-    bPotionModeStarted:
-      int: 0
-      action: set
   mode_potionSpeedBrewing_started:
     iSpeedPotionCurrentStep:
       int: 0

@@ -229,10 +229,6 @@ event_player:
     - resetPotionSequencer
 
 variable_player:
-  mode_potionSelection_will_stop:
-    bPotionModeStarted:
-      int: 0
-      action: set
   mode_potionHealingBrewing_started:
     iHealingPotionCurrentStep:
       int: 0

@@ -233,10 +233,6 @@ event_player:
     - resetPotionSequencer
 
 variable_player:
-  mode_potionSelection_will_stop:
-    bPotionModeStarted:
-      int: 0
-      action: set
   mode_potionRegenBrewing_started:
     iRegenPotionCurrentStep:
       int: 0
