@@ -115,6 +115,36 @@ light:
   nUpperInsert:
     x: 0.7053504500516452
     y: 0.6547144754316069
+  potionRackCenterLowerInsert:
+    x: 0.40872318390294415
+    y: 0.237017310252996
+  potionRackCenterUpperInsert:
+    x: 0.40872318390294415
+    y: 0.22237017310252996
+  potionRackInnerLeftLowerInsert:
+    x: 0.37657641662967895
+    y: 0.237017310252996
+  potionRackInnerLeftUpperInsert:
+    x: 0.37428021896730285
+    y: 0.22237017310252996
+  potionRackInnerRightLowerInsert:
+    x: 0.4408699511762095
+    y: 0.23834886817576564
+  potionRackInnerRightUpperInsert:
+    x: 0.4408699511762095
+    y: 0.22237017310252996
+  potionRackOuterLeftLowerInsert:
+    x: 0.3444296493564136
+    y: 0.23834886817576564
+  potionRackOuterLeftUpperInsert:
+    x: 0.3421334516940375
+    y: 0.22237017310252996
+  potionRackOuterRightLowerInsert:
+    x: 0.47301671844947474
+    y: 0.23968042609853527
+  potionRackOuterRightUpperInsert:
+    x: 0.47301671844947474
+    y: 0.22237017310252996
   ravenLowerInsert:
     x: 0.38015641139147116
     y: 0.4302788844621514
@@ -185,6 +215,11 @@ switch:
   sATarget:
     x: 0.2893209054593875
     y: 0.3715046604527297
+  sActionButton:
+    shape: CIRCLE
+    size: 0.06
+    x: 0.47072052078709864
+    y: 0.9866844207723036
   sBall1:
     x: 0.8140285747898721
     y: 0.9252232142857142
