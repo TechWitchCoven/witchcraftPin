@@ -87,14 +87,32 @@ shot_profiles:
 variable_player:
 
   # shot_group _ profile state _ event Type 
-  bindLaneGroup_unlit_hit:
-    score: 5_000
+  leftOuterLane_unlit_hit:
+    score: 5_000 * current_player.iOverallPlayfieldMultiplier * current_player.iTempPlayfieldMultiplier * iBindBBoundTarget
     switchesHit: 1
-  bindLaneGroup_lit_hit:
-    score: 100
+  leftOuterLane_lit_hit:
+    score: 100 * current_player.iOverallPlayfieldMultiplier * current_player.iTempPlayfieldMultiplier * iBindBBoundTarget
+    switchesHit: 1
+  rightOuterLane_unlit_hit:
+    score: 5_000 * current_player.iOverallPlayfieldMultiplier * current_player.iTempPlayfieldMultiplier * iBindDBoundTarget
+    switchesHit: 1
+  rightOuterLane_lit_hit:
+    score: 100 * current_player.iOverallPlayfieldMultiplier * current_player.iTempPlayfieldMultiplier * iBindDBoundTarget
+    switchesHit: 1
+  leftInnerLane_unlit_hit:
+    score: 5_000 * current_player.iOverallPlayfieldMultiplier * current_player.iTempPlayfieldMultiplier * iBindIBoundTarget
+    switchesHit: 1
+  leftInnerLane_lit_hit:
+    score: 100 * current_player.iOverallPlayfieldMultiplier * current_player.iTempPlayfieldMultiplier * iBindIBoundTarget
+    switchesHit: 1
+  rightInnerLane_unlit_hit:
+    score: 5_000 * current_player.iOverallPlayfieldMultiplier * current_player.iTempPlayfieldMultiplier * iBindNBoundTarget
+    switchesHit: 1
+  rightInnerLane_lit_hit:
+    score: 100 * current_player.iOverallPlayfieldMultiplier * current_player.iTempPlayfieldMultiplier * iBindNBoundTarget
     switchesHit: 1
   bindLaneGroup_lit_complete:
-    score: 10_000
+    score: 10_000 * current_player.iOverallPlayfieldMultiplier * current_player.iTempPlayfieldMultiplier
     bonus_multiplier: 1
 
 # The following defines what sounds will be played in this mode
