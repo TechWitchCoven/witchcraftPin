@@ -7,5 +7,10 @@ light_stripes:
     light_template:
       tags: railLight
     number_start: 1
+  leftRailLights:
+    count: 64
+    number_template: playfieldexp-5-{}
+    light_template:
+      tags: railLight
 
   

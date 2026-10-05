@@ -43,6 +43,11 @@ fast:
                       count: 64
                     - port: 2
                       count: 0
+                    - port: 5
+                      type: sk6812
+                      count: 64
+                    - port: 6
+                      count: 0
         baud: 921600
     exp_int:
         port: /dev/ttyAMA3
