@@ -6,33 +6,45 @@
       loops: 0
       speed: 1
       show_tokens:
-        light1: magicMInsert, potionInsert1, bInsert
-        light2: magicAInsert, potionInsert2, iInsert
-        light3: magicGInsert, potionInsert3, ballSaveInsert,actionButtonLight
-        light4: magicIInsert, potionInsert4, nInsert
-        light5: magicCInsert, potionInsert5, dInsert
-        color: Blue
+        light1: magicMInsert, potionInsert1, potion1AchievementInsert, bInsert
+        light2: magicAInsert, potionInsert2, potion2AchievementInsert, iInsert
+        light3: magicGInsert, potionInsert3, potion3AchievementInsert, ballSaveInsert,actionButtonLight
+        light4: magicIInsert, potionInsert4, potion4AchievementInsert, nInsert
+        light5: magicCInsert, potionInsert5, potion5AchievementInsert, dInsert
+        color: DeepPink
 - time: +880ms
   shows:
     5LEDScanAndReverse:
       loops: 0
       speed: 1
       show_tokens:
-        light1: magicMInsert, potionInsert1, bInsert
-        light2: magicAInsert, potionInsert2, iInsert
-        light3: magicGInsert, potionInsert3, ballSaveInsert,actionButtonLight
-        light4: magicIInsert, potionInsert4, nInsert
-        light5: magicCInsert, potionInsert5, dInsert
-        color: Green
+        light1: magicMInsert, potionInsert1, potion1AchievementInsert, bInsert
+        light2: magicAInsert, potionInsert2, potion2AchievementInsert, iInsert
+        light3: magicGInsert, potionInsert3, potion3AchievementInsert, ballSaveInsert,actionButtonLight
+        light4: magicIInsert, potionInsert4, potion4AchievementInsert, nInsert
+        light5: magicCInsert, potionInsert5, potion5AchievementInsert, dInsert
+        color: Aquamarine
 - time: +880ms
   shows:
     5LEDScanAndReverse:
       loops: 0
       speed: 1
       show_tokens:
-        light1: magicMInsert, potionInsert1, bInsert
-        light2: magicAInsert, potionInsert2, iInsert
-        light3: magicGInsert, potionInsert3, ballSaveInsert,actionButtonLight
-        light4: magicIInsert, potionInsert4, nInsert
-        light5: magicCInsert, potionInsert5, dInsert
-        color: Red
+        light1: magicMInsert, potionInsert1, potion1AchievementInsert, bInsert
+        light2: magicAInsert, potionInsert2, potion2AchievementInsert, iInsert
+        light3: magicGInsert, potionInsert3, potion3AchievementInsert, ballSaveInsert,actionButtonLight
+        light4: magicIInsert, potionInsert4, potion4AchievementInsert, nInsert
+        light5: magicCInsert, potionInsert5, potion5AchievementInsert, dInsert
+        color: Crimson
+- time: +880ms
+  shows:
+    5LEDScanAndReverse:
+      loops: 0
+      speed: 1
+      show_tokens:
+        light1: magicMInsert, potionInsert1, potion1AchievementInsert, bInsert
+        light2: magicAInsert, potionInsert2, potion2AchievementInsert, iInsert
+        light3: magicGInsert, potionInsert3, potion3AchievementInsert, ballSaveInsert,actionButtonLight
+        light4: magicIInsert, potionInsert4, potion4AchievementInsert, nInsert
+        light5: magicCInsert, potionInsert5, potion5AchievementInsert, dInsert
+        color: LawnGreen
