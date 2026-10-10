@@ -122,7 +122,7 @@ lights:
     number: upperpfexp-3-13
     tags: potion1uAchievementInsert, potion1AchievementInsert
   potionRackOuterLeftLowerInsert:
-    number: upperpfexp-3-16
+    number: upperpfexp-3-15
     tags: potion1lAchievementInsert, potion1AchievementInsert
   potionRackInnerLeftUpperInsert:
     number: upperpfexp-3-10
