@@ -119,33 +119,33 @@ lights:
     type: rgb
 
   potionRackOuterLeftUpperInsert:
-    number: upperpfexp-3-5
+    number: upperpfexp-3-13
     tags: potion1uAchievementInsert, potion1AchievementInsert
   potionRackOuterLeftLowerInsert:
-    number: upperpfexp-3-6
+    number: upperpfexp-3-15
     tags: potion1lAchievementInsert, potion1AchievementInsert
   potionRackInnerLeftUpperInsert:
-    number: upperpfexp-3-4
+    number: upperpfexp-3-10
     tags: potion2uAchievementInsert, potion2AchievementInsert
   potionRackInnerLeftLowerInsert:
-    number: upperpfexp-3-7
+    number: upperpfexp-3-18
     tags: potion2lAchievementInsert, potion2AchievementInsert
   potionRackCenterUpperInsert:
-    number: upperpfexp-3-3
+    number: upperpfexp-3-7
     tags: potion3uAchievementInsert, potion3AchievementInsert
   potionRackCenterLowerInsert:
-    number: upperpfexp-3-8
+    number: upperpfexp-3-21
     tags: potion3lAchievementInsert, potion3AchievementInsert
   potionRackInnerRightUpperInsert:
-    number: upperpfexp-3-2
+    number: upperpfexp-3-4
     tags: potion4uAchievementInsert, potion4AchievementInsert
   potionRackInnerRightLowerInsert:
-    number: upperpfexp-3-9
+    number: upperpfexp-3-24
     tags: potion4lAchievementInsert, potion4AchievementInsert
   potionRackOuterRightUpperInsert:
     number: upperpfexp-3-1
     tags: potion5uAchievementInsert, potion5AchievementInsert
   potionRackOuterRightLowerInsert:
-    number: upperpfexp-3-10
+    number: upperpfexp-3-27
     tags: potion5lAchievementInsert, potion5AchievementInsert
   
