@@ -106,10 +106,62 @@ variable_player:
       int: 1
       action: set
 
+# The following defines the timers in this mode
+timers:
+
+  # Timers are named and defined as such:
+  # Name of Timer:
+  #   end_value: Final Value in Timer
+  #   tick_interval: Length of Tick
+  #   start_running: Should the timer be running immediately/when enabled
+  #   control_events:
+  #     - event: Name of Event to Call Timer Control Event
+  #       action: Type of Control Event to be Peformed (stop/restart)
+
+  # The following timer acts as the primary clock related to motion events for the cauldron
+  # since motor devices have a time off for FAST EXP Boards. This primary clock will "tick"
+  # every 5 seconds and initiate an event to call another motion event as long as this
+  # mode is running.
+  waitingTimer:
+    end_value: 1
+    tick_interval: 15s
+    start_running: false
+    control_events:
+      - event: sPlungerLane_active
+        action: restart
+      - event: sPlungerLane_inactive
+        action: stop
+
 widget_player:
   player_added: 
     playerAdded:
       expire: 1000ms
+
+sound_player:
+  player_added{num==2}:
+    player2AddedAsset:
+      action: play
+  player_added{num==3}:
+    player3AddedAsset:
+      action: play
+  player_added{num==4}:
+    player4AddedAsset:
+      action: play
+  timer_waitingTimer_complete:
+    whatAreYouWaitingForAsset:
+      action: play
+  player_1_ball_started:
+    player1UpAsset:
+      action: play
+  player_2_ball_started:
+    player2UpAsset:
+      action: play
+  player_3_ball_started:
+    player3UpAsset:
+      action: play
+  player_4_ball_started:
+    player4UpAsset:
+      action: play
 
 achievements:
   speedPotionAchievement:
