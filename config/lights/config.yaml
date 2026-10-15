@@ -12,11 +12,6 @@ lights:
     number: cStartButtonLED
     platform: drivers
     type: r
-
-  transliteLight:
-    number: neuron-3-1
-    type: rgb
-
   actionButtonBlueLED:
     number: cActionButtonBlueLED
     platform: drivers
@@ -32,3 +27,17 @@ lights:
     platform: drivers
     type: g
     tags: actionButtonLight
+
+light_stripes:
+  transliteTopLights:
+    count: 32
+    number_template: neuron-3-{}
+    light_template:
+      tags: translite
+    number_start: 1
+  transliteBottomLights:
+    count: 32
+    number_template: neuron-4-{}
+    light_template:
+      tags: translite
+    number_start: 1
