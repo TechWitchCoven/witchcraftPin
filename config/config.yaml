@@ -37,7 +37,7 @@ show_player:
   init_phase_3:
     led_color:
       show_tokens:
-        lights: railLight
+        lights: translite
         color: 808080
 
 timed_switches:
