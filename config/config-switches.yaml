@@ -130,6 +130,10 @@ switches:
   sGTarget:
     number: pio2-20
     debounce: quick
+  sSpringBallHeld:
+    number: pio2-21
+    debounce: quick
+    type: NC
   sITarget:
     number: pio2-19
     debounce: quick
